@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QK8PGalVySK2ZlOU9wvEJkLN9oqLwYA4Ld0UKvqEpiGd2xkLO5NFGL/RGEwL2OwcKnFP6BpU4wapjIjo5j+iNQ==",
+  "success": true,
+  "projectFilePath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+  "expectedPackageFiles": [
+    "/home/mahmoud/.nuget/packages/antlr4.runtime.standard/4.9.3/antlr4.runtime.standard.4.9.3.nupkg.sha512"
+  ],
+  "logs": []
+}

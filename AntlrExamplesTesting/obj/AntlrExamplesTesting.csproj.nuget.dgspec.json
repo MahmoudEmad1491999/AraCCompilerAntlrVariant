@@ -1,0 +1,144 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mahmoud/Projects/AntlrExamplesTesting/AntlrExamplesTesting.csproj": {}
+  },
+  "projects": {
+    "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+        "projectName": "AntlrExamples",
+        "projectPath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+        "packagesPath": "/home/mahmoud/.nuget/packages/",
+        "outputPath": "/home/mahmoud/Projects/AntlrExamples/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mahmoud/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Antlr4.Runtime.Standard": {
+              "target": "Package",
+              "version": "[4.9.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mahmoud/.dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/mahmoud/Projects/AntlrExamplesTesting/AntlrExamplesTesting.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mahmoud/Projects/AntlrExamplesTesting/AntlrExamplesTesting.csproj",
+        "projectName": "AntlrExamplesTesting",
+        "projectPath": "/home/mahmoud/Projects/AntlrExamplesTesting/AntlrExamplesTesting.csproj",
+        "packagesPath": "/home/mahmoud/.nuget/packages/",
+        "outputPath": "/home/mahmoud/Projects/AntlrExamplesTesting/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mahmoud/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {
+                "projectPath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.9.4, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mahmoud/.dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

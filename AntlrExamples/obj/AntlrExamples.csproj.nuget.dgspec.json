@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {}
+  },
+  "projects": {
+    "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+        "projectName": "AntlrExamples",
+        "projectPath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+        "packagesPath": "/home/mahmoud/.nuget/packages/",
+        "outputPath": "/home/mahmoud/Projects/AntlrExamples/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/mahmoud/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Antlr4.Runtime.Standard": {
+              "target": "Package",
+              "version": "[4.9.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/mahmoud/.dotnet/sdk/5.0.405/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
