@@ -7,11 +7,11 @@ namespace AntlrExamples
     {
         static void Main(string[] args)
         {
-            string input = "hello mahmoud";
+            string input = "Hello mahmoud";
             ICharStream charStream = CharStreams.fromString(input);
-            ITokenSource tokenSource = new SpeakerLexer(charStream);
+            ITokenSource tokenSource = new AraCLexer(charStream);
             ITokenStream tokenStream = new CommonTokenStream(tokenSource);
-            SpeakerParser speakerParser = new SpeakerParser(tokenStream);
+            AraCParser speakerParser = new AraCParser(tokenStream);
             
             Console.WriteLine("Hello World!");
         }

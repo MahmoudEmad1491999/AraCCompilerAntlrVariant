@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/mahmoud/Projects/AntlrExamples/AraC.g4 by ANTLR 4.8
+// Generated from /home/mahmoud/AraCAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
 
 // Unreachable code detected
 #pragma warning disable 0162
