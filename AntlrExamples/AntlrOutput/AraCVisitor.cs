@@ -33,6 +33,18 @@ using IToken = Antlr4.Runtime.IToken;
 [System.CLSCompliant(false)]
 public interface IAraCVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.programm"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitProgramm([NotNull] AraCParser.ProgrammContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.expression"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitExpression([NotNull] AraCParser.ExpressionContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="AraCParser.program"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

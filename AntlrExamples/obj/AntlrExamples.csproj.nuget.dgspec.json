@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {}
+    "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj": {}
   },
   "projects": {
-    "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {
+    "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+        "projectUniqueName": "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj",
         "projectName": "AntlrExamples",
-        "projectPath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+        "projectPath": "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj",
         "packagesPath": "/home/mahmoud/.nuget/packages/",
-        "outputPath": "/home/mahmoud/Projects/AntlrExamples/obj/",
+        "outputPath": "/home/mahmoud/AraCAntlrVariant/AntlrExamples/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/mahmoud/.nuget/NuGet/NuGet.Config"

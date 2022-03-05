@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QK8PGalVySK2ZlOU9wvEJkLN9oqLwYA4Ld0UKvqEpiGd2xkLO5NFGL/RGEwL2OwcKnFP6BpU4wapjIjo5j+iNQ==",
+  "dgSpecHash": "828JeIPBV32GL4Z2ikDzRN734MttCvYN8rSzkNUAp9KO7oW13bJ3nb4YTXnB2Z5NkFPoDRCiALhA5DHm+R9yEw==",
   "success": true,
-  "projectFilePath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj",
+  "projectFilePath": "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj",
   "expectedPackageFiles": [
     "/home/mahmoud/.nuget/packages/antlr4.runtime.standard/4.9.3/antlr4.runtime.standard.4.9.3.nupkg.sha512"
   ],

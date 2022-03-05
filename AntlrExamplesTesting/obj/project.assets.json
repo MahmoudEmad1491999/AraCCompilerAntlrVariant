@@ -5965,11 +5965,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mahmoud/Projects/AntlrExamplesTesting/AntlrExamplesTesting.csproj",
+      "projectUniqueName": "/home/mahmoud/AraCAntlrVariant/AntlrExamplesTesting/AntlrExamplesTesting.csproj",
       "projectName": "AntlrExamplesTesting",
-      "projectPath": "/home/mahmoud/Projects/AntlrExamplesTesting/AntlrExamplesTesting.csproj",
+      "projectPath": "/home/mahmoud/AraCAntlrVariant/AntlrExamplesTesting/AntlrExamplesTesting.csproj",
       "packagesPath": "/home/mahmoud/.nuget/packages/",
-      "outputPath": "/home/mahmoud/Projects/AntlrExamplesTesting/obj/",
+      "outputPath": "/home/mahmoud/AraCAntlrVariant/AntlrExamplesTesting/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mahmoud/.nuget/NuGet/NuGet.Config"
@@ -5984,8 +5984,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj": {
-              "projectPath": "/home/mahmoud/Projects/AntlrExamples/AntlrExamples.csproj"
+            "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj": {
+              "projectPath": "/home/mahmoud/AraCAntlrVariant/AntlrExamples/AntlrExamples.csproj"
             }
           }
         }
