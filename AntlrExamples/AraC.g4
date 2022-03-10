@@ -1,57 +1,107 @@
 grammar AraC;
 
-programm:;
+programm: (
+		global_var_declaratoin
+		| function_declaration
+		| operatoin_declaration
+	)*;
+
+global_var_declaratoin:
+	data_type IDENTIFIER (ASSIGN expression)? FASLA_MANQUOTA;
+
+function_declaration:
+	FUNCTION IDENTIFIER RIGHT_PARENTHESIS LEFT_PARENTHESIS data_type RIGHT_CURLY_BRACKET statement*
+		LEFT_CURLY_BRACKET;
+
+operatoin_declaration:
+	OPERATION IDENTIFIER RIGHT_PARENTHESIS LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
+		LEFT_CURLY_BRACKET;
 
 expression:
-	expression ('×' | '÷') expression
-	| expression ( '+' | '-') expression
-	| '(' expression ')'
-	| Literal;
+	expression RIGHT_PARENTHESIS argument_list LEFT_PARENTHESIS
+	| expression RIGHT_SQUARE_BRACKET expression LEFT_SQUARE_BRACKET
+	| expression (DOT | ARROW) expression
+	| (PLUS | MINUS) expression
+	| (LOGICAL_NOT | BITWISE_NOT) expression
+	| RIGHT_PARENTHESIS (IDENTIFIER | data_type) LEFT_PARENTHESIS expression
+	| ADDRESS_OF_OPERATOR RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
+	| VALUE_INSIDE_OPERATOR RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
+	| SIZE_OF RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
+	| expression (MULTIPLY | DIVIDE) expression
+	| expression (PLUS | MINUS) expression
+	| expression (SHIFT_RIGHT | SHIFT_LEFT) expression
+	| expression (
+		GREATER_THAN_EQUAL
+		| LESS_THAN_EQUAL
+		| GREATER_THAN
+		| LESS_THAN
+	) expression
+	| expression (EQUAL | NOT_EQUAL) expression
+	| expression (BITWISE_AND) expression
+	| expression (BITWISE_XOR) expression
+	| expression (BITWISE_OR) expression
+	| expression (LOGICAL_AND) expression
+	| expression (LOGICAL_OR) expression
+	| RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
+	| Literal
+	| IDENTIFIER;
+
+argument_list: expression (FASLA expression)*;
+
+statement:
+	assignment_statement
+	| return_statement
+	| result_statement
+	| if_statement
+	| while_statement
+	| var_declaration
+	| expression FASLA_MANQUOTA;
+
+assignment_statement:
+	left_hand_side ASSIGN expression FASLA_MANQUOTA;
+
+left_hand_side: IDENTIFIER;
+
+if_statement:
+	IF_KEYWORD RIGHT_PARENTHESIS expression LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
+		LEFT_CURLY_BRACKET;
+
+while_statement:
+	WHILE_KEYWORD RIGHT_PARENTHESIS expression LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
+		LEFT_CURLY_BRACKET;
+
+return_statement: RETURN_KEYWORD FASLA_MANQUOTA;
+
+result_statement: RESULT_KEYWORD expression FASLA_MANQUOTA;
+
+var_declaration:
+	data_type IDENTIFIER (ASSIGN expression)? FASLA_MANQUOTA;
 
 Literal:
 	STRING_LITERAL
 	| CHARACTER_LITERAL
 	| ARABIC_INT_LITERAL
 	| ENGLISH_INT_LITERAL;
-program:
-	(
-		STRING_LITERAL
-		| CHARACTER_LITERAL
-		| IDENTIFIER
-		| ARABIC_INT_LITERAL
-		| ENGLISH_INT_LITERAL
-		| LEFT_BOW
-		| RIGHT_BOW
-		| LEFT_SQUARE
-		| RIGHT_SQUARE
-		| LEFT_CURLY
-		| RIGHT_CURLY
-		| PLUS
-		| MINUS
-		| MULTIPLY
-		| DIVIDE
-		| ARABIC_MODULS
-		| SHIFT_LEFT
-		| SHIFT_RIGHT_ARITHMETIC
-		| SHIFT_RIGHT
-		| LESS_THAN_EQUAL
-		| GREATER_THAN_EQUAL
-		| LEFT_ANGLE
-		| RIGHT_ANGLE
-		| EQUAL
-		| NOT_EQUAL
-		| ASSIGN
-		| DOT
-		| FASLA
-		| FASLA_MANQUOTA
-	)* EOF;
 
-LEFT_BOW: '(';
-RIGHT_BOW: ')';
-LEFT_SQUARE: '[';
-RIGHT_SQUARE: ']';
-LEFT_CURLY: '{';
-RIGHT_CURLY: '}';
+LEFT_PARENTHESIS: '(';
+RIGHT_PARENTHESIS: ')';
+LEFT_SQUARE_BRACKET: '[';
+RIGHT_SQUARE_BRACKET: ']';
+LEFT_CURLY_BRACKET: '{';
+RIGHT_CURLY_BRACKET: '}';
+
+// memory address operators
+ADDRESS_OF_OPERATOR: 'عنوان:';
+VALUE_INSIDE_OPERATOR: 'قيمة:';
+SIZE_OF: 'حجم:';
+
+// punctuation symbols.
+DOT: '.';
+FASLA: '،';
+FASLA_MANQUOTA: '؛';
+ARROW: '->';
+colon: ':';
+
 // mathimatical symbols.
 PLUS: '+';
 MINUS: '-';
@@ -60,6 +110,11 @@ DIVIDE: '÷';
 ARABIC_MODULS: '٪';
 MODULUS: '%';
 
+// logical operations
+LOGICAL_AND: '&&';
+LOGICAL_OR: '||';
+LOGICAL_NOT: '!';
+
 // Bitwise symbols.
 SHIFT_LEFT: '<<';
 SHIFT_RIGHT_ARITHMETIC: '>>>';
@@ -67,22 +122,18 @@ SHIFT_RIGHT: '>>';
 BITWISE_AND: '&';
 BITWISE_OR: '|';
 BITWISE_XOR: '^';
+BITWISE_NOT: '~';
 
 // Relational symbols.
 LESS_THAN_EQUAL: '<=';
 GREATER_THAN_EQUAL: '>=';
-LEFT_ANGLE: '<';
-RIGHT_ANGLE: '>';
+LESS_THAN: '<';
+GREATER_THAN: '>';
 EQUAL: '==';
 NOT_EQUAL: '!=';
 
 // operative symbols.
 ASSIGN: ':=';
-
-// punctuation symbols.
-DOT: '.';
-FASLA: '،';
-FASLA_MANQUOTA: '؛';
 
 // keywords
 FUNCTION: 'دالة';
@@ -100,14 +151,14 @@ CONTINUE_KEYWORRD: 'تخظى' | 'تخطي';
 INT_DATA_TYPE: 'صحيح';
 UINT_DATA_TYPE: 'طبيعي';
 
-BYTE_KEYWORD: 'صحيح_١';
-UBYTE_KEYWORD: 'طبيعي_١';
+BYTE_DATA_TYPE: 'صحيح_١';
+UBYTE_DATA_TYPE: 'طبيعي_١';
 
-SHORT_KEYWORD: 'صحيح_٢';
-USHORT_KEYWORD: 'طبيعي_٢';
+SHORT_DATA_TYPE: 'صحيح_٢';
+USHORT_DATA_TYPE: 'طبيعي_٢';
 
-LONG_KEYWORD: 'صحيح_٨';
-ULONG_KEYWORD: 'طبيعي_٨';
+LONG_DATA_TYPE: 'صحيح_٨';
+ULONG_DATA_TYPE: 'طبيعي_٨';
 
 // literal values.
 STRING_LITERAL:
@@ -125,3 +176,13 @@ ENGLISH_INT_LITERAL: [0-9]+;
 
 // Identifier regular expression.
 IDENTIFIER: [a-zA-Zا-ي] [a-zA-Zا-ي0-9٠-٩_]*;
+
+data_type:
+	INT_DATA_TYPE
+	| UINT_DATA_TYPE
+	| BYTE_DATA_TYPE
+	| UBYTE_DATA_TYPE
+	| SHORT_DATA_TYPE
+	| USHORT_DATA_TYPE
+	| LONG_DATA_TYPE
+	| ULONG_DATA_TYPE;
