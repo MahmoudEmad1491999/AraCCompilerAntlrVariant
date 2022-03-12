@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/mahmoud/AraCAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
+// Generated from /home/mahmoud/.repos/AraCCompilerAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -37,29 +37,40 @@ public partial class AraCParser : Parser {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
-		Literal=1, LEFT_BOW=2, RIGHT_BOW=3, LEFT_SQUARE=4, RIGHT_SQUARE=5, LEFT_CURLY=6, 
-		RIGHT_CURLY=7, PLUS=8, MINUS=9, MULTIPLY=10, DIVIDE=11, ARABIC_MODULS=12, 
-		MODULUS=13, SHIFT_LEFT=14, SHIFT_RIGHT_ARITHMETIC=15, SHIFT_RIGHT=16, 
-		BITWISE_AND=17, BITWISE_OR=18, BITWISE_XOR=19, LESS_THAN_EQUAL=20, GREATER_THAN_EQUAL=21, 
-		LEFT_ANGLE=22, RIGHT_ANGLE=23, EQUAL=24, NOT_EQUAL=25, ASSIGN=26, DOT=27, 
-		FASLA=28, FASLA_MANQUOTA=29, FUNCTION=30, OPERATION=31, RETURN_KEYWORD=32, 
-		RESULT_KEYWORD=33, IF_KEYWORD=34, WHILE_KEYWORD=35, BREAK_KEYWORD=36, 
-		CONTINUE_KEYWORRD=37, INT_DATA_TYPE=38, UINT_DATA_TYPE=39, BYTE_KEYWORD=40, 
-		UBYTE_KEYWORD=41, SHORT_KEYWORD=42, USHORT_KEYWORD=43, LONG_KEYWORD=44, 
-		ULONG_KEYWORD=45, STRING_LITERAL=46, CHARACTER_LITERAL=47, WHITE_SPACE=48, 
-		ARABIC_INT_LITERAL=49, ENGLISH_INT_LITERAL=50, IDENTIFIER=51;
+		T__0=1, Literal=2, LEFT_PARENTHESIS=3, RIGHT_PARENTHESIS=4, LEFT_SQUARE_BRACKET=5, 
+		RIGHT_SQUARE_BRACKET=6, LEFT_CURLY_BRACKET=7, RIGHT_CURLY_BRACKET=8, ADDRESS_OF_OPERATOR=9, 
+		VALUE_INSIDE_OPERATOR=10, SIZE_OF=11, DOT=12, FASLA=13, FASLA_MANQUOTA=14, 
+		ARROW=15, PLUS=16, MINUS=17, MULTIPLY=18, DIVIDE=19, ARABIC_MODULS=20, 
+		MODULUS=21, LOGICAL_AND=22, LOGICAL_OR=23, LOGICAL_NOT=24, SHIFT_LEFT=25, 
+		SHIFT_RIGHT_ARITHMETIC=26, SHIFT_RIGHT=27, BITWISE_AND=28, BITWISE_OR=29, 
+		BITWISE_XOR=30, BITWISE_NOT=31, LESS_THAN_EQUAL=32, GREATER_THAN_EQUAL=33, 
+		LESS_THAN=34, GREATER_THAN=35, EQUAL=36, NOT_EQUAL=37, ASSIGN=38, FUNCTION=39, 
+		OPERATION=40, RETURN_KEYWORD=41, RESULT_KEYWORD=42, IF_KEYWORD=43, WHILE_KEYWORD=44, 
+		BREAK_KEYWORD=45, CONTINUE_KEYWORRD=46, INT_DATA_TYPE=47, UINT_DATA_TYPE=48, 
+		BYTE_DATA_TYPE=49, UBYTE_DATA_TYPE=50, SHORT_DATA_TYPE=51, USHORT_DATA_TYPE=52, 
+		LONG_DATA_TYPE=53, ULONG_DATA_TYPE=54, STRING_LITERAL=55, CHARACTER_LITERAL=56, 
+		WHITE_SPACE=57, ARABIC_INT_LITERAL=58, ENGLISH_INT_LITERAL=59, IDENTIFIER=60;
 	public const int
-		RULE_programm = 0, RULE_expression = 1, RULE_program = 2;
+		RULE_program = 0, RULE_global_var_declaratoin = 1, RULE_function_declaration = 2, 
+		RULE_param_list = 3, RULE_operatoin_declaration = 4, RULE_expression = 5, 
+		RULE_argument_list = 6, RULE_statement = 7, RULE_assignment_statement = 8, 
+		RULE_left_hand_side = 9, RULE_if_statement = 10, RULE_while_statement = 11, 
+		RULE_return_statement = 12, RULE_result_statement = 13, RULE_var_declaration = 14, 
+		RULE_colon = 15, RULE_data_type = 16;
 	public static readonly string[] ruleNames = {
-		"programm", "expression", "program"
+		"program", "global_var_declaratoin", "function_declaration", "param_list", 
+		"operatoin_declaration", "expression", "argument_list", "statement", "assignment_statement", 
+		"left_hand_side", "if_statement", "while_statement", "return_statement", 
+		"result_statement", "var_declaration", "colon", "data_type"
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, null, "'('", "')'", "'['", "']'", "'{'", "'}'", "'+'", "'-'", "'\u00D7'", 
-		"'\u00F7'", "'\u066A'", "'%'", "'<<'", "'>>>'", "'>>'", "'&'", "'|'", 
-		"'^'", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "':='", "'.'", "'\u060C'", 
-		"'\u061B'", "'\u062F\u0627\u0644\u0629'", "'\u0639\u0645\u0644\u064A\u0629'", 
-		"'\u0631\u062C\u0648\u0639'", "'\u0627\u0644\u0646\u0627\u062A\u062C'", 
+		null, "':'", null, "'('", "')'", "'['", "']'", "'{'", "'}'", "'\u0639\u0646\u0648\u0627\u0646:'", 
+		"'\u0642\u064A\u0645\u0629:'", "'\u062D\u062C\u0645:'", "'.'", "'\u060C'", 
+		"'\u061B'", "'->'", "'+'", "'-'", "'\u00D7'", "'\u00F7'", "'\u066A'", 
+		"'%'", "'&&'", "'||'", "'!'", "'<<'", "'>>>'", "'>>'", "'&'", "'|'", "'^'", 
+		"'~'", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "':='", "'\u062F\u0627\u0644\u0629'", 
+		"'\u0639\u0645\u0644\u064A\u0629'", "'\u0631\u062C\u0648\u0639'", "'\u0627\u0644\u0646\u0627\u062A\u062C'", 
 		null, "'\u0637\u0627\u0644\u0645\u0627'", "'\u0642\u0637\u0639'", null, 
 		"'\u0635\u062D\u064A\u062D'", "'\u0637\u0628\u064A\u0639\u064A'", "'\u0635\u062D\u064A\u062D_\u0661'", 
 		"'\u0637\u0628\u064A\u0639\u064A_\u0661'", "'\u0635\u062D\u064A\u062D_\u0662'", 
@@ -67,16 +78,19 @@ public partial class AraCParser : Parser {
 		"'\u0637\u0628\u064A\u0639\u064A_\u0668'"
 	};
 	private static readonly string[] _SymbolicNames = {
-		null, "Literal", "LEFT_BOW", "RIGHT_BOW", "LEFT_SQUARE", "RIGHT_SQUARE", 
-		"LEFT_CURLY", "RIGHT_CURLY", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "ARABIC_MODULS", 
-		"MODULUS", "SHIFT_LEFT", "SHIFT_RIGHT_ARITHMETIC", "SHIFT_RIGHT", "BITWISE_AND", 
-		"BITWISE_OR", "BITWISE_XOR", "LESS_THAN_EQUAL", "GREATER_THAN_EQUAL", 
-		"LEFT_ANGLE", "RIGHT_ANGLE", "EQUAL", "NOT_EQUAL", "ASSIGN", "DOT", "FASLA", 
-		"FASLA_MANQUOTA", "FUNCTION", "OPERATION", "RETURN_KEYWORD", "RESULT_KEYWORD", 
-		"IF_KEYWORD", "WHILE_KEYWORD", "BREAK_KEYWORD", "CONTINUE_KEYWORRD", "INT_DATA_TYPE", 
-		"UINT_DATA_TYPE", "BYTE_KEYWORD", "UBYTE_KEYWORD", "SHORT_KEYWORD", "USHORT_KEYWORD", 
-		"LONG_KEYWORD", "ULONG_KEYWORD", "STRING_LITERAL", "CHARACTER_LITERAL", 
-		"WHITE_SPACE", "ARABIC_INT_LITERAL", "ENGLISH_INT_LITERAL", "IDENTIFIER"
+		null, null, "Literal", "LEFT_PARENTHESIS", "RIGHT_PARENTHESIS", "LEFT_SQUARE_BRACKET", 
+		"RIGHT_SQUARE_BRACKET", "LEFT_CURLY_BRACKET", "RIGHT_CURLY_BRACKET", "ADDRESS_OF_OPERATOR", 
+		"VALUE_INSIDE_OPERATOR", "SIZE_OF", "DOT", "FASLA", "FASLA_MANQUOTA", 
+		"ARROW", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "ARABIC_MODULS", "MODULUS", 
+		"LOGICAL_AND", "LOGICAL_OR", "LOGICAL_NOT", "SHIFT_LEFT", "SHIFT_RIGHT_ARITHMETIC", 
+		"SHIFT_RIGHT", "BITWISE_AND", "BITWISE_OR", "BITWISE_XOR", "BITWISE_NOT", 
+		"LESS_THAN_EQUAL", "GREATER_THAN_EQUAL", "LESS_THAN", "GREATER_THAN", 
+		"EQUAL", "NOT_EQUAL", "ASSIGN", "FUNCTION", "OPERATION", "RETURN_KEYWORD", 
+		"RESULT_KEYWORD", "IF_KEYWORD", "WHILE_KEYWORD", "BREAK_KEYWORD", "CONTINUE_KEYWORRD", 
+		"INT_DATA_TYPE", "UINT_DATA_TYPE", "BYTE_DATA_TYPE", "UBYTE_DATA_TYPE", 
+		"SHORT_DATA_TYPE", "USHORT_DATA_TYPE", "LONG_DATA_TYPE", "ULONG_DATA_TYPE", 
+		"STRING_LITERAL", "CHARACTER_LITERAL", "WHITE_SPACE", "ARABIC_INT_LITERAL", 
+		"ENGLISH_INT_LITERAL", "IDENTIFIER"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -110,26 +124,364 @@ public partial class AraCParser : Parser {
 		Interpreter = new ParserATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
 	}
 
-	public partial class ProgrammContext : ParserRuleContext {
-		public ProgrammContext(ParserRuleContext parent, int invokingState)
+	public partial class ProgramContext : ParserRuleContext {
+		public Global_var_declaratoinContext[] global_var_declaratoin() {
+			return GetRuleContexts<Global_var_declaratoinContext>();
+		}
+		public Global_var_declaratoinContext global_var_declaratoin(int i) {
+			return GetRuleContext<Global_var_declaratoinContext>(i);
+		}
+		public Function_declarationContext[] function_declaration() {
+			return GetRuleContexts<Function_declarationContext>();
+		}
+		public Function_declarationContext function_declaration(int i) {
+			return GetRuleContext<Function_declarationContext>(i);
+		}
+		public Operatoin_declarationContext[] operatoin_declaration() {
+			return GetRuleContexts<Operatoin_declarationContext>();
+		}
+		public Operatoin_declarationContext operatoin_declaration(int i) {
+			return GetRuleContext<Operatoin_declarationContext>(i);
+		}
+		public ProgramContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_programm; } }
+		public override int RuleIndex { get { return RULE_program; } }
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitProgramm(this);
+			if (typedVisitor != null) return typedVisitor.VisitProgram(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 
 	[RuleVersion(0)]
-	public ProgrammContext programm() {
-		ProgrammContext _localctx = new ProgrammContext(Context, State);
-		EnterRule(_localctx, 0, RULE_programm);
+	public ProgramContext program() {
+		ProgramContext _localctx = new ProgramContext(Context, State);
+		EnterRule(_localctx, 0, RULE_program);
+		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
+			State = 39;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << FUNCTION) | (1L << OPERATION) | (1L << INT_DATA_TYPE) | (1L << UINT_DATA_TYPE) | (1L << BYTE_DATA_TYPE) | (1L << UBYTE_DATA_TYPE) | (1L << SHORT_DATA_TYPE) | (1L << USHORT_DATA_TYPE) | (1L << LONG_DATA_TYPE) | (1L << ULONG_DATA_TYPE))) != 0)) {
+				{
+				State = 37;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case INT_DATA_TYPE:
+				case UINT_DATA_TYPE:
+				case BYTE_DATA_TYPE:
+				case UBYTE_DATA_TYPE:
+				case SHORT_DATA_TYPE:
+				case USHORT_DATA_TYPE:
+				case LONG_DATA_TYPE:
+				case ULONG_DATA_TYPE:
+					{
+					State = 34; global_var_declaratoin();
+					}
+					break;
+				case FUNCTION:
+					{
+					State = 35; function_declaration();
+					}
+					break;
+				case OPERATION:
+					{
+					State = 36; operatoin_declaration();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				}
+				State = 41;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Global_var_declaratoinContext : ParserRuleContext {
+		public Data_typeContext data_type() {
+			return GetRuleContext<Data_typeContext>(0);
+		}
+		public ITerminalNode IDENTIFIER() { return GetToken(AraCParser.IDENTIFIER, 0); }
+		public ITerminalNode FASLA_MANQUOTA() { return GetToken(AraCParser.FASLA_MANQUOTA, 0); }
+		public ITerminalNode ASSIGN() { return GetToken(AraCParser.ASSIGN, 0); }
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public Global_var_declaratoinContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_global_var_declaratoin; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitGlobal_var_declaratoin(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Global_var_declaratoinContext global_var_declaratoin() {
+		Global_var_declaratoinContext _localctx = new Global_var_declaratoinContext(Context, State);
+		EnterRule(_localctx, 2, RULE_global_var_declaratoin);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 42; data_type();
+			State = 43; Match(IDENTIFIER);
+			State = 46;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==ASSIGN) {
+				{
+				State = 44; Match(ASSIGN);
+				State = 45; expression(0);
+				}
+			}
+
+			State = 48; Match(FASLA_MANQUOTA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Function_declarationContext : ParserRuleContext {
+		public ITerminalNode FUNCTION() { return GetToken(AraCParser.FUNCTION, 0); }
+		public ITerminalNode IDENTIFIER() { return GetToken(AraCParser.IDENTIFIER, 0); }
+		public ITerminalNode RIGHT_PARENTHESIS() { return GetToken(AraCParser.RIGHT_PARENTHESIS, 0); }
+		public Param_listContext param_list() {
+			return GetRuleContext<Param_listContext>(0);
+		}
+		public ITerminalNode LEFT_PARENTHESIS() { return GetToken(AraCParser.LEFT_PARENTHESIS, 0); }
+		public Data_typeContext data_type() {
+			return GetRuleContext<Data_typeContext>(0);
+		}
+		public ITerminalNode RIGHT_CURLY_BRACKET() { return GetToken(AraCParser.RIGHT_CURLY_BRACKET, 0); }
+		public ITerminalNode LEFT_CURLY_BRACKET() { return GetToken(AraCParser.LEFT_CURLY_BRACKET, 0); }
+		public StatementContext[] statement() {
+			return GetRuleContexts<StatementContext>();
+		}
+		public StatementContext statement(int i) {
+			return GetRuleContext<StatementContext>(i);
+		}
+		public Function_declarationContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_function_declaration; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitFunction_declaration(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Function_declarationContext function_declaration() {
+		Function_declarationContext _localctx = new Function_declarationContext(Context, State);
+		EnterRule(_localctx, 4, RULE_function_declaration);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 50; Match(FUNCTION);
+			State = 51; Match(IDENTIFIER);
+			State = 52; Match(RIGHT_PARENTHESIS);
+			State = 53; param_list();
+			State = 54; Match(LEFT_PARENTHESIS);
+			State = 55; data_type();
+			State = 56; Match(RIGHT_CURLY_BRACKET);
+			State = 60;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Literal) | (1L << RIGHT_PARENTHESIS) | (1L << ADDRESS_OF_OPERATOR) | (1L << VALUE_INSIDE_OPERATOR) | (1L << SIZE_OF) | (1L << PLUS) | (1L << MINUS) | (1L << LOGICAL_NOT) | (1L << BITWISE_NOT) | (1L << RETURN_KEYWORD) | (1L << RESULT_KEYWORD) | (1L << IF_KEYWORD) | (1L << WHILE_KEYWORD) | (1L << INT_DATA_TYPE) | (1L << UINT_DATA_TYPE) | (1L << BYTE_DATA_TYPE) | (1L << UBYTE_DATA_TYPE) | (1L << SHORT_DATA_TYPE) | (1L << USHORT_DATA_TYPE) | (1L << LONG_DATA_TYPE) | (1L << ULONG_DATA_TYPE) | (1L << IDENTIFIER))) != 0)) {
+				{
+				{
+				State = 57; statement();
+				}
+				}
+				State = 62;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 63; Match(LEFT_CURLY_BRACKET);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Param_listContext : ParserRuleContext {
+		public Data_typeContext[] data_type() {
+			return GetRuleContexts<Data_typeContext>();
+		}
+		public Data_typeContext data_type(int i) {
+			return GetRuleContext<Data_typeContext>(i);
+		}
+		public ITerminalNode[] IDENTIFIER() { return GetTokens(AraCParser.IDENTIFIER); }
+		public ITerminalNode IDENTIFIER(int i) {
+			return GetToken(AraCParser.IDENTIFIER, i);
+		}
+		public ITerminalNode[] FASLA() { return GetTokens(AraCParser.FASLA); }
+		public ITerminalNode FASLA(int i) {
+			return GetToken(AraCParser.FASLA, i);
+		}
+		public Param_listContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_param_list; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitParam_list(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Param_listContext param_list() {
+		Param_listContext _localctx = new Param_listContext(Context, State);
+		EnterRule(_localctx, 6, RULE_param_list);
+		int _la;
+		try {
+			State = 77;
+			ErrorHandler.Sync(this);
+			switch (TokenStream.LA(1)) {
+			case INT_DATA_TYPE:
+			case UINT_DATA_TYPE:
+			case BYTE_DATA_TYPE:
+			case UBYTE_DATA_TYPE:
+			case SHORT_DATA_TYPE:
+			case USHORT_DATA_TYPE:
+			case LONG_DATA_TYPE:
+			case ULONG_DATA_TYPE:
+				EnterOuterAlt(_localctx, 1);
+				{
+				{
+				State = 65; data_type();
+				State = 66; Match(IDENTIFIER);
+				State = 73;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				while (_la==FASLA) {
+					{
+					{
+					State = 67; Match(FASLA);
+					State = 68; data_type();
+					State = 69; Match(IDENTIFIER);
+					}
+					}
+					State = 75;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				}
+				}
+				}
+				break;
+			case LEFT_PARENTHESIS:
+				EnterOuterAlt(_localctx, 2);
+				{
+				}
+				break;
+			default:
+				throw new NoViableAltException(this);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Operatoin_declarationContext : ParserRuleContext {
+		public ITerminalNode OPERATION() { return GetToken(AraCParser.OPERATION, 0); }
+		public ITerminalNode IDENTIFIER() { return GetToken(AraCParser.IDENTIFIER, 0); }
+		public ITerminalNode RIGHT_PARENTHESIS() { return GetToken(AraCParser.RIGHT_PARENTHESIS, 0); }
+		public ITerminalNode LEFT_PARENTHESIS() { return GetToken(AraCParser.LEFT_PARENTHESIS, 0); }
+		public ITerminalNode RIGHT_CURLY_BRACKET() { return GetToken(AraCParser.RIGHT_CURLY_BRACKET, 0); }
+		public ITerminalNode LEFT_CURLY_BRACKET() { return GetToken(AraCParser.LEFT_CURLY_BRACKET, 0); }
+		public StatementContext[] statement() {
+			return GetRuleContexts<StatementContext>();
+		}
+		public StatementContext statement(int i) {
+			return GetRuleContext<StatementContext>(i);
+		}
+		public Operatoin_declarationContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_operatoin_declaration; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitOperatoin_declaration(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Operatoin_declarationContext operatoin_declaration() {
+		Operatoin_declarationContext _localctx = new Operatoin_declarationContext(Context, State);
+		EnterRule(_localctx, 8, RULE_operatoin_declaration);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 79; Match(OPERATION);
+			State = 80; Match(IDENTIFIER);
+			State = 81; Match(RIGHT_PARENTHESIS);
+			State = 82; Match(LEFT_PARENTHESIS);
+			State = 83; Match(RIGHT_CURLY_BRACKET);
+			State = 87;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Literal) | (1L << RIGHT_PARENTHESIS) | (1L << ADDRESS_OF_OPERATOR) | (1L << VALUE_INSIDE_OPERATOR) | (1L << SIZE_OF) | (1L << PLUS) | (1L << MINUS) | (1L << LOGICAL_NOT) | (1L << BITWISE_NOT) | (1L << RETURN_KEYWORD) | (1L << RESULT_KEYWORD) | (1L << IF_KEYWORD) | (1L << WHILE_KEYWORD) | (1L << INT_DATA_TYPE) | (1L << UINT_DATA_TYPE) | (1L << BYTE_DATA_TYPE) | (1L << UBYTE_DATA_TYPE) | (1L << SHORT_DATA_TYPE) | (1L << USHORT_DATA_TYPE) | (1L << LONG_DATA_TYPE) | (1L << ULONG_DATA_TYPE) | (1L << IDENTIFIER))) != 0)) {
+				{
+				{
+				State = 84; statement();
+				}
+				}
+				State = 89;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 90; Match(LEFT_CURLY_BRACKET);
 			}
 		}
 		catch (RecognitionException re) {
@@ -144,19 +496,48 @@ public partial class AraCParser : Parser {
 	}
 
 	public partial class ExpressionContext : ParserRuleContext {
-		public ITerminalNode LEFT_BOW() { return GetToken(AraCParser.LEFT_BOW, 0); }
 		public ExpressionContext[] expression() {
 			return GetRuleContexts<ExpressionContext>();
 		}
 		public ExpressionContext expression(int i) {
 			return GetRuleContext<ExpressionContext>(i);
 		}
-		public ITerminalNode RIGHT_BOW() { return GetToken(AraCParser.RIGHT_BOW, 0); }
-		public ITerminalNode Literal() { return GetToken(AraCParser.Literal, 0); }
-		public ITerminalNode MULTIPLY() { return GetToken(AraCParser.MULTIPLY, 0); }
-		public ITerminalNode DIVIDE() { return GetToken(AraCParser.DIVIDE, 0); }
 		public ITerminalNode PLUS() { return GetToken(AraCParser.PLUS, 0); }
 		public ITerminalNode MINUS() { return GetToken(AraCParser.MINUS, 0); }
+		public ITerminalNode LOGICAL_NOT() { return GetToken(AraCParser.LOGICAL_NOT, 0); }
+		public ITerminalNode BITWISE_NOT() { return GetToken(AraCParser.BITWISE_NOT, 0); }
+		public ITerminalNode RIGHT_PARENTHESIS() { return GetToken(AraCParser.RIGHT_PARENTHESIS, 0); }
+		public ITerminalNode LEFT_PARENTHESIS() { return GetToken(AraCParser.LEFT_PARENTHESIS, 0); }
+		public ITerminalNode IDENTIFIER() { return GetToken(AraCParser.IDENTIFIER, 0); }
+		public Data_typeContext data_type() {
+			return GetRuleContext<Data_typeContext>(0);
+		}
+		public ITerminalNode ADDRESS_OF_OPERATOR() { return GetToken(AraCParser.ADDRESS_OF_OPERATOR, 0); }
+		public ITerminalNode VALUE_INSIDE_OPERATOR() { return GetToken(AraCParser.VALUE_INSIDE_OPERATOR, 0); }
+		public ITerminalNode SIZE_OF() { return GetToken(AraCParser.SIZE_OF, 0); }
+		public ITerminalNode Literal() { return GetToken(AraCParser.Literal, 0); }
+		public ITerminalNode DOT() { return GetToken(AraCParser.DOT, 0); }
+		public ITerminalNode ARROW() { return GetToken(AraCParser.ARROW, 0); }
+		public ITerminalNode MULTIPLY() { return GetToken(AraCParser.MULTIPLY, 0); }
+		public ITerminalNode DIVIDE() { return GetToken(AraCParser.DIVIDE, 0); }
+		public ITerminalNode SHIFT_RIGHT() { return GetToken(AraCParser.SHIFT_RIGHT, 0); }
+		public ITerminalNode SHIFT_LEFT() { return GetToken(AraCParser.SHIFT_LEFT, 0); }
+		public ITerminalNode GREATER_THAN_EQUAL() { return GetToken(AraCParser.GREATER_THAN_EQUAL, 0); }
+		public ITerminalNode LESS_THAN_EQUAL() { return GetToken(AraCParser.LESS_THAN_EQUAL, 0); }
+		public ITerminalNode GREATER_THAN() { return GetToken(AraCParser.GREATER_THAN, 0); }
+		public ITerminalNode LESS_THAN() { return GetToken(AraCParser.LESS_THAN, 0); }
+		public ITerminalNode EQUAL() { return GetToken(AraCParser.EQUAL, 0); }
+		public ITerminalNode NOT_EQUAL() { return GetToken(AraCParser.NOT_EQUAL, 0); }
+		public ITerminalNode BITWISE_AND() { return GetToken(AraCParser.BITWISE_AND, 0); }
+		public ITerminalNode BITWISE_XOR() { return GetToken(AraCParser.BITWISE_XOR, 0); }
+		public ITerminalNode BITWISE_OR() { return GetToken(AraCParser.BITWISE_OR, 0); }
+		public ITerminalNode LOGICAL_AND() { return GetToken(AraCParser.LOGICAL_AND, 0); }
+		public ITerminalNode LOGICAL_OR() { return GetToken(AraCParser.LOGICAL_OR, 0); }
+		public Argument_listContext argument_list() {
+			return GetRuleContext<Argument_listContext>(0);
+		}
+		public ITerminalNode RIGHT_SQUARE_BRACKET() { return GetToken(AraCParser.RIGHT_SQUARE_BRACKET, 0); }
+		public ITerminalNode LEFT_SQUARE_BRACKET() { return GetToken(AraCParser.LEFT_SQUARE_BRACKET, 0); }
 		public ExpressionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -179,51 +560,154 @@ public partial class AraCParser : Parser {
 		int _parentState = State;
 		ExpressionContext _localctx = new ExpressionContext(Context, _parentState);
 		ExpressionContext _prevctx = _localctx;
-		int _startState = 2;
-		EnterRecursionRule(_localctx, 2, RULE_expression, _p);
+		int _startState = 10;
+		EnterRecursionRule(_localctx, 10, RULE_expression, _p);
 		int _la;
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 14;
+			State = 125;
 			ErrorHandler.Sync(this);
-			switch (TokenStream.LA(1)) {
-			case LEFT_BOW:
+			switch ( Interpreter.AdaptivePredict(TokenStream,8,Context) ) {
+			case 1:
 				{
-				State = 9; Match(LEFT_BOW);
-				State = 10; expression(0);
-				State = 11; Match(RIGHT_BOW);
+				State = 93;
+				_la = TokenStream.LA(1);
+				if ( !(_la==PLUS || _la==MINUS) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				State = 94; expression(19);
 				}
 				break;
-			case Literal:
+			case 2:
 				{
-				State = 13; Match(Literal);
+				State = 95;
+				_la = TokenStream.LA(1);
+				if ( !(_la==LOGICAL_NOT || _la==BITWISE_NOT) ) {
+				ErrorHandler.RecoverInline(this);
+				}
+				else {
+					ErrorHandler.ReportMatch(this);
+				    Consume();
+				}
+				State = 96; expression(18);
 				}
 				break;
-			default:
-				throw new NoViableAltException(this);
+			case 3:
+				{
+				State = 97; Match(RIGHT_PARENTHESIS);
+				State = 100;
+				ErrorHandler.Sync(this);
+				switch (TokenStream.LA(1)) {
+				case IDENTIFIER:
+					{
+					State = 98; Match(IDENTIFIER);
+					}
+					break;
+				case INT_DATA_TYPE:
+				case UINT_DATA_TYPE:
+				case BYTE_DATA_TYPE:
+				case UBYTE_DATA_TYPE:
+				case SHORT_DATA_TYPE:
+				case USHORT_DATA_TYPE:
+				case LONG_DATA_TYPE:
+				case ULONG_DATA_TYPE:
+					{
+					State = 99; data_type();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
+				}
+				State = 102; Match(LEFT_PARENTHESIS);
+				State = 103; expression(17);
+				}
+				break;
+			case 4:
+				{
+				State = 104; Match(ADDRESS_OF_OPERATOR);
+				State = 105; Match(RIGHT_PARENTHESIS);
+				State = 106; expression(0);
+				State = 107; Match(LEFT_PARENTHESIS);
+				}
+				break;
+			case 5:
+				{
+				State = 109; Match(VALUE_INSIDE_OPERATOR);
+				State = 110; Match(RIGHT_PARENTHESIS);
+				State = 111; expression(0);
+				State = 112; Match(LEFT_PARENTHESIS);
+				}
+				break;
+			case 6:
+				{
+				State = 114; Match(SIZE_OF);
+				State = 115; Match(RIGHT_PARENTHESIS);
+				State = 116; expression(0);
+				State = 117; Match(LEFT_PARENTHESIS);
+				}
+				break;
+			case 7:
+				{
+				State = 119; Match(RIGHT_PARENTHESIS);
+				State = 120; expression(0);
+				State = 121; Match(LEFT_PARENTHESIS);
+				}
+				break;
+			case 8:
+				{
+				State = 123; Match(Literal);
+				}
+				break;
+			case 9:
+				{
+				State = 124; Match(IDENTIFIER);
+				}
+				break;
 			}
 			Context.Stop = TokenStream.LT(-1);
-			State = 24;
+			State = 172;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,2,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,10,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( ParseListeners!=null )
 						TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 22;
+					State = 170;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,1,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,9,Context) ) {
 					case 1:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 16;
-						if (!(Precpred(Context, 4))) throw new FailedPredicateException(this, "Precpred(Context, 4)");
-						State = 17;
+						State = 127;
+						if (!(Precpred(Context, 20))) throw new FailedPredicateException(this, "Precpred(Context, 20)");
+						State = 128;
+						_la = TokenStream.LA(1);
+						if ( !(_la==DOT || _la==ARROW) ) {
+						ErrorHandler.RecoverInline(this);
+						}
+						else {
+							ErrorHandler.ReportMatch(this);
+						    Consume();
+						}
+						State = 129; expression(21);
+						}
+						break;
+					case 2:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 130;
+						if (!(Precpred(Context, 13))) throw new FailedPredicateException(this, "Precpred(Context, 13)");
+						State = 131;
 						_la = TokenStream.LA(1);
 						if ( !(_la==MULTIPLY || _la==DIVIDE) ) {
 						ErrorHandler.RecoverInline(this);
@@ -232,16 +716,16 @@ public partial class AraCParser : Parser {
 							ErrorHandler.ReportMatch(this);
 						    Consume();
 						}
-						State = 18; expression(5);
+						State = 132; expression(14);
 						}
 						break;
-					case 2:
+					case 3:
 						{
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_expression);
-						State = 19;
-						if (!(Precpred(Context, 3))) throw new FailedPredicateException(this, "Precpred(Context, 3)");
-						State = 20;
+						State = 133;
+						if (!(Precpred(Context, 12))) throw new FailedPredicateException(this, "Precpred(Context, 12)");
+						State = 134;
 						_la = TokenStream.LA(1);
 						if ( !(_la==PLUS || _la==MINUS) ) {
 						ErrorHandler.RecoverInline(this);
@@ -250,15 +734,151 @@ public partial class AraCParser : Parser {
 							ErrorHandler.ReportMatch(this);
 						    Consume();
 						}
-						State = 21; expression(4);
+						State = 135; expression(13);
+						}
+						break;
+					case 4:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 136;
+						if (!(Precpred(Context, 11))) throw new FailedPredicateException(this, "Precpred(Context, 11)");
+						State = 137;
+						_la = TokenStream.LA(1);
+						if ( !(_la==SHIFT_LEFT || _la==SHIFT_RIGHT) ) {
+						ErrorHandler.RecoverInline(this);
+						}
+						else {
+							ErrorHandler.ReportMatch(this);
+						    Consume();
+						}
+						State = 138; expression(12);
+						}
+						break;
+					case 5:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 139;
+						if (!(Precpred(Context, 10))) throw new FailedPredicateException(this, "Precpred(Context, 10)");
+						State = 140;
+						_la = TokenStream.LA(1);
+						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << LESS_THAN_EQUAL) | (1L << GREATER_THAN_EQUAL) | (1L << LESS_THAN) | (1L << GREATER_THAN))) != 0)) ) {
+						ErrorHandler.RecoverInline(this);
+						}
+						else {
+							ErrorHandler.ReportMatch(this);
+						    Consume();
+						}
+						State = 141; expression(11);
+						}
+						break;
+					case 6:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 142;
+						if (!(Precpred(Context, 9))) throw new FailedPredicateException(this, "Precpred(Context, 9)");
+						State = 143;
+						_la = TokenStream.LA(1);
+						if ( !(_la==EQUAL || _la==NOT_EQUAL) ) {
+						ErrorHandler.RecoverInline(this);
+						}
+						else {
+							ErrorHandler.ReportMatch(this);
+						    Consume();
+						}
+						State = 144; expression(10);
+						}
+						break;
+					case 7:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 145;
+						if (!(Precpred(Context, 8))) throw new FailedPredicateException(this, "Precpred(Context, 8)");
+						{
+						State = 146; Match(BITWISE_AND);
+						}
+						State = 147; expression(9);
+						}
+						break;
+					case 8:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 148;
+						if (!(Precpred(Context, 7))) throw new FailedPredicateException(this, "Precpred(Context, 7)");
+						{
+						State = 149; Match(BITWISE_XOR);
+						}
+						State = 150; expression(8);
+						}
+						break;
+					case 9:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 151;
+						if (!(Precpred(Context, 6))) throw new FailedPredicateException(this, "Precpred(Context, 6)");
+						{
+						State = 152; Match(BITWISE_OR);
+						}
+						State = 153; expression(7);
+						}
+						break;
+					case 10:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 154;
+						if (!(Precpred(Context, 5))) throw new FailedPredicateException(this, "Precpred(Context, 5)");
+						{
+						State = 155; Match(LOGICAL_AND);
+						}
+						State = 156; expression(6);
+						}
+						break;
+					case 11:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 157;
+						if (!(Precpred(Context, 4))) throw new FailedPredicateException(this, "Precpred(Context, 4)");
+						{
+						State = 158; Match(LOGICAL_OR);
+						}
+						State = 159; expression(5);
+						}
+						break;
+					case 12:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 160;
+						if (!(Precpred(Context, 22))) throw new FailedPredicateException(this, "Precpred(Context, 22)");
+						State = 161; Match(RIGHT_PARENTHESIS);
+						State = 162; argument_list();
+						State = 163; Match(LEFT_PARENTHESIS);
+						}
+						break;
+					case 13:
+						{
+						_localctx = new ExpressionContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_expression);
+						State = 165;
+						if (!(Precpred(Context, 21))) throw new FailedPredicateException(this, "Precpred(Context, 21)");
+						State = 166; Match(RIGHT_SQUARE_BRACKET);
+						State = 167; expression(0);
+						State = 168; Match(LEFT_SQUARE_BRACKET);
 						}
 						break;
 					}
 					} 
 				}
-				State = 26;
+				State = 174;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,2,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,10,Context);
 			}
 			}
 		}
@@ -273,166 +893,584 @@ public partial class AraCParser : Parser {
 		return _localctx;
 	}
 
-	public partial class ProgramContext : ParserRuleContext {
-		public ITerminalNode Eof() { return GetToken(AraCParser.Eof, 0); }
-		public ITerminalNode[] STRING_LITERAL() { return GetTokens(AraCParser.STRING_LITERAL); }
-		public ITerminalNode STRING_LITERAL(int i) {
-			return GetToken(AraCParser.STRING_LITERAL, i);
+	public partial class Argument_listContext : ParserRuleContext {
+		public ExpressionContext[] expression() {
+			return GetRuleContexts<ExpressionContext>();
 		}
-		public ITerminalNode[] CHARACTER_LITERAL() { return GetTokens(AraCParser.CHARACTER_LITERAL); }
-		public ITerminalNode CHARACTER_LITERAL(int i) {
-			return GetToken(AraCParser.CHARACTER_LITERAL, i);
-		}
-		public ITerminalNode[] IDENTIFIER() { return GetTokens(AraCParser.IDENTIFIER); }
-		public ITerminalNode IDENTIFIER(int i) {
-			return GetToken(AraCParser.IDENTIFIER, i);
-		}
-		public ITerminalNode[] ARABIC_INT_LITERAL() { return GetTokens(AraCParser.ARABIC_INT_LITERAL); }
-		public ITerminalNode ARABIC_INT_LITERAL(int i) {
-			return GetToken(AraCParser.ARABIC_INT_LITERAL, i);
-		}
-		public ITerminalNode[] ENGLISH_INT_LITERAL() { return GetTokens(AraCParser.ENGLISH_INT_LITERAL); }
-		public ITerminalNode ENGLISH_INT_LITERAL(int i) {
-			return GetToken(AraCParser.ENGLISH_INT_LITERAL, i);
-		}
-		public ITerminalNode[] LEFT_BOW() { return GetTokens(AraCParser.LEFT_BOW); }
-		public ITerminalNode LEFT_BOW(int i) {
-			return GetToken(AraCParser.LEFT_BOW, i);
-		}
-		public ITerminalNode[] RIGHT_BOW() { return GetTokens(AraCParser.RIGHT_BOW); }
-		public ITerminalNode RIGHT_BOW(int i) {
-			return GetToken(AraCParser.RIGHT_BOW, i);
-		}
-		public ITerminalNode[] LEFT_SQUARE() { return GetTokens(AraCParser.LEFT_SQUARE); }
-		public ITerminalNode LEFT_SQUARE(int i) {
-			return GetToken(AraCParser.LEFT_SQUARE, i);
-		}
-		public ITerminalNode[] RIGHT_SQUARE() { return GetTokens(AraCParser.RIGHT_SQUARE); }
-		public ITerminalNode RIGHT_SQUARE(int i) {
-			return GetToken(AraCParser.RIGHT_SQUARE, i);
-		}
-		public ITerminalNode[] LEFT_CURLY() { return GetTokens(AraCParser.LEFT_CURLY); }
-		public ITerminalNode LEFT_CURLY(int i) {
-			return GetToken(AraCParser.LEFT_CURLY, i);
-		}
-		public ITerminalNode[] RIGHT_CURLY() { return GetTokens(AraCParser.RIGHT_CURLY); }
-		public ITerminalNode RIGHT_CURLY(int i) {
-			return GetToken(AraCParser.RIGHT_CURLY, i);
-		}
-		public ITerminalNode[] PLUS() { return GetTokens(AraCParser.PLUS); }
-		public ITerminalNode PLUS(int i) {
-			return GetToken(AraCParser.PLUS, i);
-		}
-		public ITerminalNode[] MINUS() { return GetTokens(AraCParser.MINUS); }
-		public ITerminalNode MINUS(int i) {
-			return GetToken(AraCParser.MINUS, i);
-		}
-		public ITerminalNode[] MULTIPLY() { return GetTokens(AraCParser.MULTIPLY); }
-		public ITerminalNode MULTIPLY(int i) {
-			return GetToken(AraCParser.MULTIPLY, i);
-		}
-		public ITerminalNode[] DIVIDE() { return GetTokens(AraCParser.DIVIDE); }
-		public ITerminalNode DIVIDE(int i) {
-			return GetToken(AraCParser.DIVIDE, i);
-		}
-		public ITerminalNode[] ARABIC_MODULS() { return GetTokens(AraCParser.ARABIC_MODULS); }
-		public ITerminalNode ARABIC_MODULS(int i) {
-			return GetToken(AraCParser.ARABIC_MODULS, i);
-		}
-		public ITerminalNode[] SHIFT_LEFT() { return GetTokens(AraCParser.SHIFT_LEFT); }
-		public ITerminalNode SHIFT_LEFT(int i) {
-			return GetToken(AraCParser.SHIFT_LEFT, i);
-		}
-		public ITerminalNode[] SHIFT_RIGHT_ARITHMETIC() { return GetTokens(AraCParser.SHIFT_RIGHT_ARITHMETIC); }
-		public ITerminalNode SHIFT_RIGHT_ARITHMETIC(int i) {
-			return GetToken(AraCParser.SHIFT_RIGHT_ARITHMETIC, i);
-		}
-		public ITerminalNode[] SHIFT_RIGHT() { return GetTokens(AraCParser.SHIFT_RIGHT); }
-		public ITerminalNode SHIFT_RIGHT(int i) {
-			return GetToken(AraCParser.SHIFT_RIGHT, i);
-		}
-		public ITerminalNode[] LESS_THAN_EQUAL() { return GetTokens(AraCParser.LESS_THAN_EQUAL); }
-		public ITerminalNode LESS_THAN_EQUAL(int i) {
-			return GetToken(AraCParser.LESS_THAN_EQUAL, i);
-		}
-		public ITerminalNode[] GREATER_THAN_EQUAL() { return GetTokens(AraCParser.GREATER_THAN_EQUAL); }
-		public ITerminalNode GREATER_THAN_EQUAL(int i) {
-			return GetToken(AraCParser.GREATER_THAN_EQUAL, i);
-		}
-		public ITerminalNode[] LEFT_ANGLE() { return GetTokens(AraCParser.LEFT_ANGLE); }
-		public ITerminalNode LEFT_ANGLE(int i) {
-			return GetToken(AraCParser.LEFT_ANGLE, i);
-		}
-		public ITerminalNode[] RIGHT_ANGLE() { return GetTokens(AraCParser.RIGHT_ANGLE); }
-		public ITerminalNode RIGHT_ANGLE(int i) {
-			return GetToken(AraCParser.RIGHT_ANGLE, i);
-		}
-		public ITerminalNode[] EQUAL() { return GetTokens(AraCParser.EQUAL); }
-		public ITerminalNode EQUAL(int i) {
-			return GetToken(AraCParser.EQUAL, i);
-		}
-		public ITerminalNode[] NOT_EQUAL() { return GetTokens(AraCParser.NOT_EQUAL); }
-		public ITerminalNode NOT_EQUAL(int i) {
-			return GetToken(AraCParser.NOT_EQUAL, i);
-		}
-		public ITerminalNode[] ASSIGN() { return GetTokens(AraCParser.ASSIGN); }
-		public ITerminalNode ASSIGN(int i) {
-			return GetToken(AraCParser.ASSIGN, i);
-		}
-		public ITerminalNode[] DOT() { return GetTokens(AraCParser.DOT); }
-		public ITerminalNode DOT(int i) {
-			return GetToken(AraCParser.DOT, i);
+		public ExpressionContext expression(int i) {
+			return GetRuleContext<ExpressionContext>(i);
 		}
 		public ITerminalNode[] FASLA() { return GetTokens(AraCParser.FASLA); }
 		public ITerminalNode FASLA(int i) {
 			return GetToken(AraCParser.FASLA, i);
 		}
-		public ITerminalNode[] FASLA_MANQUOTA() { return GetTokens(AraCParser.FASLA_MANQUOTA); }
-		public ITerminalNode FASLA_MANQUOTA(int i) {
-			return GetToken(AraCParser.FASLA_MANQUOTA, i);
-		}
-		public ProgramContext(ParserRuleContext parent, int invokingState)
+		public Argument_listContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
-		public override int RuleIndex { get { return RULE_program; } }
+		public override int RuleIndex { get { return RULE_argument_list; } }
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitProgram(this);
+			if (typedVisitor != null) return typedVisitor.VisitArgument_list(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
 
 	[RuleVersion(0)]
-	public ProgramContext program() {
-		ProgramContext _localctx = new ProgramContext(Context, State);
-		EnterRule(_localctx, 4, RULE_program);
+	public Argument_listContext argument_list() {
+		Argument_listContext _localctx = new Argument_listContext(Context, State);
+		EnterRule(_localctx, 12, RULE_argument_list);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 30;
+			State = 175; expression(0);
+			State = 180;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << LEFT_BOW) | (1L << RIGHT_BOW) | (1L << LEFT_SQUARE) | (1L << RIGHT_SQUARE) | (1L << LEFT_CURLY) | (1L << RIGHT_CURLY) | (1L << PLUS) | (1L << MINUS) | (1L << MULTIPLY) | (1L << DIVIDE) | (1L << ARABIC_MODULS) | (1L << SHIFT_LEFT) | (1L << SHIFT_RIGHT_ARITHMETIC) | (1L << SHIFT_RIGHT) | (1L << LESS_THAN_EQUAL) | (1L << GREATER_THAN_EQUAL) | (1L << LEFT_ANGLE) | (1L << RIGHT_ANGLE) | (1L << EQUAL) | (1L << NOT_EQUAL) | (1L << ASSIGN) | (1L << DOT) | (1L << FASLA) | (1L << FASLA_MANQUOTA) | (1L << STRING_LITERAL) | (1L << CHARACTER_LITERAL) | (1L << ARABIC_INT_LITERAL) | (1L << ENGLISH_INT_LITERAL) | (1L << IDENTIFIER))) != 0)) {
+			while (_la==FASLA) {
 				{
 				{
-				State = 27;
-				_la = TokenStream.LA(1);
-				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << LEFT_BOW) | (1L << RIGHT_BOW) | (1L << LEFT_SQUARE) | (1L << RIGHT_SQUARE) | (1L << LEFT_CURLY) | (1L << RIGHT_CURLY) | (1L << PLUS) | (1L << MINUS) | (1L << MULTIPLY) | (1L << DIVIDE) | (1L << ARABIC_MODULS) | (1L << SHIFT_LEFT) | (1L << SHIFT_RIGHT_ARITHMETIC) | (1L << SHIFT_RIGHT) | (1L << LESS_THAN_EQUAL) | (1L << GREATER_THAN_EQUAL) | (1L << LEFT_ANGLE) | (1L << RIGHT_ANGLE) | (1L << EQUAL) | (1L << NOT_EQUAL) | (1L << ASSIGN) | (1L << DOT) | (1L << FASLA) | (1L << FASLA_MANQUOTA) | (1L << STRING_LITERAL) | (1L << CHARACTER_LITERAL) | (1L << ARABIC_INT_LITERAL) | (1L << ENGLISH_INT_LITERAL) | (1L << IDENTIFIER))) != 0)) ) {
-				ErrorHandler.RecoverInline(this);
-				}
-				else {
-					ErrorHandler.ReportMatch(this);
-				    Consume();
+				State = 176; Match(FASLA);
+				State = 177; expression(0);
 				}
 				}
-				}
-				State = 32;
+				State = 182;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 33; Match(Eof);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class StatementContext : ParserRuleContext {
+		public Assignment_statementContext assignment_statement() {
+			return GetRuleContext<Assignment_statementContext>(0);
+		}
+		public Return_statementContext return_statement() {
+			return GetRuleContext<Return_statementContext>(0);
+		}
+		public Result_statementContext result_statement() {
+			return GetRuleContext<Result_statementContext>(0);
+		}
+		public If_statementContext if_statement() {
+			return GetRuleContext<If_statementContext>(0);
+		}
+		public While_statementContext while_statement() {
+			return GetRuleContext<While_statementContext>(0);
+		}
+		public Var_declarationContext var_declaration() {
+			return GetRuleContext<Var_declarationContext>(0);
+		}
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public ITerminalNode FASLA_MANQUOTA() { return GetToken(AraCParser.FASLA_MANQUOTA, 0); }
+		public StatementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_statement; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitStatement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public StatementContext statement() {
+		StatementContext _localctx = new StatementContext(Context, State);
+		EnterRule(_localctx, 14, RULE_statement);
+		try {
+			State = 192;
+			ErrorHandler.Sync(this);
+			switch ( Interpreter.AdaptivePredict(TokenStream,12,Context) ) {
+			case 1:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 183; assignment_statement();
+				}
+				break;
+			case 2:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 184; return_statement();
+				}
+				break;
+			case 3:
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 185; result_statement();
+				}
+				break;
+			case 4:
+				EnterOuterAlt(_localctx, 4);
+				{
+				State = 186; if_statement();
+				}
+				break;
+			case 5:
+				EnterOuterAlt(_localctx, 5);
+				{
+				State = 187; while_statement();
+				}
+				break;
+			case 6:
+				EnterOuterAlt(_localctx, 6);
+				{
+				State = 188; var_declaration();
+				}
+				break;
+			case 7:
+				EnterOuterAlt(_localctx, 7);
+				{
+				State = 189; expression(0);
+				State = 190; Match(FASLA_MANQUOTA);
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Assignment_statementContext : ParserRuleContext {
+		public Left_hand_sideContext left_hand_side() {
+			return GetRuleContext<Left_hand_sideContext>(0);
+		}
+		public ITerminalNode ASSIGN() { return GetToken(AraCParser.ASSIGN, 0); }
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public ITerminalNode FASLA_MANQUOTA() { return GetToken(AraCParser.FASLA_MANQUOTA, 0); }
+		public Assignment_statementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_assignment_statement; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitAssignment_statement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Assignment_statementContext assignment_statement() {
+		Assignment_statementContext _localctx = new Assignment_statementContext(Context, State);
+		EnterRule(_localctx, 16, RULE_assignment_statement);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 194; left_hand_side();
+			State = 195; Match(ASSIGN);
+			State = 196; expression(0);
+			State = 197; Match(FASLA_MANQUOTA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Left_hand_sideContext : ParserRuleContext {
+		public ITerminalNode IDENTIFIER() { return GetToken(AraCParser.IDENTIFIER, 0); }
+		public Left_hand_sideContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_left_hand_side; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitLeft_hand_side(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Left_hand_sideContext left_hand_side() {
+		Left_hand_sideContext _localctx = new Left_hand_sideContext(Context, State);
+		EnterRule(_localctx, 18, RULE_left_hand_side);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 199; Match(IDENTIFIER);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class If_statementContext : ParserRuleContext {
+		public ITerminalNode IF_KEYWORD() { return GetToken(AraCParser.IF_KEYWORD, 0); }
+		public ITerminalNode RIGHT_PARENTHESIS() { return GetToken(AraCParser.RIGHT_PARENTHESIS, 0); }
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public ITerminalNode LEFT_PARENTHESIS() { return GetToken(AraCParser.LEFT_PARENTHESIS, 0); }
+		public ITerminalNode RIGHT_CURLY_BRACKET() { return GetToken(AraCParser.RIGHT_CURLY_BRACKET, 0); }
+		public ITerminalNode LEFT_CURLY_BRACKET() { return GetToken(AraCParser.LEFT_CURLY_BRACKET, 0); }
+		public StatementContext[] statement() {
+			return GetRuleContexts<StatementContext>();
+		}
+		public StatementContext statement(int i) {
+			return GetRuleContext<StatementContext>(i);
+		}
+		public If_statementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_if_statement; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitIf_statement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public If_statementContext if_statement() {
+		If_statementContext _localctx = new If_statementContext(Context, State);
+		EnterRule(_localctx, 20, RULE_if_statement);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 201; Match(IF_KEYWORD);
+			State = 202; Match(RIGHT_PARENTHESIS);
+			State = 203; expression(0);
+			State = 204; Match(LEFT_PARENTHESIS);
+			State = 205; Match(RIGHT_CURLY_BRACKET);
+			State = 209;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Literal) | (1L << RIGHT_PARENTHESIS) | (1L << ADDRESS_OF_OPERATOR) | (1L << VALUE_INSIDE_OPERATOR) | (1L << SIZE_OF) | (1L << PLUS) | (1L << MINUS) | (1L << LOGICAL_NOT) | (1L << BITWISE_NOT) | (1L << RETURN_KEYWORD) | (1L << RESULT_KEYWORD) | (1L << IF_KEYWORD) | (1L << WHILE_KEYWORD) | (1L << INT_DATA_TYPE) | (1L << UINT_DATA_TYPE) | (1L << BYTE_DATA_TYPE) | (1L << UBYTE_DATA_TYPE) | (1L << SHORT_DATA_TYPE) | (1L << USHORT_DATA_TYPE) | (1L << LONG_DATA_TYPE) | (1L << ULONG_DATA_TYPE) | (1L << IDENTIFIER))) != 0)) {
+				{
+				{
+				State = 206; statement();
+				}
+				}
+				State = 211;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 212; Match(LEFT_CURLY_BRACKET);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class While_statementContext : ParserRuleContext {
+		public ITerminalNode WHILE_KEYWORD() { return GetToken(AraCParser.WHILE_KEYWORD, 0); }
+		public ITerminalNode RIGHT_PARENTHESIS() { return GetToken(AraCParser.RIGHT_PARENTHESIS, 0); }
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public ITerminalNode LEFT_PARENTHESIS() { return GetToken(AraCParser.LEFT_PARENTHESIS, 0); }
+		public ITerminalNode RIGHT_CURLY_BRACKET() { return GetToken(AraCParser.RIGHT_CURLY_BRACKET, 0); }
+		public ITerminalNode LEFT_CURLY_BRACKET() { return GetToken(AraCParser.LEFT_CURLY_BRACKET, 0); }
+		public StatementContext[] statement() {
+			return GetRuleContexts<StatementContext>();
+		}
+		public StatementContext statement(int i) {
+			return GetRuleContext<StatementContext>(i);
+		}
+		public While_statementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_while_statement; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitWhile_statement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public While_statementContext while_statement() {
+		While_statementContext _localctx = new While_statementContext(Context, State);
+		EnterRule(_localctx, 22, RULE_while_statement);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 214; Match(WHILE_KEYWORD);
+			State = 215; Match(RIGHT_PARENTHESIS);
+			State = 216; expression(0);
+			State = 217; Match(LEFT_PARENTHESIS);
+			State = 218; Match(RIGHT_CURLY_BRACKET);
+			State = 222;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << Literal) | (1L << RIGHT_PARENTHESIS) | (1L << ADDRESS_OF_OPERATOR) | (1L << VALUE_INSIDE_OPERATOR) | (1L << SIZE_OF) | (1L << PLUS) | (1L << MINUS) | (1L << LOGICAL_NOT) | (1L << BITWISE_NOT) | (1L << RETURN_KEYWORD) | (1L << RESULT_KEYWORD) | (1L << IF_KEYWORD) | (1L << WHILE_KEYWORD) | (1L << INT_DATA_TYPE) | (1L << UINT_DATA_TYPE) | (1L << BYTE_DATA_TYPE) | (1L << UBYTE_DATA_TYPE) | (1L << SHORT_DATA_TYPE) | (1L << USHORT_DATA_TYPE) | (1L << LONG_DATA_TYPE) | (1L << ULONG_DATA_TYPE) | (1L << IDENTIFIER))) != 0)) {
+				{
+				{
+				State = 219; statement();
+				}
+				}
+				State = 224;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+			}
+			State = 225; Match(LEFT_CURLY_BRACKET);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Return_statementContext : ParserRuleContext {
+		public ITerminalNode RETURN_KEYWORD() { return GetToken(AraCParser.RETURN_KEYWORD, 0); }
+		public ITerminalNode FASLA_MANQUOTA() { return GetToken(AraCParser.FASLA_MANQUOTA, 0); }
+		public Return_statementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_return_statement; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitReturn_statement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Return_statementContext return_statement() {
+		Return_statementContext _localctx = new Return_statementContext(Context, State);
+		EnterRule(_localctx, 24, RULE_return_statement);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 227; Match(RETURN_KEYWORD);
+			State = 228; Match(FASLA_MANQUOTA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Result_statementContext : ParserRuleContext {
+		public ITerminalNode RESULT_KEYWORD() { return GetToken(AraCParser.RESULT_KEYWORD, 0); }
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public ITerminalNode FASLA_MANQUOTA() { return GetToken(AraCParser.FASLA_MANQUOTA, 0); }
+		public Result_statementContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_result_statement; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitResult_statement(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Result_statementContext result_statement() {
+		Result_statementContext _localctx = new Result_statementContext(Context, State);
+		EnterRule(_localctx, 26, RULE_result_statement);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 230; Match(RESULT_KEYWORD);
+			State = 231; expression(0);
+			State = 232; Match(FASLA_MANQUOTA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Var_declarationContext : ParserRuleContext {
+		public Data_typeContext data_type() {
+			return GetRuleContext<Data_typeContext>(0);
+		}
+		public ITerminalNode IDENTIFIER() { return GetToken(AraCParser.IDENTIFIER, 0); }
+		public ITerminalNode FASLA_MANQUOTA() { return GetToken(AraCParser.FASLA_MANQUOTA, 0); }
+		public ITerminalNode ASSIGN() { return GetToken(AraCParser.ASSIGN, 0); }
+		public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
+		}
+		public Var_declarationContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_var_declaration; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitVar_declaration(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Var_declarationContext var_declaration() {
+		Var_declarationContext _localctx = new Var_declarationContext(Context, State);
+		EnterRule(_localctx, 28, RULE_var_declaration);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 234; data_type();
+			State = 235; Match(IDENTIFIER);
+			State = 238;
+			ErrorHandler.Sync(this);
+			_la = TokenStream.LA(1);
+			if (_la==ASSIGN) {
+				{
+				State = 236; Match(ASSIGN);
+				State = 237; expression(0);
+				}
+			}
+
+			State = 240; Match(FASLA_MANQUOTA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class ColonContext : ParserRuleContext {
+		public ColonContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_colon; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitColon(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public ColonContext colon() {
+		ColonContext _localctx = new ColonContext(Context, State);
+		EnterRule(_localctx, 30, RULE_colon);
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 242; Match(T__0);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class Data_typeContext : ParserRuleContext {
+		public ITerminalNode INT_DATA_TYPE() { return GetToken(AraCParser.INT_DATA_TYPE, 0); }
+		public ITerminalNode UINT_DATA_TYPE() { return GetToken(AraCParser.UINT_DATA_TYPE, 0); }
+		public ITerminalNode BYTE_DATA_TYPE() { return GetToken(AraCParser.BYTE_DATA_TYPE, 0); }
+		public ITerminalNode UBYTE_DATA_TYPE() { return GetToken(AraCParser.UBYTE_DATA_TYPE, 0); }
+		public ITerminalNode SHORT_DATA_TYPE() { return GetToken(AraCParser.SHORT_DATA_TYPE, 0); }
+		public ITerminalNode USHORT_DATA_TYPE() { return GetToken(AraCParser.USHORT_DATA_TYPE, 0); }
+		public ITerminalNode LONG_DATA_TYPE() { return GetToken(AraCParser.LONG_DATA_TYPE, 0); }
+		public ITerminalNode ULONG_DATA_TYPE() { return GetToken(AraCParser.ULONG_DATA_TYPE, 0); }
+		public Data_typeContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_data_type; } }
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IAraCVisitor<TResult> typedVisitor = visitor as IAraCVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitData_type(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public Data_typeContext data_type() {
+		Data_typeContext _localctx = new Data_typeContext(Context, State);
+		EnterRule(_localctx, 32, RULE_data_type);
+		int _la;
+		try {
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 244;
+			_la = TokenStream.LA(1);
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << INT_DATA_TYPE) | (1L << UINT_DATA_TYPE) | (1L << BYTE_DATA_TYPE) | (1L << UBYTE_DATA_TYPE) | (1L << SHORT_DATA_TYPE) | (1L << USHORT_DATA_TYPE) | (1L << LONG_DATA_TYPE) | (1L << ULONG_DATA_TYPE))) != 0)) ) {
+			ErrorHandler.RecoverInline(this);
+			}
+			else {
+				ErrorHandler.ReportMatch(this);
+			    Consume();
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -448,53 +1486,240 @@ public partial class AraCParser : Parser {
 
 	public override bool Sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 1: return expression_sempred((ExpressionContext)_localctx, predIndex);
+		case 5: return expression_sempred((ExpressionContext)_localctx, predIndex);
 		}
 		return true;
 	}
 	private bool expression_sempred(ExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
-		case 0: return Precpred(Context, 4);
-		case 1: return Precpred(Context, 3);
+		case 0: return Precpred(Context, 20);
+		case 1: return Precpred(Context, 13);
+		case 2: return Precpred(Context, 12);
+		case 3: return Precpred(Context, 11);
+		case 4: return Precpred(Context, 10);
+		case 5: return Precpred(Context, 9);
+		case 6: return Precpred(Context, 8);
+		case 7: return Precpred(Context, 7);
+		case 8: return Precpred(Context, 6);
+		case 9: return Precpred(Context, 5);
+		case 10: return Precpred(Context, 4);
+		case 11: return Precpred(Context, 22);
+		case 12: return Precpred(Context, 21);
 		}
 		return true;
 	}
 
 	private static char[] _serializedATN = {
 		'\x3', '\x608B', '\xA72A', '\x8133', '\xB9ED', '\x417C', '\x3BE7', '\x7786', 
-		'\x5964', '\x3', '\x35', '&', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', 
-		'\t', '\x3', '\x4', '\x4', '\t', '\x4', '\x3', '\x2', '\x3', '\x2', '\x3', 
-		'\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', 
-		'\x3', '\x5', '\x3', '\x11', '\n', '\x3', '\x3', '\x3', '\x3', '\x3', 
-		'\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\a', '\x3', '\x19', 
-		'\n', '\x3', '\f', '\x3', '\xE', '\x3', '\x1C', '\v', '\x3', '\x3', '\x4', 
-		'\a', '\x4', '\x1F', '\n', '\x4', '\f', '\x4', '\xE', '\x4', '\"', '\v', 
-		'\x4', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x2', '\x3', '\x4', 
-		'\x5', '\x2', '\x4', '\x6', '\x2', '\x5', '\x3', '\x2', '\f', '\r', '\x3', 
-		'\x2', '\n', '\v', '\a', '\x2', '\x4', '\xE', '\x10', '\x12', '\x16', 
-		'\x1F', '\x30', '\x31', '\x33', '\x35', '\x2', '&', '\x2', '\b', '\x3', 
-		'\x2', '\x2', '\x2', '\x4', '\x10', '\x3', '\x2', '\x2', '\x2', '\x6', 
-		' ', '\x3', '\x2', '\x2', '\x2', '\b', '\t', '\x3', '\x2', '\x2', '\x2', 
-		'\t', '\x3', '\x3', '\x2', '\x2', '\x2', '\n', '\v', '\b', '\x3', '\x1', 
-		'\x2', '\v', '\f', '\a', '\x4', '\x2', '\x2', '\f', '\r', '\x5', '\x4', 
-		'\x3', '\x2', '\r', '\xE', '\a', '\x5', '\x2', '\x2', '\xE', '\x11', '\x3', 
-		'\x2', '\x2', '\x2', '\xF', '\x11', '\a', '\x3', '\x2', '\x2', '\x10', 
-		'\n', '\x3', '\x2', '\x2', '\x2', '\x10', '\xF', '\x3', '\x2', '\x2', 
-		'\x2', '\x11', '\x1A', '\x3', '\x2', '\x2', '\x2', '\x12', '\x13', '\f', 
-		'\x6', '\x2', '\x2', '\x13', '\x14', '\t', '\x2', '\x2', '\x2', '\x14', 
-		'\x19', '\x5', '\x4', '\x3', '\a', '\x15', '\x16', '\f', '\x5', '\x2', 
-		'\x2', '\x16', '\x17', '\t', '\x3', '\x2', '\x2', '\x17', '\x19', '\x5', 
-		'\x4', '\x3', '\x6', '\x18', '\x12', '\x3', '\x2', '\x2', '\x2', '\x18', 
-		'\x15', '\x3', '\x2', '\x2', '\x2', '\x19', '\x1C', '\x3', '\x2', '\x2', 
-		'\x2', '\x1A', '\x18', '\x3', '\x2', '\x2', '\x2', '\x1A', '\x1B', '\x3', 
-		'\x2', '\x2', '\x2', '\x1B', '\x5', '\x3', '\x2', '\x2', '\x2', '\x1C', 
-		'\x1A', '\x3', '\x2', '\x2', '\x2', '\x1D', '\x1F', '\t', '\x4', '\x2', 
-		'\x2', '\x1E', '\x1D', '\x3', '\x2', '\x2', '\x2', '\x1F', '\"', '\x3', 
-		'\x2', '\x2', '\x2', ' ', '\x1E', '\x3', '\x2', '\x2', '\x2', ' ', '!', 
-		'\x3', '\x2', '\x2', '\x2', '!', '#', '\x3', '\x2', '\x2', '\x2', '\"', 
-		' ', '\x3', '\x2', '\x2', '\x2', '#', '$', '\a', '\x2', '\x2', '\x3', 
-		'$', '\a', '\x3', '\x2', '\x2', '\x2', '\x6', '\x10', '\x18', '\x1A', 
-		' ',
+		'\x5964', '\x3', '>', '\xF9', '\x4', '\x2', '\t', '\x2', '\x4', '\x3', 
+		'\t', '\x3', '\x4', '\x4', '\t', '\x4', '\x4', '\x5', '\t', '\x5', '\x4', 
+		'\x6', '\t', '\x6', '\x4', '\a', '\t', '\a', '\x4', '\b', '\t', '\b', 
+		'\x4', '\t', '\t', '\t', '\x4', '\n', '\t', '\n', '\x4', '\v', '\t', '\v', 
+		'\x4', '\f', '\t', '\f', '\x4', '\r', '\t', '\r', '\x4', '\xE', '\t', 
+		'\xE', '\x4', '\xF', '\t', '\xF', '\x4', '\x10', '\t', '\x10', '\x4', 
+		'\x11', '\t', '\x11', '\x4', '\x12', '\t', '\x12', '\x3', '\x2', '\x3', 
+		'\x2', '\x3', '\x2', '\a', '\x2', '(', '\n', '\x2', '\f', '\x2', '\xE', 
+		'\x2', '+', '\v', '\x2', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', 
+		'\x3', '\x5', '\x3', '\x31', '\n', '\x3', '\x3', '\x3', '\x3', '\x3', 
+		'\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\x3', '\x4', 
+		'\x3', '\x4', '\x3', '\x4', '\x3', '\x4', '\a', '\x4', '=', '\n', '\x4', 
+		'\f', '\x4', '\xE', '\x4', '@', '\v', '\x4', '\x3', '\x4', '\x3', '\x4', 
+		'\x3', '\x5', '\x3', '\x5', '\x3', '\x5', '\x3', '\x5', '\x3', '\x5', 
+		'\x3', '\x5', '\a', '\x5', 'J', '\n', '\x5', '\f', '\x5', '\xE', '\x5', 
+		'M', '\v', '\x5', '\x3', '\x5', '\x5', '\x5', 'P', '\n', '\x5', '\x3', 
+		'\x6', '\x3', '\x6', '\x3', '\x6', '\x3', '\x6', '\x3', '\x6', '\x3', 
+		'\x6', '\a', '\x6', 'X', '\n', '\x6', '\f', '\x6', '\xE', '\x6', '[', 
+		'\v', '\x6', '\x3', '\x6', '\x3', '\x6', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', 
+		'\x5', '\a', 'g', '\n', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', 
+		'\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', 
+		'\x3', '\a', '\x3', '\a', '\x3', '\a', '\x5', '\a', '\x80', '\n', '\a', 
+		'\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', 
+		'\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', 
+		'\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', 
+		'\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', 
+		'\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\x3', '\a', '\a', '\a', 
+		'\xAD', '\n', '\a', '\f', '\a', '\xE', '\a', '\xB0', '\v', '\a', '\x3', 
+		'\b', '\x3', '\b', '\x3', '\b', '\a', '\b', '\xB5', '\n', '\b', '\f', 
+		'\b', '\xE', '\b', '\xB8', '\v', '\b', '\x3', '\t', '\x3', '\t', '\x3', 
+		'\t', '\x3', '\t', '\x3', '\t', '\x3', '\t', '\x3', '\t', '\x3', '\t', 
+		'\x3', '\t', '\x5', '\t', '\xC3', '\n', '\t', '\x3', '\n', '\x3', '\n', 
+		'\x3', '\n', '\x3', '\n', '\x3', '\n', '\x3', '\v', '\x3', '\v', '\x3', 
+		'\f', '\x3', '\f', '\x3', '\f', '\x3', '\f', '\x3', '\f', '\x3', '\f', 
+		'\a', '\f', '\xD2', '\n', '\f', '\f', '\f', '\xE', '\f', '\xD5', '\v', 
+		'\f', '\x3', '\f', '\x3', '\f', '\x3', '\r', '\x3', '\r', '\x3', '\r', 
+		'\x3', '\r', '\x3', '\r', '\x3', '\r', '\a', '\r', '\xDF', '\n', '\r', 
+		'\f', '\r', '\xE', '\r', '\xE2', '\v', '\r', '\x3', '\r', '\x3', '\r', 
+		'\x3', '\xE', '\x3', '\xE', '\x3', '\xE', '\x3', '\xF', '\x3', '\xF', 
+		'\x3', '\xF', '\x3', '\xF', '\x3', '\x10', '\x3', '\x10', '\x3', '\x10', 
+		'\x3', '\x10', '\x5', '\x10', '\xF1', '\n', '\x10', '\x3', '\x10', '\x3', 
+		'\x10', '\x3', '\x11', '\x3', '\x11', '\x3', '\x12', '\x3', '\x12', '\x3', 
+		'\x12', '\x2', '\x3', '\f', '\x13', '\x2', '\x4', '\x6', '\b', '\n', '\f', 
+		'\xE', '\x10', '\x12', '\x14', '\x16', '\x18', '\x1A', '\x1C', '\x1E', 
+		' ', '\"', '\x2', '\n', '\x3', '\x2', '\x12', '\x13', '\x4', '\x2', '\x1A', 
+		'\x1A', '!', '!', '\x4', '\x2', '\xE', '\xE', '\x11', '\x11', '\x3', '\x2', 
+		'\x14', '\x15', '\x4', '\x2', '\x1B', '\x1B', '\x1D', '\x1D', '\x3', '\x2', 
+		'\"', '%', '\x3', '\x2', '&', '\'', '\x3', '\x2', '\x31', '\x38', '\x2', 
+		'\x10F', '\x2', ')', '\x3', '\x2', '\x2', '\x2', '\x4', ',', '\x3', '\x2', 
+		'\x2', '\x2', '\x6', '\x34', '\x3', '\x2', '\x2', '\x2', '\b', 'O', '\x3', 
+		'\x2', '\x2', '\x2', '\n', 'Q', '\x3', '\x2', '\x2', '\x2', '\f', '\x7F', 
+		'\x3', '\x2', '\x2', '\x2', '\xE', '\xB1', '\x3', '\x2', '\x2', '\x2', 
+		'\x10', '\xC2', '\x3', '\x2', '\x2', '\x2', '\x12', '\xC4', '\x3', '\x2', 
+		'\x2', '\x2', '\x14', '\xC9', '\x3', '\x2', '\x2', '\x2', '\x16', '\xCB', 
+		'\x3', '\x2', '\x2', '\x2', '\x18', '\xD8', '\x3', '\x2', '\x2', '\x2', 
+		'\x1A', '\xE5', '\x3', '\x2', '\x2', '\x2', '\x1C', '\xE8', '\x3', '\x2', 
+		'\x2', '\x2', '\x1E', '\xEC', '\x3', '\x2', '\x2', '\x2', ' ', '\xF4', 
+		'\x3', '\x2', '\x2', '\x2', '\"', '\xF6', '\x3', '\x2', '\x2', '\x2', 
+		'$', '(', '\x5', '\x4', '\x3', '\x2', '%', '(', '\x5', '\x6', '\x4', '\x2', 
+		'&', '(', '\x5', '\n', '\x6', '\x2', '\'', '$', '\x3', '\x2', '\x2', '\x2', 
+		'\'', '%', '\x3', '\x2', '\x2', '\x2', '\'', '&', '\x3', '\x2', '\x2', 
+		'\x2', '(', '+', '\x3', '\x2', '\x2', '\x2', ')', '\'', '\x3', '\x2', 
+		'\x2', '\x2', ')', '*', '\x3', '\x2', '\x2', '\x2', '*', '\x3', '\x3', 
+		'\x2', '\x2', '\x2', '+', ')', '\x3', '\x2', '\x2', '\x2', ',', '-', '\x5', 
+		'\"', '\x12', '\x2', '-', '\x30', '\a', '>', '\x2', '\x2', '.', '/', '\a', 
+		'(', '\x2', '\x2', '/', '\x31', '\x5', '\f', '\a', '\x2', '\x30', '.', 
+		'\x3', '\x2', '\x2', '\x2', '\x30', '\x31', '\x3', '\x2', '\x2', '\x2', 
+		'\x31', '\x32', '\x3', '\x2', '\x2', '\x2', '\x32', '\x33', '\a', '\x10', 
+		'\x2', '\x2', '\x33', '\x5', '\x3', '\x2', '\x2', '\x2', '\x34', '\x35', 
+		'\a', ')', '\x2', '\x2', '\x35', '\x36', '\a', '>', '\x2', '\x2', '\x36', 
+		'\x37', '\a', '\x6', '\x2', '\x2', '\x37', '\x38', '\x5', '\b', '\x5', 
+		'\x2', '\x38', '\x39', '\a', '\x5', '\x2', '\x2', '\x39', ':', '\x5', 
+		'\"', '\x12', '\x2', ':', '>', '\a', '\n', '\x2', '\x2', ';', '=', '\x5', 
+		'\x10', '\t', '\x2', '<', ';', '\x3', '\x2', '\x2', '\x2', '=', '@', '\x3', 
+		'\x2', '\x2', '\x2', '>', '<', '\x3', '\x2', '\x2', '\x2', '>', '?', '\x3', 
+		'\x2', '\x2', '\x2', '?', '\x41', '\x3', '\x2', '\x2', '\x2', '@', '>', 
+		'\x3', '\x2', '\x2', '\x2', '\x41', '\x42', '\a', '\t', '\x2', '\x2', 
+		'\x42', '\a', '\x3', '\x2', '\x2', '\x2', '\x43', '\x44', '\x5', '\"', 
+		'\x12', '\x2', '\x44', 'K', '\a', '>', '\x2', '\x2', '\x45', '\x46', '\a', 
+		'\xF', '\x2', '\x2', '\x46', 'G', '\x5', '\"', '\x12', '\x2', 'G', 'H', 
+		'\a', '>', '\x2', '\x2', 'H', 'J', '\x3', '\x2', '\x2', '\x2', 'I', '\x45', 
+		'\x3', '\x2', '\x2', '\x2', 'J', 'M', '\x3', '\x2', '\x2', '\x2', 'K', 
+		'I', '\x3', '\x2', '\x2', '\x2', 'K', 'L', '\x3', '\x2', '\x2', '\x2', 
+		'L', 'P', '\x3', '\x2', '\x2', '\x2', 'M', 'K', '\x3', '\x2', '\x2', '\x2', 
+		'N', 'P', '\x3', '\x2', '\x2', '\x2', 'O', '\x43', '\x3', '\x2', '\x2', 
+		'\x2', 'O', 'N', '\x3', '\x2', '\x2', '\x2', 'P', '\t', '\x3', '\x2', 
+		'\x2', '\x2', 'Q', 'R', '\a', '*', '\x2', '\x2', 'R', 'S', '\a', '>', 
+		'\x2', '\x2', 'S', 'T', '\a', '\x6', '\x2', '\x2', 'T', 'U', '\a', '\x5', 
+		'\x2', '\x2', 'U', 'Y', '\a', '\n', '\x2', '\x2', 'V', 'X', '\x5', '\x10', 
+		'\t', '\x2', 'W', 'V', '\x3', '\x2', '\x2', '\x2', 'X', '[', '\x3', '\x2', 
+		'\x2', '\x2', 'Y', 'W', '\x3', '\x2', '\x2', '\x2', 'Y', 'Z', '\x3', '\x2', 
+		'\x2', '\x2', 'Z', '\\', '\x3', '\x2', '\x2', '\x2', '[', 'Y', '\x3', 
+		'\x2', '\x2', '\x2', '\\', ']', '\a', '\t', '\x2', '\x2', ']', '\v', '\x3', 
+		'\x2', '\x2', '\x2', '^', '_', '\b', '\a', '\x1', '\x2', '_', '`', '\t', 
+		'\x2', '\x2', '\x2', '`', '\x80', '\x5', '\f', '\a', '\x15', '\x61', '\x62', 
+		'\t', '\x3', '\x2', '\x2', '\x62', '\x80', '\x5', '\f', '\a', '\x14', 
+		'\x63', '\x66', '\a', '\x6', '\x2', '\x2', '\x64', 'g', '\a', '>', '\x2', 
+		'\x2', '\x65', 'g', '\x5', '\"', '\x12', '\x2', '\x66', '\x64', '\x3', 
+		'\x2', '\x2', '\x2', '\x66', '\x65', '\x3', '\x2', '\x2', '\x2', 'g', 
+		'h', '\x3', '\x2', '\x2', '\x2', 'h', 'i', '\a', '\x5', '\x2', '\x2', 
+		'i', '\x80', '\x5', '\f', '\a', '\x13', 'j', 'k', '\a', '\v', '\x2', '\x2', 
+		'k', 'l', '\a', '\x6', '\x2', '\x2', 'l', 'm', '\x5', '\f', '\a', '\x2', 
+		'm', 'n', '\a', '\x5', '\x2', '\x2', 'n', '\x80', '\x3', '\x2', '\x2', 
+		'\x2', 'o', 'p', '\a', '\f', '\x2', '\x2', 'p', 'q', '\a', '\x6', '\x2', 
+		'\x2', 'q', 'r', '\x5', '\f', '\a', '\x2', 'r', 's', '\a', '\x5', '\x2', 
+		'\x2', 's', '\x80', '\x3', '\x2', '\x2', '\x2', 't', 'u', '\a', '\r', 
+		'\x2', '\x2', 'u', 'v', '\a', '\x6', '\x2', '\x2', 'v', 'w', '\x5', '\f', 
+		'\a', '\x2', 'w', 'x', '\a', '\x5', '\x2', '\x2', 'x', '\x80', '\x3', 
+		'\x2', '\x2', '\x2', 'y', 'z', '\a', '\x6', '\x2', '\x2', 'z', '{', '\x5', 
+		'\f', '\a', '\x2', '{', '|', '\a', '\x5', '\x2', '\x2', '|', '\x80', '\x3', 
+		'\x2', '\x2', '\x2', '}', '\x80', '\a', '\x4', '\x2', '\x2', '~', '\x80', 
+		'\a', '>', '\x2', '\x2', '\x7F', '^', '\x3', '\x2', '\x2', '\x2', '\x7F', 
+		'\x61', '\x3', '\x2', '\x2', '\x2', '\x7F', '\x63', '\x3', '\x2', '\x2', 
+		'\x2', '\x7F', 'j', '\x3', '\x2', '\x2', '\x2', '\x7F', 'o', '\x3', '\x2', 
+		'\x2', '\x2', '\x7F', 't', '\x3', '\x2', '\x2', '\x2', '\x7F', 'y', '\x3', 
+		'\x2', '\x2', '\x2', '\x7F', '}', '\x3', '\x2', '\x2', '\x2', '\x7F', 
+		'~', '\x3', '\x2', '\x2', '\x2', '\x80', '\xAE', '\x3', '\x2', '\x2', 
+		'\x2', '\x81', '\x82', '\f', '\x16', '\x2', '\x2', '\x82', '\x83', '\t', 
+		'\x4', '\x2', '\x2', '\x83', '\xAD', '\x5', '\f', '\a', '\x17', '\x84', 
+		'\x85', '\f', '\xF', '\x2', '\x2', '\x85', '\x86', '\t', '\x5', '\x2', 
+		'\x2', '\x86', '\xAD', '\x5', '\f', '\a', '\x10', '\x87', '\x88', '\f', 
+		'\xE', '\x2', '\x2', '\x88', '\x89', '\t', '\x2', '\x2', '\x2', '\x89', 
+		'\xAD', '\x5', '\f', '\a', '\xF', '\x8A', '\x8B', '\f', '\r', '\x2', '\x2', 
+		'\x8B', '\x8C', '\t', '\x6', '\x2', '\x2', '\x8C', '\xAD', '\x5', '\f', 
+		'\a', '\xE', '\x8D', '\x8E', '\f', '\f', '\x2', '\x2', '\x8E', '\x8F', 
+		'\t', '\a', '\x2', '\x2', '\x8F', '\xAD', '\x5', '\f', '\a', '\r', '\x90', 
+		'\x91', '\f', '\v', '\x2', '\x2', '\x91', '\x92', '\t', '\b', '\x2', '\x2', 
+		'\x92', '\xAD', '\x5', '\f', '\a', '\f', '\x93', '\x94', '\f', '\n', '\x2', 
+		'\x2', '\x94', '\x95', '\a', '\x1E', '\x2', '\x2', '\x95', '\xAD', '\x5', 
+		'\f', '\a', '\v', '\x96', '\x97', '\f', '\t', '\x2', '\x2', '\x97', '\x98', 
+		'\a', ' ', '\x2', '\x2', '\x98', '\xAD', '\x5', '\f', '\a', '\n', '\x99', 
+		'\x9A', '\f', '\b', '\x2', '\x2', '\x9A', '\x9B', '\a', '\x1F', '\x2', 
+		'\x2', '\x9B', '\xAD', '\x5', '\f', '\a', '\t', '\x9C', '\x9D', '\f', 
+		'\a', '\x2', '\x2', '\x9D', '\x9E', '\a', '\x18', '\x2', '\x2', '\x9E', 
+		'\xAD', '\x5', '\f', '\a', '\b', '\x9F', '\xA0', '\f', '\x6', '\x2', '\x2', 
+		'\xA0', '\xA1', '\a', '\x19', '\x2', '\x2', '\xA1', '\xAD', '\x5', '\f', 
+		'\a', '\a', '\xA2', '\xA3', '\f', '\x18', '\x2', '\x2', '\xA3', '\xA4', 
+		'\a', '\x6', '\x2', '\x2', '\xA4', '\xA5', '\x5', '\xE', '\b', '\x2', 
+		'\xA5', '\xA6', '\a', '\x5', '\x2', '\x2', '\xA6', '\xAD', '\x3', '\x2', 
+		'\x2', '\x2', '\xA7', '\xA8', '\f', '\x17', '\x2', '\x2', '\xA8', '\xA9', 
+		'\a', '\b', '\x2', '\x2', '\xA9', '\xAA', '\x5', '\f', '\a', '\x2', '\xAA', 
+		'\xAB', '\a', '\a', '\x2', '\x2', '\xAB', '\xAD', '\x3', '\x2', '\x2', 
+		'\x2', '\xAC', '\x81', '\x3', '\x2', '\x2', '\x2', '\xAC', '\x84', '\x3', 
+		'\x2', '\x2', '\x2', '\xAC', '\x87', '\x3', '\x2', '\x2', '\x2', '\xAC', 
+		'\x8A', '\x3', '\x2', '\x2', '\x2', '\xAC', '\x8D', '\x3', '\x2', '\x2', 
+		'\x2', '\xAC', '\x90', '\x3', '\x2', '\x2', '\x2', '\xAC', '\x93', '\x3', 
+		'\x2', '\x2', '\x2', '\xAC', '\x96', '\x3', '\x2', '\x2', '\x2', '\xAC', 
+		'\x99', '\x3', '\x2', '\x2', '\x2', '\xAC', '\x9C', '\x3', '\x2', '\x2', 
+		'\x2', '\xAC', '\x9F', '\x3', '\x2', '\x2', '\x2', '\xAC', '\xA2', '\x3', 
+		'\x2', '\x2', '\x2', '\xAC', '\xA7', '\x3', '\x2', '\x2', '\x2', '\xAD', 
+		'\xB0', '\x3', '\x2', '\x2', '\x2', '\xAE', '\xAC', '\x3', '\x2', '\x2', 
+		'\x2', '\xAE', '\xAF', '\x3', '\x2', '\x2', '\x2', '\xAF', '\r', '\x3', 
+		'\x2', '\x2', '\x2', '\xB0', '\xAE', '\x3', '\x2', '\x2', '\x2', '\xB1', 
+		'\xB6', '\x5', '\f', '\a', '\x2', '\xB2', '\xB3', '\a', '\xF', '\x2', 
+		'\x2', '\xB3', '\xB5', '\x5', '\f', '\a', '\x2', '\xB4', '\xB2', '\x3', 
+		'\x2', '\x2', '\x2', '\xB5', '\xB8', '\x3', '\x2', '\x2', '\x2', '\xB6', 
+		'\xB4', '\x3', '\x2', '\x2', '\x2', '\xB6', '\xB7', '\x3', '\x2', '\x2', 
+		'\x2', '\xB7', '\xF', '\x3', '\x2', '\x2', '\x2', '\xB8', '\xB6', '\x3', 
+		'\x2', '\x2', '\x2', '\xB9', '\xC3', '\x5', '\x12', '\n', '\x2', '\xBA', 
+		'\xC3', '\x5', '\x1A', '\xE', '\x2', '\xBB', '\xC3', '\x5', '\x1C', '\xF', 
+		'\x2', '\xBC', '\xC3', '\x5', '\x16', '\f', '\x2', '\xBD', '\xC3', '\x5', 
+		'\x18', '\r', '\x2', '\xBE', '\xC3', '\x5', '\x1E', '\x10', '\x2', '\xBF', 
+		'\xC0', '\x5', '\f', '\a', '\x2', '\xC0', '\xC1', '\a', '\x10', '\x2', 
+		'\x2', '\xC1', '\xC3', '\x3', '\x2', '\x2', '\x2', '\xC2', '\xB9', '\x3', 
+		'\x2', '\x2', '\x2', '\xC2', '\xBA', '\x3', '\x2', '\x2', '\x2', '\xC2', 
+		'\xBB', '\x3', '\x2', '\x2', '\x2', '\xC2', '\xBC', '\x3', '\x2', '\x2', 
+		'\x2', '\xC2', '\xBD', '\x3', '\x2', '\x2', '\x2', '\xC2', '\xBE', '\x3', 
+		'\x2', '\x2', '\x2', '\xC2', '\xBF', '\x3', '\x2', '\x2', '\x2', '\xC3', 
+		'\x11', '\x3', '\x2', '\x2', '\x2', '\xC4', '\xC5', '\x5', '\x14', '\v', 
+		'\x2', '\xC5', '\xC6', '\a', '(', '\x2', '\x2', '\xC6', '\xC7', '\x5', 
+		'\f', '\a', '\x2', '\xC7', '\xC8', '\a', '\x10', '\x2', '\x2', '\xC8', 
+		'\x13', '\x3', '\x2', '\x2', '\x2', '\xC9', '\xCA', '\a', '>', '\x2', 
+		'\x2', '\xCA', '\x15', '\x3', '\x2', '\x2', '\x2', '\xCB', '\xCC', '\a', 
+		'-', '\x2', '\x2', '\xCC', '\xCD', '\a', '\x6', '\x2', '\x2', '\xCD', 
+		'\xCE', '\x5', '\f', '\a', '\x2', '\xCE', '\xCF', '\a', '\x5', '\x2', 
+		'\x2', '\xCF', '\xD3', '\a', '\n', '\x2', '\x2', '\xD0', '\xD2', '\x5', 
+		'\x10', '\t', '\x2', '\xD1', '\xD0', '\x3', '\x2', '\x2', '\x2', '\xD2', 
+		'\xD5', '\x3', '\x2', '\x2', '\x2', '\xD3', '\xD1', '\x3', '\x2', '\x2', 
+		'\x2', '\xD3', '\xD4', '\x3', '\x2', '\x2', '\x2', '\xD4', '\xD6', '\x3', 
+		'\x2', '\x2', '\x2', '\xD5', '\xD3', '\x3', '\x2', '\x2', '\x2', '\xD6', 
+		'\xD7', '\a', '\t', '\x2', '\x2', '\xD7', '\x17', '\x3', '\x2', '\x2', 
+		'\x2', '\xD8', '\xD9', '\a', '.', '\x2', '\x2', '\xD9', '\xDA', '\a', 
+		'\x6', '\x2', '\x2', '\xDA', '\xDB', '\x5', '\f', '\a', '\x2', '\xDB', 
+		'\xDC', '\a', '\x5', '\x2', '\x2', '\xDC', '\xE0', '\a', '\n', '\x2', 
+		'\x2', '\xDD', '\xDF', '\x5', '\x10', '\t', '\x2', '\xDE', '\xDD', '\x3', 
+		'\x2', '\x2', '\x2', '\xDF', '\xE2', '\x3', '\x2', '\x2', '\x2', '\xE0', 
+		'\xDE', '\x3', '\x2', '\x2', '\x2', '\xE0', '\xE1', '\x3', '\x2', '\x2', 
+		'\x2', '\xE1', '\xE3', '\x3', '\x2', '\x2', '\x2', '\xE2', '\xE0', '\x3', 
+		'\x2', '\x2', '\x2', '\xE3', '\xE4', '\a', '\t', '\x2', '\x2', '\xE4', 
+		'\x19', '\x3', '\x2', '\x2', '\x2', '\xE5', '\xE6', '\a', '+', '\x2', 
+		'\x2', '\xE6', '\xE7', '\a', '\x10', '\x2', '\x2', '\xE7', '\x1B', '\x3', 
+		'\x2', '\x2', '\x2', '\xE8', '\xE9', '\a', ',', '\x2', '\x2', '\xE9', 
+		'\xEA', '\x5', '\f', '\a', '\x2', '\xEA', '\xEB', '\a', '\x10', '\x2', 
+		'\x2', '\xEB', '\x1D', '\x3', '\x2', '\x2', '\x2', '\xEC', '\xED', '\x5', 
+		'\"', '\x12', '\x2', '\xED', '\xF0', '\a', '>', '\x2', '\x2', '\xEE', 
+		'\xEF', '\a', '(', '\x2', '\x2', '\xEF', '\xF1', '\x5', '\f', '\a', '\x2', 
+		'\xF0', '\xEE', '\x3', '\x2', '\x2', '\x2', '\xF0', '\xF1', '\x3', '\x2', 
+		'\x2', '\x2', '\xF1', '\xF2', '\x3', '\x2', '\x2', '\x2', '\xF2', '\xF3', 
+		'\a', '\x10', '\x2', '\x2', '\xF3', '\x1F', '\x3', '\x2', '\x2', '\x2', 
+		'\xF4', '\xF5', '\a', '\x3', '\x2', '\x2', '\xF5', '!', '\x3', '\x2', 
+		'\x2', '\x2', '\xF6', '\xF7', '\t', '\t', '\x2', '\x2', '\xF7', '#', '\x3', 
+		'\x2', '\x2', '\x2', '\x12', '\'', ')', '\x30', '>', 'K', 'O', 'Y', '\x66', 
+		'\x7F', '\xAC', '\xAE', '\xB6', '\xC2', '\xD3', '\xE0', '\xF0',
 	};
 
 	public static readonly ATN _ATN =

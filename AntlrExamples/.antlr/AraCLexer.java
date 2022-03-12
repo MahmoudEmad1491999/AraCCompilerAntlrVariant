@@ -1,4 +1,4 @@
-// Generated from /home/mahmoud/.repos/AraCCompilerAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
+// Generated from AraC.g4 by ANTLR 4.9.3
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -10,7 +10,7 @@ import org.antlr.v4.runtime.misc.*;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class AraCLexer extends Lexer {
-	static { RuntimeMetaData.checkVersion("4.8", RuntimeMetaData.VERSION); }
+	static { RuntimeMetaData.checkVersion("4.9.3", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
@@ -177,7 +177,7 @@ public class AraCLexer extends Lexer {
 		"\21!\22#\23%\24\'\25)\26+\27-\30/\31\61\32\63\33\65\34\67\359\36;\37="+
 		" ?!A\"C#E$G%I&K\'M(O)Q*S+U,W-Y.[/]\60_\61a\62c\63e\64g\65i\66k\67m8o9"+
 		"q\2s:u;w<y={>\3\2\t\4\2\2\2$$\4\2\2\2))\4\2\13\17\"\"\3\2\u0662\u066b"+
-		"\3\2\62;\5\2C\\c|\u0629\u064c\b\2\62;C\\aac|\u0629\u064c\u0662\u066b\2"+
+		"\3\2\62;\5\2C\\c|\u0623\u064c\b\2\62;C\\aac|\u0623\u064c\u0662\u066b\2"+
 		"\u0189\2\3\3\2\2\2\2\5\3\2\2\2\2\7\3\2\2\2\2\t\3\2\2\2\2\13\3\2\2\2\2"+
 		"\r\3\2\2\2\2\17\3\2\2\2\2\21\3\2\2\2\2\23\3\2\2\2\2\25\3\2\2\2\2\27\3"+
 		"\2\2\2\2\31\3\2\2\2\2\33\3\2\2\2\2\35\3\2\2\2\2\37\3\2\2\2\2!\3\2\2\2"+

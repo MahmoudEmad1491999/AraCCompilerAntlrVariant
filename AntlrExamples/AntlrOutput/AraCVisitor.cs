@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/mahmoud/AraCAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
+// Generated from /home/mahmoud/.repos/AraCCompilerAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -33,11 +33,35 @@ using IToken = Antlr4.Runtime.IToken;
 [System.CLSCompliant(false)]
 public interface IAraCVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.programm"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.program"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitProgramm([NotNull] AraCParser.ProgrammContext context);
+	Result VisitProgram([NotNull] AraCParser.ProgramContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.global_var_declaratoin"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitGlobal_var_declaratoin([NotNull] AraCParser.Global_var_declaratoinContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.function_declaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitFunction_declaration([NotNull] AraCParser.Function_declarationContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.param_list"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitParam_list([NotNull] AraCParser.Param_listContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.operatoin_declaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitOperatoin_declaration([NotNull] AraCParser.Operatoin_declarationContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="AraCParser.expression"/>.
 	/// </summary>
@@ -45,10 +69,70 @@ public interface IAraCVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitExpression([NotNull] AraCParser.ExpressionContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.program"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.argument_list"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitProgram([NotNull] AraCParser.ProgramContext context);
+	Result VisitArgument_list([NotNull] AraCParser.Argument_listContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitStatement([NotNull] AraCParser.StatementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.assignment_statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitAssignment_statement([NotNull] AraCParser.Assignment_statementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.left_hand_side"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLeft_hand_side([NotNull] AraCParser.Left_hand_sideContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.if_statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitIf_statement([NotNull] AraCParser.If_statementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.while_statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitWhile_statement([NotNull] AraCParser.While_statementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.return_statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitReturn_statement([NotNull] AraCParser.Return_statementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.result_statement"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitResult_statement([NotNull] AraCParser.Result_statementContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.var_declaration"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitVar_declaration([NotNull] AraCParser.Var_declarationContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.colon"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitColon([NotNull] AraCParser.ColonContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="AraCParser.data_type"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitData_type([NotNull] AraCParser.Data_typeContext context);
 }
 } // namespace AntlrOutput

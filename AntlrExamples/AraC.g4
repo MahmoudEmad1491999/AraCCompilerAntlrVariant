@@ -1,6 +1,6 @@
 grammar AraC;
 
-programm: (
+program: (
 		global_var_declaratoin
 		| function_declaration
 		| operatoin_declaration
@@ -10,8 +10,11 @@ global_var_declaratoin:
 	data_type IDENTIFIER (ASSIGN expression)? FASLA_MANQUOTA;
 
 function_declaration:
-	FUNCTION IDENTIFIER RIGHT_PARENTHESIS LEFT_PARENTHESIS data_type RIGHT_CURLY_BRACKET statement*
-		LEFT_CURLY_BRACKET;
+	FUNCTION IDENTIFIER RIGHT_PARENTHESIS param_list LEFT_PARENTHESIS data_type RIGHT_CURLY_BRACKET
+		statement* LEFT_CURLY_BRACKET;
+
+param_list: (data_type IDENTIFIER ('،' data_type IDENTIFIER)*)
+	|;
 
 operatoin_declaration:
 	OPERATION IDENTIFIER RIGHT_PARENTHESIS LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
@@ -175,7 +178,7 @@ ARABIC_INT_LITERAL: [٠-٩]+;
 ENGLISH_INT_LITERAL: [0-9]+;
 
 // Identifier regular expression.
-IDENTIFIER: [a-zA-Zا-ي] [a-zA-Zا-ي0-9٠-٩_]*;
+IDENTIFIER: [a-zA-Zء-ي] [a-zA-Zء-ي0-9٠-٩_]*;
 
 data_type:
 	INT_DATA_TYPE
