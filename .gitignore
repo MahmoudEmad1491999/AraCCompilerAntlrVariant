@@ -1,2 +1,4 @@
-AntlrExamples/bin
-.vscode
+AntlrExamples/bin/*
+.vscode/*
+AntlrExamples/.antlr/*
+AntlrExamples/.vscode/*
