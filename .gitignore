@@ -1,4 +1,5 @@
-AntlrExamples/bin/*
-.vscode/*
-AntlrExamples/.antlr/*
-AntlrExamples/.vscode/*
+AntlrExamples/bin/
+AntlrExamples/obj/
+.vscode/
+AntlrExamples/.antlr/
+AntlrExamples/.vscode/
