@@ -22,14 +22,8 @@ namespace AntlrExamples
             ITokenStream tokenStream = new CommonTokenStream(tokenSource);
             AraCParser araCParser = new AraCParser(tokenStream);
             AraCParser.ProgramContext programContext = araCParser.program();
-            Console.WriteLine("//////////////////////////////////////////");
-            
-            foreach (var item in programContext.children)
-            {
-                Console.WriteLine(item);
-            }
-            Console.WriteLine(programContext.children);
-            Console.WriteLine("//////////////////////////////////////////");
+
+
 
 
         }

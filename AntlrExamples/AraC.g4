@@ -21,44 +21,44 @@ operatoin_declaration:
 		LEFT_CURLY_BRACKET;
 
 expression:
-	expression RIGHT_PARENTHESIS argument_list LEFT_PARENTHESIS
-	| expression RIGHT_SQUARE_BRACKET expression LEFT_SQUARE_BRACKET
-	| expression (DOT | ARROW) expression
-	| (PLUS | MINUS) expression
-	| (LOGICAL_NOT | BITWISE_NOT) expression
-	| RIGHT_PARENTHESIS (IDENTIFIER | data_type) LEFT_PARENTHESIS expression
-	| ADDRESS_OF_OPERATOR RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
-	| VALUE_INSIDE_OPERATOR RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
-	| SIZE_OF RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
-	| expression (MULTIPLY | DIVIDE) expression
-	| expression (PLUS | MINUS) expression
-	| expression (SHIFT_RIGHT | SHIFT_LEFT) expression
+	expression RIGHT_PARENTHESIS argument_list LEFT_PARENTHESIS					# funciton_calling_expression
+	| expression RIGHT_SQUARE_BRACKET expression LEFT_SQUARE_BRACKET			# array_subscription_expression
+	| expression (DOT | ARROW) expression										# dot_arrow_expression
+	| (PLUS | MINUS) expression													# unary_plus_or_minus_expression
+	| (LOGICAL_NOT | BITWISE_NOT) expression									# unary_negation_logical_and_bitwise
+	| RIGHT_PARENTHESIS (IDENTIFIER | data_type) LEFT_PARENTHESIS expression	# casting_expression
+	| ADDRESS_OF_OPERATOR expression											# address_of_expression
+	| VALUE_INSIDE_OPERATOR expression											# value_inside_address_expression
+	| SIZE_OF expression														# size_of_expression
+	| expression (MULTIPLY | DIVIDE) expression									# multiplicative_expression
+	| expression (PLUS | MINUS) expression										# additive_expression
+	| expression (SHIFT_RIGHT | SHIFT_LEFT) expression							# bitwise_shift_expression
 	| expression (
 		GREATER_THAN_EQUAL
 		| LESS_THAN_EQUAL
 		| GREATER_THAN
 		| LESS_THAN
-	) expression
-	| expression (EQUAL | NOT_EQUAL) expression
-	| expression (BITWISE_AND) expression
-	| expression (BITWISE_XOR) expression
-	| expression (BITWISE_OR) expression
-	| expression (LOGICAL_AND) expression
-	| expression (LOGICAL_OR) expression
-	| RIGHT_PARENTHESIS expression LEFT_PARENTHESIS
-	| Literal
-	| IDENTIFIER;
+	) expression									# comparative_expression
+	| expression (EQUAL | NOT_EQUAL) expression		# equality_testing_expression
+	| expression (BITWISE_AND) expression			# bitwise_and_expression
+	| expression (BITWISE_XOR) expression			# bitwise_xor_expression
+	| expression (BITWISE_OR) expression			# bitwise_or_expression
+	| expression (LOGICAL_AND) expression			# logical_and_expressoin
+	| expression (LOGICAL_OR) expression			# logical_or_expression
+	| RIGHT_PARENTHESIS expression LEFT_PARENTHESIS	# parenthesis_expression
+	| Literal										# literal_expression
+	| IDENTIFIER									# identifier_expression;
 
 argument_list: expression (FASLA expression)*;
 
 statement:
-	assignment_statement
-	| return_statement
-	| result_statement
-	| if_statement
-	| while_statement
-	| var_declaration
-	| expression FASLA_MANQUOTA;
+	assignment_statement		# assignment_statement_typeof_statement
+	| return_statement			# return_statement_typeof_statement
+	| result_statement			# result_statement_typeof_statement
+	| if_statement				# if_statement_typeof_statement
+	| while_statement			# while_statement_typeof_statement
+	| var_declaration			# var_declaration_typeof_statement
+	| expression FASLA_MANQUOTA	# expression_statement_typeof_statement;
 
 assignment_statement:
 	left_hand_side ASSIGN expression FASLA_MANQUOTA;
