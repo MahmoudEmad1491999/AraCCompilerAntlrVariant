@@ -14,6 +14,7 @@ namespace AntlrExamples
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("MahmoudEmad");
             string path = "/home/mahmoud/AraCAntlrVariant/AntlrExamples/testfile.arac";
             string input = File.ReadAllText(path);
 
