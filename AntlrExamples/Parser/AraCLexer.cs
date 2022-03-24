@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/mahmoud/repos/AraCCompilerAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
+// Generated from /home/mahmoud/projects/AraCCompilerAntlrVariant/AntlrExamples/AraC.g4 by ANTLR 4.8
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace AntlrOutput {
+namespace Parser {
 using System;
 using System.IO;
 using System.Text;
@@ -34,19 +34,18 @@ public partial class AraCLexer : Lexer {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
-		T__0=1, Literal=2, LEFT_PARENTHESIS=3, RIGHT_PARENTHESIS=4, LEFT_SQUARE_BRACKET=5, 
-		RIGHT_SQUARE_BRACKET=6, LEFT_CURLY_BRACKET=7, RIGHT_CURLY_BRACKET=8, ADDRESS_OF_OPERATOR=9, 
-		VALUE_INSIDE_OPERATOR=10, SIZE_OF=11, DOT=12, FASLA=13, FASLA_MANQUOTA=14, 
-		ARROW=15, PLUS=16, MINUS=17, MULTIPLY=18, DIVIDE=19, ARABIC_MODULS=20, 
-		MODULUS=21, LOGICAL_AND=22, LOGICAL_OR=23, LOGICAL_NOT=24, SHIFT_LEFT=25, 
-		SHIFT_RIGHT_ARITHMETIC=26, SHIFT_RIGHT=27, BITWISE_AND=28, BITWISE_OR=29, 
-		BITWISE_XOR=30, BITWISE_NOT=31, LESS_THAN_EQUAL=32, GREATER_THAN_EQUAL=33, 
-		LESS_THAN=34, GREATER_THAN=35, EQUAL=36, NOT_EQUAL=37, ASSIGN=38, FUNCTION=39, 
-		OPERATION=40, RETURN_KEYWORD=41, RESULT_KEYWORD=42, IF_KEYWORD=43, WHILE_KEYWORD=44, 
-		BREAK_KEYWORD=45, CONTINUE_KEYWORRD=46, INT_DATA_TYPE=47, UINT_DATA_TYPE=48, 
-		BYTE_DATA_TYPE=49, UBYTE_DATA_TYPE=50, SHORT_DATA_TYPE=51, USHORT_DATA_TYPE=52, 
-		LONG_DATA_TYPE=53, ULONG_DATA_TYPE=54, STRING_LITERAL=55, CHARACTER_LITERAL=56, 
-		WHITE_SPACE=57, ARABIC_INT_LITERAL=58, ENGLISH_INT_LITERAL=59, IDENTIFIER=60;
+		Literal=1, LP=2, RP=3, LSB=4, RSB=5, LCB=6, RCB=7, ADDRESS_OF_OPERATOR=8, 
+		VALUE_INSIDE_OPERATOR=9, SIZE_OF=10, DOT=11, FASLA=12, FASLA_MANQUOTA=13, 
+		ARROW=14, COLON=15, PLUS=16, MINUS=17, MULTIPLY=18, DIVIDE=19, ARABIC_MODULS=20, 
+		MODULUS=21, LAND=22, LOR=23, LOGICAL_NOT=24, SL_SYMBOL=25, SRA_SYM=26, 
+		SR_SYM=27, BAND_SYM=28, BOR_SYM=29, BXOR_SYM=30, BNOT_SYM=31, LTE_SYM=32, 
+		GTE_SYM=33, LT_SYM=34, GT_SYM=35, EQUAL_SYM=36, NOTEQ_SYM=37, ASSIGN_SYM=38, 
+		FUNC_KEYWORD=39, OPER_KEYWORD=40, RET_KEYWORD=41, RES_KEYWORD=42, IF_KEYWORD=43, 
+		WHILE_KEYWORD=44, BREAK_KEYWORD=45, CONTINUE_KEYWORRD=46, INT_DATA_TYPE=47, 
+		UINT_DATA_TYPE=48, BYTE_DATA_TYPE=49, UBYTE_DATA_TYPE=50, SHORT_DATA_TYPE=51, 
+		USHORT_DATA_TYPE=52, LONG_DATA_TYPE=53, ULONG_DATA_TYPE=54, STRING_LITERAL=55, 
+		CHARACTER_LITERAL=56, WHITE_SPACE=57, ARABIC_INT_LITERAL=58, ENGLISH_INT_LITERAL=59, 
+		ID=60;
 	public static string[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -56,19 +55,17 @@ public partial class AraCLexer : Lexer {
 	};
 
 	public static readonly string[] ruleNames = {
-		"T__0", "Literal", "LEFT_PARENTHESIS", "RIGHT_PARENTHESIS", "LEFT_SQUARE_BRACKET", 
-		"RIGHT_SQUARE_BRACKET", "LEFT_CURLY_BRACKET", "RIGHT_CURLY_BRACKET", "ADDRESS_OF_OPERATOR", 
+		"Literal", "LP", "RP", "LSB", "RSB", "LCB", "RCB", "ADDRESS_OF_OPERATOR", 
 		"VALUE_INSIDE_OPERATOR", "SIZE_OF", "DOT", "FASLA", "FASLA_MANQUOTA", 
-		"ARROW", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "ARABIC_MODULS", "MODULUS", 
-		"LOGICAL_AND", "LOGICAL_OR", "LOGICAL_NOT", "SHIFT_LEFT", "SHIFT_RIGHT_ARITHMETIC", 
-		"SHIFT_RIGHT", "BITWISE_AND", "BITWISE_OR", "BITWISE_XOR", "BITWISE_NOT", 
-		"LESS_THAN_EQUAL", "GREATER_THAN_EQUAL", "LESS_THAN", "GREATER_THAN", 
-		"EQUAL", "NOT_EQUAL", "ASSIGN", "FUNCTION", "OPERATION", "RETURN_KEYWORD", 
-		"RESULT_KEYWORD", "IF_KEYWORD", "WHILE_KEYWORD", "BREAK_KEYWORD", "CONTINUE_KEYWORRD", 
-		"INT_DATA_TYPE", "UINT_DATA_TYPE", "BYTE_DATA_TYPE", "UBYTE_DATA_TYPE", 
-		"SHORT_DATA_TYPE", "USHORT_DATA_TYPE", "LONG_DATA_TYPE", "ULONG_DATA_TYPE", 
-		"STRING_LITERAL", "ESCAPED_CHARACTERS", "CHARACTER_LITERAL", "WHITE_SPACE", 
-		"ARABIC_INT_LITERAL", "ENGLISH_INT_LITERAL", "IDENTIFIER"
+		"ARROW", "COLON", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "ARABIC_MODULS", 
+		"MODULUS", "LAND", "LOR", "LOGICAL_NOT", "SL_SYMBOL", "SRA_SYM", "SR_SYM", 
+		"BAND_SYM", "BOR_SYM", "BXOR_SYM", "BNOT_SYM", "LTE_SYM", "GTE_SYM", "LT_SYM", 
+		"GT_SYM", "EQUAL_SYM", "NOTEQ_SYM", "ASSIGN_SYM", "FUNC_KEYWORD", "OPER_KEYWORD", 
+		"RET_KEYWORD", "RES_KEYWORD", "IF_KEYWORD", "WHILE_KEYWORD", "BREAK_KEYWORD", 
+		"CONTINUE_KEYWORRD", "INT_DATA_TYPE", "UINT_DATA_TYPE", "BYTE_DATA_TYPE", 
+		"UBYTE_DATA_TYPE", "SHORT_DATA_TYPE", "USHORT_DATA_TYPE", "LONG_DATA_TYPE", 
+		"ULONG_DATA_TYPE", "STRING_LITERAL", "ESCAPED_CHARACTERS", "CHARACTER_LITERAL", 
+		"WHITE_SPACE", "ARABIC_INT_LITERAL", "ENGLISH_INT_LITERAL", "ID"
 	};
 
 
@@ -82,9 +79,9 @@ public partial class AraCLexer : Lexer {
 	}
 
 	private static readonly string[] _LiteralNames = {
-		null, "':'", null, "'('", "')'", "'['", "']'", "'{'", "'}'", "'\u0639\u0646\u0648\u0627\u0646:'", 
+		null, null, "'('", "')'", "'['", "']'", "'{'", "'}'", "'\u0639\u0646\u0648\u0627\u0646:'", 
 		"'\u0642\u064A\u0645\u0629:'", "'\u062D\u062C\u0645:'", "'.'", "'\u060C'", 
-		"'\u061B'", "'->'", "'+'", "'-'", "'\u00D7'", "'\u00F7'", "'\u066A'", 
+		"'\u061B'", "'->'", "':'", "'+'", "'-'", "'\u00D7'", "'\u00F7'", "'\u066A'", 
 		"'%'", "'&&'", "'||'", "'!'", "'<<'", "'>>>'", "'>>'", "'&'", "'|'", "'^'", 
 		"'~'", "'<='", "'>='", "'<'", "'>'", "'=='", "'!='", "':='", "'\u062F\u0627\u0644\u0629'", 
 		"'\u0639\u0645\u0644\u064A\u0629'", "'\u0631\u062C\u0648\u0639'", "'\u0627\u0644\u0646\u0627\u062A\u062C'", 
@@ -95,19 +92,17 @@ public partial class AraCLexer : Lexer {
 		"'\u0637\u0628\u064A\u0639\u064A_\u0668'"
 	};
 	private static readonly string[] _SymbolicNames = {
-		null, null, "Literal", "LEFT_PARENTHESIS", "RIGHT_PARENTHESIS", "LEFT_SQUARE_BRACKET", 
-		"RIGHT_SQUARE_BRACKET", "LEFT_CURLY_BRACKET", "RIGHT_CURLY_BRACKET", "ADDRESS_OF_OPERATOR", 
+		null, "Literal", "LP", "RP", "LSB", "RSB", "LCB", "RCB", "ADDRESS_OF_OPERATOR", 
 		"VALUE_INSIDE_OPERATOR", "SIZE_OF", "DOT", "FASLA", "FASLA_MANQUOTA", 
-		"ARROW", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "ARABIC_MODULS", "MODULUS", 
-		"LOGICAL_AND", "LOGICAL_OR", "LOGICAL_NOT", "SHIFT_LEFT", "SHIFT_RIGHT_ARITHMETIC", 
-		"SHIFT_RIGHT", "BITWISE_AND", "BITWISE_OR", "BITWISE_XOR", "BITWISE_NOT", 
-		"LESS_THAN_EQUAL", "GREATER_THAN_EQUAL", "LESS_THAN", "GREATER_THAN", 
-		"EQUAL", "NOT_EQUAL", "ASSIGN", "FUNCTION", "OPERATION", "RETURN_KEYWORD", 
-		"RESULT_KEYWORD", "IF_KEYWORD", "WHILE_KEYWORD", "BREAK_KEYWORD", "CONTINUE_KEYWORRD", 
-		"INT_DATA_TYPE", "UINT_DATA_TYPE", "BYTE_DATA_TYPE", "UBYTE_DATA_TYPE", 
-		"SHORT_DATA_TYPE", "USHORT_DATA_TYPE", "LONG_DATA_TYPE", "ULONG_DATA_TYPE", 
-		"STRING_LITERAL", "CHARACTER_LITERAL", "WHITE_SPACE", "ARABIC_INT_LITERAL", 
-		"ENGLISH_INT_LITERAL", "IDENTIFIER"
+		"ARROW", "COLON", "PLUS", "MINUS", "MULTIPLY", "DIVIDE", "ARABIC_MODULS", 
+		"MODULUS", "LAND", "LOR", "LOGICAL_NOT", "SL_SYMBOL", "SRA_SYM", "SR_SYM", 
+		"BAND_SYM", "BOR_SYM", "BXOR_SYM", "BNOT_SYM", "LTE_SYM", "GTE_SYM", "LT_SYM", 
+		"GT_SYM", "EQUAL_SYM", "NOTEQ_SYM", "ASSIGN_SYM", "FUNC_KEYWORD", "OPER_KEYWORD", 
+		"RET_KEYWORD", "RES_KEYWORD", "IF_KEYWORD", "WHILE_KEYWORD", "BREAK_KEYWORD", 
+		"CONTINUE_KEYWORRD", "INT_DATA_TYPE", "UINT_DATA_TYPE", "BYTE_DATA_TYPE", 
+		"UBYTE_DATA_TYPE", "SHORT_DATA_TYPE", "USHORT_DATA_TYPE", "LONG_DATA_TYPE", 
+		"ULONG_DATA_TYPE", "STRING_LITERAL", "CHARACTER_LITERAL", "WHITE_SPACE", 
+		"ARABIC_INT_LITERAL", "ENGLISH_INT_LITERAL", "ID"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -161,14 +156,14 @@ public partial class AraCLexer : Lexer {
 		'\t', '\x37', '\x4', '\x38', '\t', '\x38', '\x4', '\x39', '\t', '\x39', 
 		'\x4', ':', '\t', ':', '\x4', ';', '\t', ';', '\x4', '<', '\t', '<', '\x4', 
 		'=', '\t', '=', '\x4', '>', '\t', '>', '\x3', '\x2', '\x3', '\x2', '\x3', 
-		'\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x3', '\x5', '\x3', '\x84', 
-		'\n', '\x3', '\x3', '\x4', '\x3', '\x4', '\x3', '\x5', '\x3', '\x5', '\x3', 
-		'\x6', '\x3', '\x6', '\x3', '\a', '\x3', '\a', '\x3', '\b', '\x3', '\b', 
+		'\x2', '\x3', '\x2', '\x5', '\x2', '\x82', '\n', '\x2', '\x3', '\x3', 
+		'\x3', '\x3', '\x3', '\x4', '\x3', '\x4', '\x3', '\x5', '\x3', '\x5', 
+		'\x3', '\x6', '\x3', '\x6', '\x3', '\a', '\x3', '\a', '\x3', '\b', '\x3', 
+		'\b', '\x3', '\t', '\x3', '\t', '\x3', '\t', '\x3', '\t', '\x3', '\t', 
 		'\x3', '\t', '\x3', '\t', '\x3', '\n', '\x3', '\n', '\x3', '\n', '\x3', 
-		'\n', '\x3', '\n', '\x3', '\n', '\x3', '\n', '\x3', '\v', '\x3', '\v', 
-		'\x3', '\v', '\x3', '\v', '\x3', '\v', '\x3', '\v', '\x3', '\f', '\x3', 
-		'\f', '\x3', '\f', '\x3', '\f', '\x3', '\f', '\x3', '\r', '\x3', '\r', 
-		'\x3', '\xE', '\x3', '\xE', '\x3', '\xF', '\x3', '\xF', '\x3', '\x10', 
+		'\n', '\x3', '\n', '\x3', '\n', '\x3', '\v', '\x3', '\v', '\x3', '\v', 
+		'\x3', '\v', '\x3', '\v', '\x3', '\f', '\x3', '\f', '\x3', '\r', '\x3', 
+		'\r', '\x3', '\xE', '\x3', '\xE', '\x3', '\xF', '\x3', '\xF', '\x3', '\xF', 
 		'\x3', '\x10', '\x3', '\x10', '\x3', '\x11', '\x3', '\x11', '\x3', '\x12', 
 		'\x3', '\x12', '\x3', '\x13', '\x3', '\x13', '\x3', '\x14', '\x3', '\x14', 
 		'\x3', '\x15', '\x3', '\x15', '\x3', '\x16', '\x3', '\x16', '\x3', '\x17', 
@@ -259,71 +254,71 @@ public partial class AraCLexer : Lexer {
 		'\x2', '\x2', '\x2', '\x2', 's', '\x3', '\x2', '\x2', '\x2', '\x2', 'u', 
 		'\x3', '\x2', '\x2', '\x2', '\x2', 'w', '\x3', '\x2', '\x2', '\x2', '\x2', 
 		'y', '\x3', '\x2', '\x2', '\x2', '\x2', '{', '\x3', '\x2', '\x2', '\x2', 
-		'\x3', '}', '\x3', '\x2', '\x2', '\x2', '\x5', '\x83', '\x3', '\x2', '\x2', 
-		'\x2', '\a', '\x85', '\x3', '\x2', '\x2', '\x2', '\t', '\x87', '\x3', 
-		'\x2', '\x2', '\x2', '\v', '\x89', '\x3', '\x2', '\x2', '\x2', '\r', '\x8B', 
-		'\x3', '\x2', '\x2', '\x2', '\xF', '\x8D', '\x3', '\x2', '\x2', '\x2', 
-		'\x11', '\x8F', '\x3', '\x2', '\x2', '\x2', '\x13', '\x91', '\x3', '\x2', 
-		'\x2', '\x2', '\x15', '\x98', '\x3', '\x2', '\x2', '\x2', '\x17', '\x9E', 
-		'\x3', '\x2', '\x2', '\x2', '\x19', '\xA3', '\x3', '\x2', '\x2', '\x2', 
-		'\x1B', '\xA5', '\x3', '\x2', '\x2', '\x2', '\x1D', '\xA7', '\x3', '\x2', 
-		'\x2', '\x2', '\x1F', '\xA9', '\x3', '\x2', '\x2', '\x2', '!', '\xAC', 
-		'\x3', '\x2', '\x2', '\x2', '#', '\xAE', '\x3', '\x2', '\x2', '\x2', '%', 
-		'\xB0', '\x3', '\x2', '\x2', '\x2', '\'', '\xB2', '\x3', '\x2', '\x2', 
-		'\x2', ')', '\xB4', '\x3', '\x2', '\x2', '\x2', '+', '\xB6', '\x3', '\x2', 
-		'\x2', '\x2', '-', '\xB8', '\x3', '\x2', '\x2', '\x2', '/', '\xBB', '\x3', 
-		'\x2', '\x2', '\x2', '\x31', '\xBE', '\x3', '\x2', '\x2', '\x2', '\x33', 
-		'\xC0', '\x3', '\x2', '\x2', '\x2', '\x35', '\xC3', '\x3', '\x2', '\x2', 
-		'\x2', '\x37', '\xC7', '\x3', '\x2', '\x2', '\x2', '\x39', '\xCA', '\x3', 
-		'\x2', '\x2', '\x2', ';', '\xCC', '\x3', '\x2', '\x2', '\x2', '=', '\xCE', 
-		'\x3', '\x2', '\x2', '\x2', '?', '\xD0', '\x3', '\x2', '\x2', '\x2', '\x41', 
-		'\xD2', '\x3', '\x2', '\x2', '\x2', '\x43', '\xD5', '\x3', '\x2', '\x2', 
-		'\x2', '\x45', '\xD8', '\x3', '\x2', '\x2', '\x2', 'G', '\xDA', '\x3', 
-		'\x2', '\x2', '\x2', 'I', '\xDC', '\x3', '\x2', '\x2', '\x2', 'K', '\xDF', 
-		'\x3', '\x2', '\x2', '\x2', 'M', '\xE2', '\x3', '\x2', '\x2', '\x2', 'O', 
-		'\xE5', '\x3', '\x2', '\x2', '\x2', 'Q', '\xEA', '\x3', '\x2', '\x2', 
-		'\x2', 'S', '\xF0', '\x3', '\x2', '\x2', '\x2', 'U', '\xF5', '\x3', '\x2', 
-		'\x2', '\x2', 'W', '\x102', '\x3', '\x2', '\x2', '\x2', 'Y', '\x104', 
-		'\x3', '\x2', '\x2', '\x2', '[', '\x10A', '\x3', '\x2', '\x2', '\x2', 
-		']', '\x116', '\x3', '\x2', '\x2', '\x2', '_', '\x118', '\x3', '\x2', 
-		'\x2', '\x2', '\x61', '\x11D', '\x3', '\x2', '\x2', '\x2', '\x63', '\x123', 
-		'\x3', '\x2', '\x2', '\x2', '\x65', '\x12A', '\x3', '\x2', '\x2', '\x2', 
-		'g', '\x132', '\x3', '\x2', '\x2', '\x2', 'i', '\x139', '\x3', '\x2', 
-		'\x2', '\x2', 'k', '\x141', '\x3', '\x2', '\x2', '\x2', 'm', '\x148', 
-		'\x3', '\x2', '\x2', '\x2', 'o', '\x150', '\x3', '\x2', '\x2', '\x2', 
-		'q', '\x160', '\x3', '\x2', '\x2', '\x2', 's', '\x162', '\x3', '\x2', 
-		'\x2', '\x2', 'u', '\x169', '\x3', '\x2', '\x2', '\x2', 'w', '\x16E', 
-		'\x3', '\x2', '\x2', '\x2', 'y', '\x173', '\x3', '\x2', '\x2', '\x2', 
-		'{', '\x177', '\x3', '\x2', '\x2', '\x2', '}', '~', '\a', '<', '\x2', 
-		'\x2', '~', '\x4', '\x3', '\x2', '\x2', '\x2', '\x7F', '\x84', '\x5', 
-		'o', '\x38', '\x2', '\x80', '\x84', '\x5', 's', ':', '\x2', '\x81', '\x84', 
-		'\x5', 'w', '<', '\x2', '\x82', '\x84', '\x5', 'y', '=', '\x2', '\x83', 
-		'\x7F', '\x3', '\x2', '\x2', '\x2', '\x83', '\x80', '\x3', '\x2', '\x2', 
-		'\x2', '\x83', '\x81', '\x3', '\x2', '\x2', '\x2', '\x83', '\x82', '\x3', 
-		'\x2', '\x2', '\x2', '\x84', '\x6', '\x3', '\x2', '\x2', '\x2', '\x85', 
-		'\x86', '\a', '*', '\x2', '\x2', '\x86', '\b', '\x3', '\x2', '\x2', '\x2', 
-		'\x87', '\x88', '\a', '+', '\x2', '\x2', '\x88', '\n', '\x3', '\x2', '\x2', 
-		'\x2', '\x89', '\x8A', '\a', ']', '\x2', '\x2', '\x8A', '\f', '\x3', '\x2', 
-		'\x2', '\x2', '\x8B', '\x8C', '\a', '_', '\x2', '\x2', '\x8C', '\xE', 
-		'\x3', '\x2', '\x2', '\x2', '\x8D', '\x8E', '\a', '}', '\x2', '\x2', '\x8E', 
-		'\x10', '\x3', '\x2', '\x2', '\x2', '\x8F', '\x90', '\a', '\x7F', '\x2', 
-		'\x2', '\x90', '\x12', '\x3', '\x2', '\x2', '\x2', '\x91', '\x92', '\a', 
-		'\x63B', '\x2', '\x2', '\x92', '\x93', '\a', '\x648', '\x2', '\x2', '\x93', 
-		'\x94', '\a', '\x64A', '\x2', '\x2', '\x94', '\x95', '\a', '\x629', '\x2', 
-		'\x2', '\x95', '\x96', '\a', '\x648', '\x2', '\x2', '\x96', '\x97', '\a', 
-		'<', '\x2', '\x2', '\x97', '\x14', '\x3', '\x2', '\x2', '\x2', '\x98', 
-		'\x99', '\a', '\x644', '\x2', '\x2', '\x99', '\x9A', '\a', '\x64C', '\x2', 
-		'\x2', '\x9A', '\x9B', '\a', '\x647', '\x2', '\x2', '\x9B', '\x9C', '\a', 
-		'\x62B', '\x2', '\x2', '\x9C', '\x9D', '\a', '<', '\x2', '\x2', '\x9D', 
-		'\x16', '\x3', '\x2', '\x2', '\x2', '\x9E', '\x9F', '\a', '\x62F', '\x2', 
-		'\x2', '\x9F', '\xA0', '\a', '\x62E', '\x2', '\x2', '\xA0', '\xA1', '\a', 
-		'\x647', '\x2', '\x2', '\xA1', '\xA2', '\a', '<', '\x2', '\x2', '\xA2', 
-		'\x18', '\x3', '\x2', '\x2', '\x2', '\xA3', '\xA4', '\a', '\x30', '\x2', 
-		'\x2', '\xA4', '\x1A', '\x3', '\x2', '\x2', '\x2', '\xA5', '\xA6', '\a', 
-		'\x60E', '\x2', '\x2', '\xA6', '\x1C', '\x3', '\x2', '\x2', '\x2', '\xA7', 
-		'\xA8', '\a', '\x61D', '\x2', '\x2', '\xA8', '\x1E', '\x3', '\x2', '\x2', 
-		'\x2', '\xA9', '\xAA', '\a', '/', '\x2', '\x2', '\xAA', '\xAB', '\a', 
-		'@', '\x2', '\x2', '\xAB', ' ', '\x3', '\x2', '\x2', '\x2', '\xAC', '\xAD', 
+		'\x3', '\x81', '\x3', '\x2', '\x2', '\x2', '\x5', '\x83', '\x3', '\x2', 
+		'\x2', '\x2', '\a', '\x85', '\x3', '\x2', '\x2', '\x2', '\t', '\x87', 
+		'\x3', '\x2', '\x2', '\x2', '\v', '\x89', '\x3', '\x2', '\x2', '\x2', 
+		'\r', '\x8B', '\x3', '\x2', '\x2', '\x2', '\xF', '\x8D', '\x3', '\x2', 
+		'\x2', '\x2', '\x11', '\x8F', '\x3', '\x2', '\x2', '\x2', '\x13', '\x96', 
+		'\x3', '\x2', '\x2', '\x2', '\x15', '\x9C', '\x3', '\x2', '\x2', '\x2', 
+		'\x17', '\xA1', '\x3', '\x2', '\x2', '\x2', '\x19', '\xA3', '\x3', '\x2', 
+		'\x2', '\x2', '\x1B', '\xA5', '\x3', '\x2', '\x2', '\x2', '\x1D', '\xA7', 
+		'\x3', '\x2', '\x2', '\x2', '\x1F', '\xAA', '\x3', '\x2', '\x2', '\x2', 
+		'!', '\xAC', '\x3', '\x2', '\x2', '\x2', '#', '\xAE', '\x3', '\x2', '\x2', 
+		'\x2', '%', '\xB0', '\x3', '\x2', '\x2', '\x2', '\'', '\xB2', '\x3', '\x2', 
+		'\x2', '\x2', ')', '\xB4', '\x3', '\x2', '\x2', '\x2', '+', '\xB6', '\x3', 
+		'\x2', '\x2', '\x2', '-', '\xB8', '\x3', '\x2', '\x2', '\x2', '/', '\xBB', 
+		'\x3', '\x2', '\x2', '\x2', '\x31', '\xBE', '\x3', '\x2', '\x2', '\x2', 
+		'\x33', '\xC0', '\x3', '\x2', '\x2', '\x2', '\x35', '\xC3', '\x3', '\x2', 
+		'\x2', '\x2', '\x37', '\xC7', '\x3', '\x2', '\x2', '\x2', '\x39', '\xCA', 
+		'\x3', '\x2', '\x2', '\x2', ';', '\xCC', '\x3', '\x2', '\x2', '\x2', '=', 
+		'\xCE', '\x3', '\x2', '\x2', '\x2', '?', '\xD0', '\x3', '\x2', '\x2', 
+		'\x2', '\x41', '\xD2', '\x3', '\x2', '\x2', '\x2', '\x43', '\xD5', '\x3', 
+		'\x2', '\x2', '\x2', '\x45', '\xD8', '\x3', '\x2', '\x2', '\x2', 'G', 
+		'\xDA', '\x3', '\x2', '\x2', '\x2', 'I', '\xDC', '\x3', '\x2', '\x2', 
+		'\x2', 'K', '\xDF', '\x3', '\x2', '\x2', '\x2', 'M', '\xE2', '\x3', '\x2', 
+		'\x2', '\x2', 'O', '\xE5', '\x3', '\x2', '\x2', '\x2', 'Q', '\xEA', '\x3', 
+		'\x2', '\x2', '\x2', 'S', '\xF0', '\x3', '\x2', '\x2', '\x2', 'U', '\xF5', 
+		'\x3', '\x2', '\x2', '\x2', 'W', '\x102', '\x3', '\x2', '\x2', '\x2', 
+		'Y', '\x104', '\x3', '\x2', '\x2', '\x2', '[', '\x10A', '\x3', '\x2', 
+		'\x2', '\x2', ']', '\x116', '\x3', '\x2', '\x2', '\x2', '_', '\x118', 
+		'\x3', '\x2', '\x2', '\x2', '\x61', '\x11D', '\x3', '\x2', '\x2', '\x2', 
+		'\x63', '\x123', '\x3', '\x2', '\x2', '\x2', '\x65', '\x12A', '\x3', '\x2', 
+		'\x2', '\x2', 'g', '\x132', '\x3', '\x2', '\x2', '\x2', 'i', '\x139', 
+		'\x3', '\x2', '\x2', '\x2', 'k', '\x141', '\x3', '\x2', '\x2', '\x2', 
+		'm', '\x148', '\x3', '\x2', '\x2', '\x2', 'o', '\x150', '\x3', '\x2', 
+		'\x2', '\x2', 'q', '\x160', '\x3', '\x2', '\x2', '\x2', 's', '\x162', 
+		'\x3', '\x2', '\x2', '\x2', 'u', '\x169', '\x3', '\x2', '\x2', '\x2', 
+		'w', '\x16E', '\x3', '\x2', '\x2', '\x2', 'y', '\x173', '\x3', '\x2', 
+		'\x2', '\x2', '{', '\x177', '\x3', '\x2', '\x2', '\x2', '}', '\x82', '\x5', 
+		'o', '\x38', '\x2', '~', '\x82', '\x5', 's', ':', '\x2', '\x7F', '\x82', 
+		'\x5', 'w', '<', '\x2', '\x80', '\x82', '\x5', 'y', '=', '\x2', '\x81', 
+		'}', '\x3', '\x2', '\x2', '\x2', '\x81', '~', '\x3', '\x2', '\x2', '\x2', 
+		'\x81', '\x7F', '\x3', '\x2', '\x2', '\x2', '\x81', '\x80', '\x3', '\x2', 
+		'\x2', '\x2', '\x82', '\x4', '\x3', '\x2', '\x2', '\x2', '\x83', '\x84', 
+		'\a', '*', '\x2', '\x2', '\x84', '\x6', '\x3', '\x2', '\x2', '\x2', '\x85', 
+		'\x86', '\a', '+', '\x2', '\x2', '\x86', '\b', '\x3', '\x2', '\x2', '\x2', 
+		'\x87', '\x88', '\a', ']', '\x2', '\x2', '\x88', '\n', '\x3', '\x2', '\x2', 
+		'\x2', '\x89', '\x8A', '\a', '_', '\x2', '\x2', '\x8A', '\f', '\x3', '\x2', 
+		'\x2', '\x2', '\x8B', '\x8C', '\a', '}', '\x2', '\x2', '\x8C', '\xE', 
+		'\x3', '\x2', '\x2', '\x2', '\x8D', '\x8E', '\a', '\x7F', '\x2', '\x2', 
+		'\x8E', '\x10', '\x3', '\x2', '\x2', '\x2', '\x8F', '\x90', '\a', '\x63B', 
+		'\x2', '\x2', '\x90', '\x91', '\a', '\x648', '\x2', '\x2', '\x91', '\x92', 
+		'\a', '\x64A', '\x2', '\x2', '\x92', '\x93', '\a', '\x629', '\x2', '\x2', 
+		'\x93', '\x94', '\a', '\x648', '\x2', '\x2', '\x94', '\x95', '\a', '<', 
+		'\x2', '\x2', '\x95', '\x12', '\x3', '\x2', '\x2', '\x2', '\x96', '\x97', 
+		'\a', '\x644', '\x2', '\x2', '\x97', '\x98', '\a', '\x64C', '\x2', '\x2', 
+		'\x98', '\x99', '\a', '\x647', '\x2', '\x2', '\x99', '\x9A', '\a', '\x62B', 
+		'\x2', '\x2', '\x9A', '\x9B', '\a', '<', '\x2', '\x2', '\x9B', '\x14', 
+		'\x3', '\x2', '\x2', '\x2', '\x9C', '\x9D', '\a', '\x62F', '\x2', '\x2', 
+		'\x9D', '\x9E', '\a', '\x62E', '\x2', '\x2', '\x9E', '\x9F', '\a', '\x647', 
+		'\x2', '\x2', '\x9F', '\xA0', '\a', '<', '\x2', '\x2', '\xA0', '\x16', 
+		'\x3', '\x2', '\x2', '\x2', '\xA1', '\xA2', '\a', '\x30', '\x2', '\x2', 
+		'\xA2', '\x18', '\x3', '\x2', '\x2', '\x2', '\xA3', '\xA4', '\a', '\x60E', 
+		'\x2', '\x2', '\xA4', '\x1A', '\x3', '\x2', '\x2', '\x2', '\xA5', '\xA6', 
+		'\a', '\x61D', '\x2', '\x2', '\xA6', '\x1C', '\x3', '\x2', '\x2', '\x2', 
+		'\xA7', '\xA8', '\a', '/', '\x2', '\x2', '\xA8', '\xA9', '\a', '@', '\x2', 
+		'\x2', '\xA9', '\x1E', '\x3', '\x2', '\x2', '\x2', '\xAA', '\xAB', '\a', 
+		'<', '\x2', '\x2', '\xAB', ' ', '\x3', '\x2', '\x2', '\x2', '\xAC', '\xAD', 
 		'\a', '-', '\x2', '\x2', '\xAD', '\"', '\x3', '\x2', '\x2', '\x2', '\xAE', 
 		'\xAF', '\a', '/', '\x2', '\x2', '\xAF', '$', '\x3', '\x2', '\x2', '\x2', 
 		'\xB0', '\xB1', '\a', '\xD9', '\x2', '\x2', '\xB1', '&', '\x3', '\x2', 
@@ -457,7 +452,7 @@ public partial class AraCLexer : Lexer {
 		'\x178', '\x3', '\x2', '\x2', '\x2', '\x17A', '\x17D', '\x3', '\x2', '\x2', 
 		'\x2', '\x17B', '\x179', '\x3', '\x2', '\x2', '\x2', '\x17B', '\x17C', 
 		'\x3', '\x2', '\x2', '\x2', '\x17C', '|', '\x3', '\x2', '\x2', '\x2', 
-		'\x17D', '\x17B', '\x3', '\x2', '\x2', '\x2', '\r', '\x2', '\x83', '\x102', 
+		'\x17D', '\x17B', '\x3', '\x2', '\x2', '\x2', '\r', '\x2', '\x81', '\x102', 
 		'\x116', '\x153', '\x155', '\x160', '\x165', '\x170', '\x175', '\x17B', 
 		'\x3', '\b', '\x2', '\x2',
 	};
@@ -467,4 +462,4 @@ public partial class AraCLexer : Lexer {
 
 
 }
-} // namespace AntlrOutput
+} // namespace Parser

@@ -1,84 +1,73 @@
 grammar AraC;
 
 program: (
-		global_var_declaratoin
+		global_var_declaratoin 
 		| function_declaration
 		| operatoin_declaration
-	)*;
+	)+;
 
 global_var_declaratoin:
-	data_type IDENTIFIER (ASSIGN expression)? FASLA_MANQUOTA;
+	data_type ID (ASSIGN_SYM expression)? FASLA_MANQUOTA;
 
 function_declaration:
-	FUNCTION IDENTIFIER RIGHT_PARENTHESIS param_list LEFT_PARENTHESIS data_type RIGHT_CURLY_BRACKET
-		statement* LEFT_CURLY_BRACKET;
-
-param_list: (data_type IDENTIFIER ('،' data_type IDENTIFIER)*)
-	|;
+	FUNC_KEYWORD ID RP param_list LP COLON data_type RCB statement* LCB;
 
 operatoin_declaration:
-	OPERATION IDENTIFIER RIGHT_PARENTHESIS LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
-		LEFT_CURLY_BRACKET;
+	OPER_KEYWORD ID RP param_list LP RCB statement* LCB;
+
+param_list: (data_type ID (FASLA data_type ID)*) |  ;
 
 expression:
-	expression RIGHT_PARENTHESIS argument_list LEFT_PARENTHESIS					# funciton_calling_expression
-	| expression RIGHT_SQUARE_BRACKET expression LEFT_SQUARE_BRACKET			# array_subscription_expression
-	| expression (DOT | ARROW) expression										# dot_arrow_expression
-	| (PLUS | MINUS) expression													# unary_plus_or_minus_expression
-	| (LOGICAL_NOT | BITWISE_NOT) expression									# unary_negation_logical_and_bitwise
-	| RIGHT_PARENTHESIS (IDENTIFIER | data_type) LEFT_PARENTHESIS expression	# casting_expression
-	| ADDRESS_OF_OPERATOR expression											# address_of_expression
-	| VALUE_INSIDE_OPERATOR expression											# value_inside_address_expression
-	| SIZE_OF expression														# size_of_expression
-	| expression (MULTIPLY | DIVIDE) expression									# multiplicative_expression
-	| expression (PLUS | MINUS) expression										# additive_expression
-	| expression (SHIFT_RIGHT | SHIFT_LEFT) expression							# bitwise_shift_expression
-	| expression (
-		GREATER_THAN_EQUAL
-		| LESS_THAN_EQUAL
-		| GREATER_THAN
-		| LESS_THAN
-	) expression									# comparative_expression
-	| expression (EQUAL | NOT_EQUAL) expression		# equality_testing_expression
-	| expression (BITWISE_AND) expression			# bitwise_and_expression
-	| expression (BITWISE_XOR) expression			# bitwise_xor_expression
-	| expression (BITWISE_OR) expression			# bitwise_or_expression
-	| expression (LOGICAL_AND) expression			# logical_and_expressoin
-	| expression (LOGICAL_OR) expression			# logical_or_expression
-	| RIGHT_PARENTHESIS expression LEFT_PARENTHESIS	# parenthesis_expression
-	| Literal										# literal_expression
-	| IDENTIFIER									# identifier_expression;
+	expression RP argument_list LP									# funciton_calling_expr
+	| expression RSB expression LSB									# array_subscription_expr
+	| (PLUS | MINUS) expression										# unary_arithmetic_expr
+	| (LOGICAL_NOT | BNOT_SYM) expression							# unary_bl_expr
+	| RP (ID | data_type) LP expression								# casting_expr
+	| ADDRESS_OF_OPERATOR expression								# address_of_expr
+	| VALUE_INSIDE_OPERATOR expression								# indirection_of_expr
+	| SIZE_OF expression											# size_of_expr
+	| expression  DIVIDE expression									# multipy_expr
+	| expression MULTIPLY expression								# divide_expr
+	| expression MINUS expression									# subtract_expr
+	| expression PLUS  expression									# add_expr
+	| expression (SR_SYM | SL_SYMBOL) expression					# shift_expr
+	| expression (GTE_SYM | LTE_SYM | GT_SYM | LT_SYM) expression	# comparative_expr
+	| expression (EQUAL_SYM | NOTEQ_SYM) expression					# equality_expr
+	| expression (BAND_SYM) expression								# band_expr
+	| expression (BXOR_SYM) expression								# bxor_expr
+	| expression (BOR_SYM) expression								# bor_expr
+	| expression (LAND) expression									# land_expr
+	| expression (LOR) expression									# lor_expr
+	| RP expression LP												# parenth_expr
+	| Literal														# literal_expr
+	| ID															# identifier_expr;
 
 argument_list: expression (FASLA expression)*;
 
 statement:
-	assignment_statement		# assignment_statement_typeof_statement
-	| return_statement			# return_statement_typeof_statement
-	| result_statement			# result_statement_typeof_statement
-	| if_statement				# if_statement_typeof_statement
-	| while_statement			# while_statement_typeof_statement
-	| var_declaration			# var_declaration_typeof_statement
-	| expression FASLA_MANQUOTA	# expression_statement_typeof_statement;
+	assignment_statement		# assignment_stat
+	| return_statement			# return_stat
+	| result_statement			# result_stat
+	| if_statement				# if_stat
+	| while_statement			# while_stat
+	| var_declaration			# var_decl_stat
+	| expression FASLA_MANQUOTA	# expre_stat;
 
 assignment_statement:
-	left_hand_side ASSIGN expression FASLA_MANQUOTA;
+	ID ASSIGN_SYM expression FASLA_MANQUOTA;
 
-left_hand_side: IDENTIFIER;
 
-if_statement:
-	IF_KEYWORD RIGHT_PARENTHESIS expression LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
-		LEFT_CURLY_BRACKET;
+if_statement: IF_KEYWORD RP expression LP RCB statement* LCB;
 
 while_statement:
-	WHILE_KEYWORD RIGHT_PARENTHESIS expression LEFT_PARENTHESIS RIGHT_CURLY_BRACKET statement*
-		LEFT_CURLY_BRACKET;
+	WHILE_KEYWORD RP expression LP RCB statement* LCB;
 
-return_statement: RETURN_KEYWORD FASLA_MANQUOTA;
+return_statement: RET_KEYWORD FASLA_MANQUOTA;
 
-result_statement: RESULT_KEYWORD expression FASLA_MANQUOTA;
+result_statement: RES_KEYWORD expression FASLA_MANQUOTA;
 
 var_declaration:
-	data_type IDENTIFIER (ASSIGN expression)? FASLA_MANQUOTA;
+	data_type ID (ASSIGN_SYM expression)? FASLA_MANQUOTA;
 
 Literal:
 	STRING_LITERAL
@@ -86,12 +75,12 @@ Literal:
 	| ARABIC_INT_LITERAL
 	| ENGLISH_INT_LITERAL;
 
-LEFT_PARENTHESIS: '(';
-RIGHT_PARENTHESIS: ')';
-LEFT_SQUARE_BRACKET: '[';
-RIGHT_SQUARE_BRACKET: ']';
-LEFT_CURLY_BRACKET: '{';
-RIGHT_CURLY_BRACKET: '}';
+LP: '(';
+RP: ')';
+LSB: '[';
+RSB: ']';
+LCB: '{';
+RCB: '}';
 
 // memory address operators
 ADDRESS_OF_OPERATOR: 'عنوان:';
@@ -103,7 +92,7 @@ DOT: '.';
 FASLA: '،';
 FASLA_MANQUOTA: '؛';
 ARROW: '->';
-colon: ':';
+COLON: ':';
 
 // mathimatical symbols.
 PLUS: '+';
@@ -114,36 +103,36 @@ ARABIC_MODULS: '٪';
 MODULUS: '%';
 
 // logical operations
-LOGICAL_AND: '&&';
-LOGICAL_OR: '||';
+LAND: '&&';
+LOR: '||';
 LOGICAL_NOT: '!';
 
 // Bitwise symbols.
-SHIFT_LEFT: '<<';
-SHIFT_RIGHT_ARITHMETIC: '>>>';
-SHIFT_RIGHT: '>>';
-BITWISE_AND: '&';
-BITWISE_OR: '|';
-BITWISE_XOR: '^';
-BITWISE_NOT: '~';
+SL_SYMBOL: '<<';
+SRA_SYM: '>>>';
+SR_SYM: '>>';
+BAND_SYM: '&';
+BOR_SYM: '|';
+BXOR_SYM: '^';
+BNOT_SYM: '~';
 
 // Relational symbols.
-LESS_THAN_EQUAL: '<=';
-GREATER_THAN_EQUAL: '>=';
-LESS_THAN: '<';
-GREATER_THAN: '>';
-EQUAL: '==';
-NOT_EQUAL: '!=';
+LTE_SYM: '<=';
+GTE_SYM: '>=';
+LT_SYM: '<';
+GT_SYM: '>';
+EQUAL_SYM: '==';
+NOTEQ_SYM: '!=';
 
 // operative symbols.
-ASSIGN: ':=';
+ASSIGN_SYM: ':=';
 
 // keywords
-FUNCTION: 'دالة';
-OPERATION: 'عملية';
+FUNC_KEYWORD: 'دالة';
+OPER_KEYWORD: 'عملية';
 
-RETURN_KEYWORD: 'رجوع';
-RESULT_KEYWORD: 'الناتج';
+RET_KEYWORD: 'رجوع';
+RES_KEYWORD: 'الناتج';
 
 IF_KEYWORD: 'إذا' | 'اذا';
 WHILE_KEYWORD: 'طالما';
@@ -178,7 +167,7 @@ ARABIC_INT_LITERAL: [٠-٩]+;
 ENGLISH_INT_LITERAL: [0-9]+;
 
 // Identifier regular expression.
-IDENTIFIER: [a-zA-Zء-ي] [a-zA-Zء-ي0-9٠-٩_]*;
+ID: [a-zA-Zء-ي] [a-zA-Zء-ي0-9٠-٩_]*;
 
 data_type:
 	INT_DATA_TYPE
