@@ -39,286 +39,279 @@ public interface IAraCVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitProgram([NotNull] AraCParser.ProgramContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.global_var_declaratoin"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.globalVarDecl"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitGlobal_var_declaratoin([NotNull] AraCParser.Global_var_declaratoinContext context);
+	Result VisitGlobalVarDecl([NotNull] AraCParser.GlobalVarDeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.function_declaration"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.funcDecl"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitFunction_declaration([NotNull] AraCParser.Function_declarationContext context);
+	Result VisitFuncDecl([NotNull] AraCParser.FuncDeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.operatoin_declaration"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.opDecl"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitOperatoin_declaration([NotNull] AraCParser.Operatoin_declarationContext context);
+	Result VisitOpDecl([NotNull] AraCParser.OpDeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.param_list"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.paramList"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitParam_list([NotNull] AraCParser.Param_listContext context);
+	Result VisitParamList([NotNull] AraCParser.ParamListContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>casting_expr</c>
+	/// Visit a parse tree produced by the <c>IDExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitCasting_expr([NotNull] AraCParser.Casting_exprContext context);
+	Result VisitIDExpr([NotNull] AraCParser.IDExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>lor_expr</c>
+	/// Visit a parse tree produced by the <c>AddressExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitLor_expr([NotNull] AraCParser.Lor_exprContext context);
+	Result VisitAddressExpr([NotNull] AraCParser.AddressExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>array_subscription_expr</c>
+	/// Visit a parse tree produced by the <c>ParenthesisExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitArray_subscription_expr([NotNull] AraCParser.Array_subscription_exprContext context);
+	Result VisitParenthesisExpr([NotNull] AraCParser.ParenthesisExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>add_expr</c>
+	/// Visit a parse tree produced by the <c>MultiplyExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAdd_expr([NotNull] AraCParser.Add_exprContext context);
+	Result VisitMultiplyExpr([NotNull] AraCParser.MultiplyExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>land_expr</c>
+	/// Visit a parse tree produced by the <c>EualityExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitLand_expr([NotNull] AraCParser.Land_exprContext context);
+	Result VisitEualityExpr([NotNull] AraCParser.EualityExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>comparative_expr</c>
+	/// Visit a parse tree produced by the <c>BxorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitComparative_expr([NotNull] AraCParser.Comparative_exprContext context);
+	Result VisitBxorExpr([NotNull] AraCParser.BxorExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>unary_bl_expr</c>
+	/// Visit a parse tree produced by the <c>AddExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitUnary_bl_expr([NotNull] AraCParser.Unary_bl_exprContext context);
+	Result VisitAddExpr([NotNull] AraCParser.AddExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>size_of_expr</c>
+	/// Visit a parse tree produced by the <c>CompExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitSize_of_expr([NotNull] AraCParser.Size_of_exprContext context);
+	Result VisitCompExpr([NotNull] AraCParser.CompExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>funciton_calling_expr</c>
+	/// Visit a parse tree produced by the <c>BandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitFunciton_calling_expr([NotNull] AraCParser.Funciton_calling_exprContext context);
+	Result VisitBandExpr([NotNull] AraCParser.BandExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>shift_expr</c>
+	/// Visit a parse tree produced by the <c>LandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitShift_expr([NotNull] AraCParser.Shift_exprContext context);
+	Result VisitLandExpr([NotNull] AraCParser.LandExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>address_of_expr</c>
+	/// Visit a parse tree produced by the <c>IndirectionExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAddress_of_expr([NotNull] AraCParser.Address_of_exprContext context);
+	Result VisitIndirectionExpr([NotNull] AraCParser.IndirectionExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>indirection_of_expr</c>
+	/// Visit a parse tree produced by the <c>ArrSubScripExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitIndirection_of_expr([NotNull] AraCParser.Indirection_of_exprContext context);
+	Result VisitArrSubScripExpr([NotNull] AraCParser.ArrSubScripExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>subtract_expr</c>
+	/// Visit a parse tree produced by the <c>LorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitSubtract_expr([NotNull] AraCParser.Subtract_exprContext context);
+	Result VisitLorExpr([NotNull] AraCParser.LorExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>multipy_expr</c>
+	/// Visit a parse tree produced by the <c>DivExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitMultipy_expr([NotNull] AraCParser.Multipy_exprContext context);
+	Result VisitDivExpr([NotNull] AraCParser.DivExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>divide_expr</c>
+	/// Visit a parse tree produced by the <c>BorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitDivide_expr([NotNull] AraCParser.Divide_exprContext context);
+	Result VisitBorExpr([NotNull] AraCParser.BorExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>bor_expr</c>
+	/// Visit a parse tree produced by the <c>SizeExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitBor_expr([NotNull] AraCParser.Bor_exprContext context);
+	Result VisitSizeExpr([NotNull] AraCParser.SizeExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>literal_expr</c>
+	/// Visit a parse tree produced by the <c>LiteralExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitLiteral_expr([NotNull] AraCParser.Literal_exprContext context);
+	Result VisitLiteralExpr([NotNull] AraCParser.LiteralExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>identifier_expr</c>
+	/// Visit a parse tree produced by the <c>UnaryBLExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitIdentifier_expr([NotNull] AraCParser.Identifier_exprContext context);
+	Result VisitUnaryBLExpr([NotNull] AraCParser.UnaryBLExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>parenth_expr</c>
+	/// Visit a parse tree produced by the <c>SubtractExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitParenth_expr([NotNull] AraCParser.Parenth_exprContext context);
+	Result VisitSubtractExpr([NotNull] AraCParser.SubtractExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>equality_expr</c>
+	/// Visit a parse tree produced by the <c>CastingExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitEquality_expr([NotNull] AraCParser.Equality_exprContext context);
+	Result VisitCastingExpr([NotNull] AraCParser.CastingExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>bxor_expr</c>
+	/// Visit a parse tree produced by the <c>UnaryArithmeticExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitBxor_expr([NotNull] AraCParser.Bxor_exprContext context);
+	Result VisitUnaryArithmeticExpr([NotNull] AraCParser.UnaryArithmeticExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>band_expr</c>
+	/// Visit a parse tree produced by the <c>FuncCallExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitBand_expr([NotNull] AraCParser.Band_exprContext context);
+	Result VisitFuncCallExpr([NotNull] AraCParser.FuncCallExprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>unary_arithmetic_expr</c>
-	/// labeled alternative in <see cref="AraCParser.expression"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.argumentList"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitUnary_arithmetic_expr([NotNull] AraCParser.Unary_arithmetic_exprContext context);
+	Result VisitArgumentList([NotNull] AraCParser.ArgumentListContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.argument_list"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitArgument_list([NotNull] AraCParser.Argument_listContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>assignment_stat</c>
+	/// Visit a parse tree produced by the <c>assignment_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAssignment_stat([NotNull] AraCParser.Assignment_statContext context);
+	Result VisitAssignment_Stat([NotNull] AraCParser.Assignment_StatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>return_stat</c>
+	/// Visit a parse tree produced by the <c>return_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitReturn_stat([NotNull] AraCParser.Return_statContext context);
+	Result VisitReturn_Stat([NotNull] AraCParser.Return_StatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>result_stat</c>
+	/// Visit a parse tree produced by the <c>result_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitResult_stat([NotNull] AraCParser.Result_statContext context);
+	Result VisitResult_Stat([NotNull] AraCParser.Result_StatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>if_stat</c>
+	/// Visit a parse tree produced by the <c>if_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitIf_stat([NotNull] AraCParser.If_statContext context);
+	Result VisitIf_Stat([NotNull] AraCParser.If_StatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>while_stat</c>
+	/// Visit a parse tree produced by the <c>while_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitWhile_stat([NotNull] AraCParser.While_statContext context);
+	Result VisitWhile_Stat([NotNull] AraCParser.While_StatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>var_decl_stat</c>
+	/// Visit a parse tree produced by the <c>var_Decl</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitVar_decl_stat([NotNull] AraCParser.Var_decl_statContext context);
+	Result VisitVar_Decl([NotNull] AraCParser.Var_DeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>expre_stat</c>
+	/// Visit a parse tree produced by the <c>expression_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitExpre_stat([NotNull] AraCParser.Expre_statContext context);
+	Result VisitExpression_Stat([NotNull] AraCParser.Expression_StatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.assignment_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.assignmentStat"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAssignment_statement([NotNull] AraCParser.Assignment_statementContext context);
+	Result VisitAssignmentStat([NotNull] AraCParser.AssignmentStatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.if_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.ifStat"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitIf_statement([NotNull] AraCParser.If_statementContext context);
+	Result VisitIfStat([NotNull] AraCParser.IfStatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.while_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.whileStat"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitWhile_statement([NotNull] AraCParser.While_statementContext context);
+	Result VisitWhileStat([NotNull] AraCParser.WhileStatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.return_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.returnStat"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitReturn_statement([NotNull] AraCParser.Return_statementContext context);
+	Result VisitReturnStat([NotNull] AraCParser.ReturnStatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.result_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.resultStat"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitResult_statement([NotNull] AraCParser.Result_statementContext context);
+	Result VisitResultStat([NotNull] AraCParser.ResultStatContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.var_declaration"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.varDecl"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitVar_declaration([NotNull] AraCParser.Var_declarationContext context);
+	Result VisitVarDecl([NotNull] AraCParser.VarDeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.data_type"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.dataType"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitData_type([NotNull] AraCParser.Data_typeContext context);
+	Result VisitDataType([NotNull] AraCParser.DataTypeContext context);
 }
 } // namespace Parser

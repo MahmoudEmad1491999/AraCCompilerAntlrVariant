@@ -48,569 +48,555 @@ public partial class AraCBaseListener : IAraCListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitProgram([NotNull] AraCParser.ProgramContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.global_var_declaratoin"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.globalVarDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterGlobal_var_declaratoin([NotNull] AraCParser.Global_var_declaratoinContext context) { }
+	public virtual void EnterGlobalVarDecl([NotNull] AraCParser.GlobalVarDeclContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.global_var_declaratoin"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.globalVarDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitGlobal_var_declaratoin([NotNull] AraCParser.Global_var_declaratoinContext context) { }
+	public virtual void ExitGlobalVarDecl([NotNull] AraCParser.GlobalVarDeclContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.function_declaration"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.funcDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterFunction_declaration([NotNull] AraCParser.Function_declarationContext context) { }
+	public virtual void EnterFuncDecl([NotNull] AraCParser.FuncDeclContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.function_declaration"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.funcDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitFunction_declaration([NotNull] AraCParser.Function_declarationContext context) { }
+	public virtual void ExitFuncDecl([NotNull] AraCParser.FuncDeclContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.operatoin_declaration"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.opDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterOperatoin_declaration([NotNull] AraCParser.Operatoin_declarationContext context) { }
+	public virtual void EnterOpDecl([NotNull] AraCParser.OpDeclContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.operatoin_declaration"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.opDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitOperatoin_declaration([NotNull] AraCParser.Operatoin_declarationContext context) { }
+	public virtual void ExitOpDecl([NotNull] AraCParser.OpDeclContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.param_list"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.paramList"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterParam_list([NotNull] AraCParser.Param_listContext context) { }
+	public virtual void EnterParamList([NotNull] AraCParser.ParamListContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.param_list"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.paramList"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitParam_list([NotNull] AraCParser.Param_listContext context) { }
+	public virtual void ExitParamList([NotNull] AraCParser.ParamListContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>casting_expr</c>
+	/// Enter a parse tree produced by the <c>IDExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterCasting_expr([NotNull] AraCParser.Casting_exprContext context) { }
+	public virtual void EnterIDExpr([NotNull] AraCParser.IDExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>casting_expr</c>
+	/// Exit a parse tree produced by the <c>IDExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitCasting_expr([NotNull] AraCParser.Casting_exprContext context) { }
+	public virtual void ExitIDExpr([NotNull] AraCParser.IDExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>lor_expr</c>
+	/// Enter a parse tree produced by the <c>AddressExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterLor_expr([NotNull] AraCParser.Lor_exprContext context) { }
+	public virtual void EnterAddressExpr([NotNull] AraCParser.AddressExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>lor_expr</c>
+	/// Exit a parse tree produced by the <c>AddressExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitLor_expr([NotNull] AraCParser.Lor_exprContext context) { }
+	public virtual void ExitAddressExpr([NotNull] AraCParser.AddressExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>array_subscription_expr</c>
+	/// Enter a parse tree produced by the <c>ParenthesisExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterArray_subscription_expr([NotNull] AraCParser.Array_subscription_exprContext context) { }
+	public virtual void EnterParenthesisExpr([NotNull] AraCParser.ParenthesisExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>array_subscription_expr</c>
+	/// Exit a parse tree produced by the <c>ParenthesisExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitArray_subscription_expr([NotNull] AraCParser.Array_subscription_exprContext context) { }
+	public virtual void ExitParenthesisExpr([NotNull] AraCParser.ParenthesisExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>add_expr</c>
+	/// Enter a parse tree produced by the <c>MultiplyExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAdd_expr([NotNull] AraCParser.Add_exprContext context) { }
+	public virtual void EnterMultiplyExpr([NotNull] AraCParser.MultiplyExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>add_expr</c>
+	/// Exit a parse tree produced by the <c>MultiplyExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAdd_expr([NotNull] AraCParser.Add_exprContext context) { }
+	public virtual void ExitMultiplyExpr([NotNull] AraCParser.MultiplyExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>land_expr</c>
+	/// Enter a parse tree produced by the <c>EualityExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterLand_expr([NotNull] AraCParser.Land_exprContext context) { }
+	public virtual void EnterEualityExpr([NotNull] AraCParser.EualityExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>land_expr</c>
+	/// Exit a parse tree produced by the <c>EualityExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitLand_expr([NotNull] AraCParser.Land_exprContext context) { }
+	public virtual void ExitEualityExpr([NotNull] AraCParser.EualityExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>comparative_expr</c>
+	/// Enter a parse tree produced by the <c>BxorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterComparative_expr([NotNull] AraCParser.Comparative_exprContext context) { }
+	public virtual void EnterBxorExpr([NotNull] AraCParser.BxorExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>comparative_expr</c>
+	/// Exit a parse tree produced by the <c>BxorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitComparative_expr([NotNull] AraCParser.Comparative_exprContext context) { }
+	public virtual void ExitBxorExpr([NotNull] AraCParser.BxorExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>unary_bl_expr</c>
+	/// Enter a parse tree produced by the <c>AddExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterUnary_bl_expr([NotNull] AraCParser.Unary_bl_exprContext context) { }
+	public virtual void EnterAddExpr([NotNull] AraCParser.AddExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>unary_bl_expr</c>
+	/// Exit a parse tree produced by the <c>AddExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitUnary_bl_expr([NotNull] AraCParser.Unary_bl_exprContext context) { }
+	public virtual void ExitAddExpr([NotNull] AraCParser.AddExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>size_of_expr</c>
+	/// Enter a parse tree produced by the <c>CompExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterSize_of_expr([NotNull] AraCParser.Size_of_exprContext context) { }
+	public virtual void EnterCompExpr([NotNull] AraCParser.CompExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>size_of_expr</c>
+	/// Exit a parse tree produced by the <c>CompExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitSize_of_expr([NotNull] AraCParser.Size_of_exprContext context) { }
+	public virtual void ExitCompExpr([NotNull] AraCParser.CompExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>funciton_calling_expr</c>
+	/// Enter a parse tree produced by the <c>BandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterFunciton_calling_expr([NotNull] AraCParser.Funciton_calling_exprContext context) { }
+	public virtual void EnterBandExpr([NotNull] AraCParser.BandExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>funciton_calling_expr</c>
+	/// Exit a parse tree produced by the <c>BandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitFunciton_calling_expr([NotNull] AraCParser.Funciton_calling_exprContext context) { }
+	public virtual void ExitBandExpr([NotNull] AraCParser.BandExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>shift_expr</c>
+	/// Enter a parse tree produced by the <c>LandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterShift_expr([NotNull] AraCParser.Shift_exprContext context) { }
+	public virtual void EnterLandExpr([NotNull] AraCParser.LandExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>shift_expr</c>
+	/// Exit a parse tree produced by the <c>LandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitShift_expr([NotNull] AraCParser.Shift_exprContext context) { }
+	public virtual void ExitLandExpr([NotNull] AraCParser.LandExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>address_of_expr</c>
+	/// Enter a parse tree produced by the <c>IndirectionExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAddress_of_expr([NotNull] AraCParser.Address_of_exprContext context) { }
+	public virtual void EnterIndirectionExpr([NotNull] AraCParser.IndirectionExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>address_of_expr</c>
+	/// Exit a parse tree produced by the <c>IndirectionExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAddress_of_expr([NotNull] AraCParser.Address_of_exprContext context) { }
+	public virtual void ExitIndirectionExpr([NotNull] AraCParser.IndirectionExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>indirection_of_expr</c>
+	/// Enter a parse tree produced by the <c>ArrSubScripExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIndirection_of_expr([NotNull] AraCParser.Indirection_of_exprContext context) { }
+	public virtual void EnterArrSubScripExpr([NotNull] AraCParser.ArrSubScripExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>indirection_of_expr</c>
+	/// Exit a parse tree produced by the <c>ArrSubScripExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIndirection_of_expr([NotNull] AraCParser.Indirection_of_exprContext context) { }
+	public virtual void ExitArrSubScripExpr([NotNull] AraCParser.ArrSubScripExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>subtract_expr</c>
+	/// Enter a parse tree produced by the <c>LorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterSubtract_expr([NotNull] AraCParser.Subtract_exprContext context) { }
+	public virtual void EnterLorExpr([NotNull] AraCParser.LorExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>subtract_expr</c>
+	/// Exit a parse tree produced by the <c>LorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitSubtract_expr([NotNull] AraCParser.Subtract_exprContext context) { }
+	public virtual void ExitLorExpr([NotNull] AraCParser.LorExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>multipy_expr</c>
+	/// Enter a parse tree produced by the <c>DivExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterMultipy_expr([NotNull] AraCParser.Multipy_exprContext context) { }
+	public virtual void EnterDivExpr([NotNull] AraCParser.DivExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>multipy_expr</c>
+	/// Exit a parse tree produced by the <c>DivExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitMultipy_expr([NotNull] AraCParser.Multipy_exprContext context) { }
+	public virtual void ExitDivExpr([NotNull] AraCParser.DivExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>divide_expr</c>
+	/// Enter a parse tree produced by the <c>BorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterDivide_expr([NotNull] AraCParser.Divide_exprContext context) { }
+	public virtual void EnterBorExpr([NotNull] AraCParser.BorExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>divide_expr</c>
+	/// Exit a parse tree produced by the <c>BorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitDivide_expr([NotNull] AraCParser.Divide_exprContext context) { }
+	public virtual void ExitBorExpr([NotNull] AraCParser.BorExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>bor_expr</c>
+	/// Enter a parse tree produced by the <c>SizeExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterBor_expr([NotNull] AraCParser.Bor_exprContext context) { }
+	public virtual void EnterSizeExpr([NotNull] AraCParser.SizeExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>bor_expr</c>
+	/// Exit a parse tree produced by the <c>SizeExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitBor_expr([NotNull] AraCParser.Bor_exprContext context) { }
+	public virtual void ExitSizeExpr([NotNull] AraCParser.SizeExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>literal_expr</c>
+	/// Enter a parse tree produced by the <c>LiteralExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterLiteral_expr([NotNull] AraCParser.Literal_exprContext context) { }
+	public virtual void EnterLiteralExpr([NotNull] AraCParser.LiteralExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>literal_expr</c>
+	/// Exit a parse tree produced by the <c>LiteralExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitLiteral_expr([NotNull] AraCParser.Literal_exprContext context) { }
+	public virtual void ExitLiteralExpr([NotNull] AraCParser.LiteralExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>identifier_expr</c>
+	/// Enter a parse tree produced by the <c>UnaryBLExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIdentifier_expr([NotNull] AraCParser.Identifier_exprContext context) { }
+	public virtual void EnterUnaryBLExpr([NotNull] AraCParser.UnaryBLExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>identifier_expr</c>
+	/// Exit a parse tree produced by the <c>UnaryBLExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIdentifier_expr([NotNull] AraCParser.Identifier_exprContext context) { }
+	public virtual void ExitUnaryBLExpr([NotNull] AraCParser.UnaryBLExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>parenth_expr</c>
+	/// Enter a parse tree produced by the <c>SubtractExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterParenth_expr([NotNull] AraCParser.Parenth_exprContext context) { }
+	public virtual void EnterSubtractExpr([NotNull] AraCParser.SubtractExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>parenth_expr</c>
+	/// Exit a parse tree produced by the <c>SubtractExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitParenth_expr([NotNull] AraCParser.Parenth_exprContext context) { }
+	public virtual void ExitSubtractExpr([NotNull] AraCParser.SubtractExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>equality_expr</c>
+	/// Enter a parse tree produced by the <c>CastingExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterEquality_expr([NotNull] AraCParser.Equality_exprContext context) { }
+	public virtual void EnterCastingExpr([NotNull] AraCParser.CastingExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>equality_expr</c>
+	/// Exit a parse tree produced by the <c>CastingExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitEquality_expr([NotNull] AraCParser.Equality_exprContext context) { }
+	public virtual void ExitCastingExpr([NotNull] AraCParser.CastingExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>bxor_expr</c>
+	/// Enter a parse tree produced by the <c>UnaryArithmeticExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterBxor_expr([NotNull] AraCParser.Bxor_exprContext context) { }
+	public virtual void EnterUnaryArithmeticExpr([NotNull] AraCParser.UnaryArithmeticExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>bxor_expr</c>
+	/// Exit a parse tree produced by the <c>UnaryArithmeticExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitBxor_expr([NotNull] AraCParser.Bxor_exprContext context) { }
+	public virtual void ExitUnaryArithmeticExpr([NotNull] AraCParser.UnaryArithmeticExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>band_expr</c>
+	/// Enter a parse tree produced by the <c>FuncCallExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterBand_expr([NotNull] AraCParser.Band_exprContext context) { }
+	public virtual void EnterFuncCallExpr([NotNull] AraCParser.FuncCallExprContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>band_expr</c>
+	/// Exit a parse tree produced by the <c>FuncCallExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitBand_expr([NotNull] AraCParser.Band_exprContext context) { }
+	public virtual void ExitFuncCallExpr([NotNull] AraCParser.FuncCallExprContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>unary_arithmetic_expr</c>
-	/// labeled alternative in <see cref="AraCParser.expression"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.argumentList"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterUnary_arithmetic_expr([NotNull] AraCParser.Unary_arithmetic_exprContext context) { }
+	public virtual void EnterArgumentList([NotNull] AraCParser.ArgumentListContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>unary_arithmetic_expr</c>
-	/// labeled alternative in <see cref="AraCParser.expression"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.argumentList"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitUnary_arithmetic_expr([NotNull] AraCParser.Unary_arithmetic_exprContext context) { }
+	public virtual void ExitArgumentList([NotNull] AraCParser.ArgumentListContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.argument_list"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterArgument_list([NotNull] AraCParser.Argument_listContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.argument_list"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitArgument_list([NotNull] AraCParser.Argument_listContext context) { }
-	/// <summary>
-	/// Enter a parse tree produced by the <c>assignment_stat</c>
+	/// Enter a parse tree produced by the <c>assignment_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAssignment_stat([NotNull] AraCParser.Assignment_statContext context) { }
+	public virtual void EnterAssignment_Stat([NotNull] AraCParser.Assignment_StatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>assignment_stat</c>
+	/// Exit a parse tree produced by the <c>assignment_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAssignment_stat([NotNull] AraCParser.Assignment_statContext context) { }
+	public virtual void ExitAssignment_Stat([NotNull] AraCParser.Assignment_StatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>return_stat</c>
+	/// Enter a parse tree produced by the <c>return_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterReturn_stat([NotNull] AraCParser.Return_statContext context) { }
+	public virtual void EnterReturn_Stat([NotNull] AraCParser.Return_StatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>return_stat</c>
+	/// Exit a parse tree produced by the <c>return_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitReturn_stat([NotNull] AraCParser.Return_statContext context) { }
+	public virtual void ExitReturn_Stat([NotNull] AraCParser.Return_StatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>result_stat</c>
+	/// Enter a parse tree produced by the <c>result_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterResult_stat([NotNull] AraCParser.Result_statContext context) { }
+	public virtual void EnterResult_Stat([NotNull] AraCParser.Result_StatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>result_stat</c>
+	/// Exit a parse tree produced by the <c>result_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitResult_stat([NotNull] AraCParser.Result_statContext context) { }
+	public virtual void ExitResult_Stat([NotNull] AraCParser.Result_StatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>if_stat</c>
+	/// Enter a parse tree produced by the <c>if_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIf_stat([NotNull] AraCParser.If_statContext context) { }
+	public virtual void EnterIf_Stat([NotNull] AraCParser.If_StatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>if_stat</c>
+	/// Exit a parse tree produced by the <c>if_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIf_stat([NotNull] AraCParser.If_statContext context) { }
+	public virtual void ExitIf_Stat([NotNull] AraCParser.If_StatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>while_stat</c>
+	/// Enter a parse tree produced by the <c>while_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterWhile_stat([NotNull] AraCParser.While_statContext context) { }
+	public virtual void EnterWhile_Stat([NotNull] AraCParser.While_StatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>while_stat</c>
+	/// Exit a parse tree produced by the <c>while_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitWhile_stat([NotNull] AraCParser.While_statContext context) { }
+	public virtual void ExitWhile_Stat([NotNull] AraCParser.While_StatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>var_decl_stat</c>
+	/// Enter a parse tree produced by the <c>var_Decl</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterVar_decl_stat([NotNull] AraCParser.Var_decl_statContext context) { }
+	public virtual void EnterVar_Decl([NotNull] AraCParser.Var_DeclContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>var_decl_stat</c>
+	/// Exit a parse tree produced by the <c>var_Decl</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitVar_decl_stat([NotNull] AraCParser.Var_decl_statContext context) { }
+	public virtual void ExitVar_Decl([NotNull] AraCParser.Var_DeclContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by the <c>expre_stat</c>
+	/// Enter a parse tree produced by the <c>expression_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterExpre_stat([NotNull] AraCParser.Expre_statContext context) { }
+	public virtual void EnterExpression_Stat([NotNull] AraCParser.Expression_StatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by the <c>expre_stat</c>
+	/// Exit a parse tree produced by the <c>expression_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitExpre_stat([NotNull] AraCParser.Expre_statContext context) { }
+	public virtual void ExitExpression_Stat([NotNull] AraCParser.Expression_StatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.assignment_statement"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.assignmentStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterAssignment_statement([NotNull] AraCParser.Assignment_statementContext context) { }
+	public virtual void EnterAssignmentStat([NotNull] AraCParser.AssignmentStatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.assignment_statement"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.assignmentStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitAssignment_statement([NotNull] AraCParser.Assignment_statementContext context) { }
+	public virtual void ExitAssignmentStat([NotNull] AraCParser.AssignmentStatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.if_statement"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.ifStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterIf_statement([NotNull] AraCParser.If_statementContext context) { }
+	public virtual void EnterIfStat([NotNull] AraCParser.IfStatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.if_statement"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.ifStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitIf_statement([NotNull] AraCParser.If_statementContext context) { }
+	public virtual void ExitIfStat([NotNull] AraCParser.IfStatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.while_statement"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.whileStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterWhile_statement([NotNull] AraCParser.While_statementContext context) { }
+	public virtual void EnterWhileStat([NotNull] AraCParser.WhileStatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.while_statement"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.whileStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitWhile_statement([NotNull] AraCParser.While_statementContext context) { }
+	public virtual void ExitWhileStat([NotNull] AraCParser.WhileStatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.return_statement"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.returnStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterReturn_statement([NotNull] AraCParser.Return_statementContext context) { }
+	public virtual void EnterReturnStat([NotNull] AraCParser.ReturnStatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.return_statement"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.returnStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitReturn_statement([NotNull] AraCParser.Return_statementContext context) { }
+	public virtual void ExitReturnStat([NotNull] AraCParser.ReturnStatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.result_statement"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.resultStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterResult_statement([NotNull] AraCParser.Result_statementContext context) { }
+	public virtual void EnterResultStat([NotNull] AraCParser.ResultStatContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.result_statement"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.resultStat"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitResult_statement([NotNull] AraCParser.Result_statementContext context) { }
+	public virtual void ExitResultStat([NotNull] AraCParser.ResultStatContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.var_declaration"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.varDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterVar_declaration([NotNull] AraCParser.Var_declarationContext context) { }
+	public virtual void EnterVarDecl([NotNull] AraCParser.VarDeclContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.var_declaration"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.varDecl"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitVar_declaration([NotNull] AraCParser.Var_declarationContext context) { }
+	public virtual void ExitVarDecl([NotNull] AraCParser.VarDeclContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="AraCParser.data_type"/>.
+	/// Enter a parse tree produced by <see cref="AraCParser.dataType"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void EnterData_type([NotNull] AraCParser.Data_typeContext context) { }
+	public virtual void EnterDataType([NotNull] AraCParser.DataTypeContext context) { }
 	/// <summary>
-	/// Exit a parse tree produced by <see cref="AraCParser.data_type"/>.
+	/// Exit a parse tree produced by <see cref="AraCParser.dataType"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	public virtual void ExitData_type([NotNull] AraCParser.Data_typeContext context) { }
+	public virtual void ExitDataType([NotNull] AraCParser.DataTypeContext context) { }
 
 	/// <inheritdoc/>
 	/// <remarks>The default implementation does nothing.</remarks>

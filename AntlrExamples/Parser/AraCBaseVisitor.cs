@@ -45,7 +45,7 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// <return>The visitor result.</return>
 	public virtual Result VisitProgram([NotNull] AraCParser.ProgramContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.global_var_declaratoin"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.globalVarDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -53,9 +53,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitGlobal_var_declaratoin([NotNull] AraCParser.Global_var_declaratoinContext context) { return VisitChildren(context); }
+	public virtual Result VisitGlobalVarDecl([NotNull] AraCParser.GlobalVarDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.function_declaration"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.funcDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -63,9 +63,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunction_declaration([NotNull] AraCParser.Function_declarationContext context) { return VisitChildren(context); }
+	public virtual Result VisitFuncDecl([NotNull] AraCParser.FuncDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.operatoin_declaration"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.opDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -73,9 +73,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOperatoin_declaration([NotNull] AraCParser.Operatoin_declarationContext context) { return VisitChildren(context); }
+	public virtual Result VisitOpDecl([NotNull] AraCParser.OpDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.param_list"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.paramList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -83,9 +83,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitParam_list([NotNull] AraCParser.Param_listContext context) { return VisitChildren(context); }
+	public virtual Result VisitParamList([NotNull] AraCParser.ParamListContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>casting_expr</c>
+	/// Visit a parse tree produced by the <c>IDExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -94,9 +94,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCasting_expr([NotNull] AraCParser.Casting_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitIDExpr([NotNull] AraCParser.IDExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>lor_expr</c>
+	/// Visit a parse tree produced by the <c>AddressExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -105,9 +105,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLor_expr([NotNull] AraCParser.Lor_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitAddressExpr([NotNull] AraCParser.AddressExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>array_subscription_expr</c>
+	/// Visit a parse tree produced by the <c>ParenthesisExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -116,9 +116,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitArray_subscription_expr([NotNull] AraCParser.Array_subscription_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitParenthesisExpr([NotNull] AraCParser.ParenthesisExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>add_expr</c>
+	/// Visit a parse tree produced by the <c>MultiplyExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -127,9 +127,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAdd_expr([NotNull] AraCParser.Add_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitMultiplyExpr([NotNull] AraCParser.MultiplyExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>land_expr</c>
+	/// Visit a parse tree produced by the <c>EualityExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -138,9 +138,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLand_expr([NotNull] AraCParser.Land_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitEualityExpr([NotNull] AraCParser.EualityExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>comparative_expr</c>
+	/// Visit a parse tree produced by the <c>BxorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -149,9 +149,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitComparative_expr([NotNull] AraCParser.Comparative_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitBxorExpr([NotNull] AraCParser.BxorExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>unary_bl_expr</c>
+	/// Visit a parse tree produced by the <c>AddExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -160,9 +160,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitUnary_bl_expr([NotNull] AraCParser.Unary_bl_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitAddExpr([NotNull] AraCParser.AddExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>size_of_expr</c>
+	/// Visit a parse tree produced by the <c>CompExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -171,9 +171,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSize_of_expr([NotNull] AraCParser.Size_of_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitCompExpr([NotNull] AraCParser.CompExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>funciton_calling_expr</c>
+	/// Visit a parse tree produced by the <c>BandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -182,9 +182,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFunciton_calling_expr([NotNull] AraCParser.Funciton_calling_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitBandExpr([NotNull] AraCParser.BandExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>shift_expr</c>
+	/// Visit a parse tree produced by the <c>LandExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -193,9 +193,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitShift_expr([NotNull] AraCParser.Shift_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitLandExpr([NotNull] AraCParser.LandExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>address_of_expr</c>
+	/// Visit a parse tree produced by the <c>IndirectionExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -204,9 +204,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAddress_of_expr([NotNull] AraCParser.Address_of_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitIndirectionExpr([NotNull] AraCParser.IndirectionExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>indirection_of_expr</c>
+	/// Visit a parse tree produced by the <c>ArrSubScripExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -215,9 +215,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndirection_of_expr([NotNull] AraCParser.Indirection_of_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitArrSubScripExpr([NotNull] AraCParser.ArrSubScripExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>subtract_expr</c>
+	/// Visit a parse tree produced by the <c>LorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -226,9 +226,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSubtract_expr([NotNull] AraCParser.Subtract_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitLorExpr([NotNull] AraCParser.LorExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>multipy_expr</c>
+	/// Visit a parse tree produced by the <c>DivExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -237,9 +237,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitMultipy_expr([NotNull] AraCParser.Multipy_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitDivExpr([NotNull] AraCParser.DivExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>divide_expr</c>
+	/// Visit a parse tree produced by the <c>BorExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -248,9 +248,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDivide_expr([NotNull] AraCParser.Divide_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitBorExpr([NotNull] AraCParser.BorExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>bor_expr</c>
+	/// Visit a parse tree produced by the <c>SizeExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -259,9 +259,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBor_expr([NotNull] AraCParser.Bor_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitSizeExpr([NotNull] AraCParser.SizeExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>literal_expr</c>
+	/// Visit a parse tree produced by the <c>LiteralExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -270,9 +270,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLiteral_expr([NotNull] AraCParser.Literal_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitLiteralExpr([NotNull] AraCParser.LiteralExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>identifier_expr</c>
+	/// Visit a parse tree produced by the <c>UnaryBLExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -281,9 +281,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIdentifier_expr([NotNull] AraCParser.Identifier_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitUnaryBLExpr([NotNull] AraCParser.UnaryBLExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>parenth_expr</c>
+	/// Visit a parse tree produced by the <c>SubtractExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -292,9 +292,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitParenth_expr([NotNull] AraCParser.Parenth_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitSubtractExpr([NotNull] AraCParser.SubtractExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>equality_expr</c>
+	/// Visit a parse tree produced by the <c>CastingExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -303,9 +303,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEquality_expr([NotNull] AraCParser.Equality_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitCastingExpr([NotNull] AraCParser.CastingExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>bxor_expr</c>
+	/// Visit a parse tree produced by the <c>UnaryArithmeticExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -314,9 +314,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBxor_expr([NotNull] AraCParser.Bxor_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitUnaryArithmeticExpr([NotNull] AraCParser.UnaryArithmeticExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>band_expr</c>
+	/// Visit a parse tree produced by the <c>FuncCallExpr</c>
 	/// labeled alternative in <see cref="AraCParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -325,10 +325,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBand_expr([NotNull] AraCParser.Band_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitFuncCallExpr([NotNull] AraCParser.FuncCallExprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>unary_arithmetic_expr</c>
-	/// labeled alternative in <see cref="AraCParser.expression"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.argumentList"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -336,19 +335,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitUnary_arithmetic_expr([NotNull] AraCParser.Unary_arithmetic_exprContext context) { return VisitChildren(context); }
+	public virtual Result VisitArgumentList([NotNull] AraCParser.ArgumentListContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.argument_list"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitArgument_list([NotNull] AraCParser.Argument_listContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>assignment_stat</c>
+	/// Visit a parse tree produced by the <c>assignment_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -357,9 +346,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAssignment_stat([NotNull] AraCParser.Assignment_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitAssignment_Stat([NotNull] AraCParser.Assignment_StatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>return_stat</c>
+	/// Visit a parse tree produced by the <c>return_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -368,9 +357,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitReturn_stat([NotNull] AraCParser.Return_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitReturn_Stat([NotNull] AraCParser.Return_StatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>result_stat</c>
+	/// Visit a parse tree produced by the <c>result_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -379,9 +368,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitResult_stat([NotNull] AraCParser.Result_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitResult_Stat([NotNull] AraCParser.Result_StatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>if_stat</c>
+	/// Visit a parse tree produced by the <c>if_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -390,9 +379,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIf_stat([NotNull] AraCParser.If_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitIf_Stat([NotNull] AraCParser.If_StatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>while_stat</c>
+	/// Visit a parse tree produced by the <c>while_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -401,9 +390,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWhile_stat([NotNull] AraCParser.While_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitWhile_Stat([NotNull] AraCParser.While_StatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>var_decl_stat</c>
+	/// Visit a parse tree produced by the <c>var_Decl</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -412,9 +401,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVar_decl_stat([NotNull] AraCParser.Var_decl_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitVar_Decl([NotNull] AraCParser.Var_DeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>expre_stat</c>
+	/// Visit a parse tree produced by the <c>expression_Stat</c>
 	/// labeled alternative in <see cref="AraCParser.statement"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -423,9 +412,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitExpre_stat([NotNull] AraCParser.Expre_statContext context) { return VisitChildren(context); }
+	public virtual Result VisitExpression_Stat([NotNull] AraCParser.Expression_StatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.assignment_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.assignmentStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -433,9 +422,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAssignment_statement([NotNull] AraCParser.Assignment_statementContext context) { return VisitChildren(context); }
+	public virtual Result VisitAssignmentStat([NotNull] AraCParser.AssignmentStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.if_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.ifStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -443,9 +432,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIf_statement([NotNull] AraCParser.If_statementContext context) { return VisitChildren(context); }
+	public virtual Result VisitIfStat([NotNull] AraCParser.IfStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.while_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.whileStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -453,9 +442,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitWhile_statement([NotNull] AraCParser.While_statementContext context) { return VisitChildren(context); }
+	public virtual Result VisitWhileStat([NotNull] AraCParser.WhileStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.return_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.returnStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -463,9 +452,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitReturn_statement([NotNull] AraCParser.Return_statementContext context) { return VisitChildren(context); }
+	public virtual Result VisitReturnStat([NotNull] AraCParser.ReturnStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.result_statement"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.resultStat"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -473,9 +462,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitResult_statement([NotNull] AraCParser.Result_statementContext context) { return VisitChildren(context); }
+	public virtual Result VisitResultStat([NotNull] AraCParser.ResultStatContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.var_declaration"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.varDecl"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -483,9 +472,9 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVar_declaration([NotNull] AraCParser.Var_declarationContext context) { return VisitChildren(context); }
+	public virtual Result VisitVarDecl([NotNull] AraCParser.VarDeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="AraCParser.data_type"/>.
+	/// Visit a parse tree produced by <see cref="AraCParser.dataType"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -493,6 +482,6 @@ public partial class AraCBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitData_type([NotNull] AraCParser.Data_typeContext context) { return VisitChildren(context); }
+	public virtual Result VisitDataType([NotNull] AraCParser.DataTypeContext context) { return VisitChildren(context); }
 }
 } // namespace Parser
