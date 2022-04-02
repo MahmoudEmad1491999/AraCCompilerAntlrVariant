@@ -1,74 +1,91 @@
-grammar AraC;
+grammar arac;
 
 program: (
 		globalVarDecl
-		| funcDecl
-		| opDecl
+		| functionDecl
+		| operationDecl
 	)+;
 
 globalVarDecl:
-	dataType ID (ASSIGN_SYM expression)? FASLA_MANQUOTA;
+	dataType ID inititalization? FASLA_MANQUOTA;
 
-funcDecl:
-	FUNC_KEYWORD ID RP paramList LP COLON dataType RCB statement* LCB;
+inititalization: (ASSIGN_SYM expression);
 
-opDecl:
-	OP_KEYWORD ID RP paramList LP RCB statement* LCB;
+functionDecl:
+	FUNC_KEYWORD ID RP paramList LP COLON dataType RCB statementList LCB;
 
-paramList: (dataType ID (FASLA dataType ID)*)?;
+operationDecl:
+	OP_KEYWORD ID RP paramList LP RCB statementList LCB;
+
+parameter: dataType ID;
+paramList: (parameter (FASLA parameter)*)?;
+
+argument: expression;
+argumentList: (argument (FASLA argument)*)?;
 
 expression:
-	expression RP argumentList LP									# FuncCallExpr
+	ID RP argumentList LP											# funCallExpr
 	| expression RSB expression LSB									# ArrSubScripExpr
-	| (PLUS | MINUS) expression										# UnaryArithmeticExpr
-	| (LOGICAL_NOT | BNOT_SYM) expression							# UnaryBLExpr
-	| RP dataType LP expression									# CastingExpr
+	| PLUS  expression												# negationExpr
+	|  unaryBL_op expression										# UnaryBLExpr
+	| RP dataType LP expression										# CastingExpr
 	| ADDRESS_OF_OPERATOR expression								# AddressExpr
 	| VALUE_INSIDE_OPERATOR expression								# IndirectionExpr
 	| SIZE_OF expression											# SizeExpr
-	| expression DIVIDE expression									# DivExpr
-	| expression MULTIPLY expression								# MultiplyExpr
-	| expression MINUS expression									# SubtractExpr
-	| expression PLUS expression									# AddExpr
-	| expression (GTE_SYM | LTE_SYM | GT_SYM | LT_SYM) expression	# CompExpr
-	| expression (EQUAL_SYM | NOTEQ_SYM) expression					# EualityExpr
-	| expression (BAND_SYM) expression								# BandExpr
+	| expression DIVIDE expression									# divideExpr
+	| expression MULTIPLY expression								# multiplyExpr
+	| expression MINUS expression									# subtractionExpr
+	| expression PLUS expression									# addExpr
+	| expression SL_SYM expression									# shiftLeftExpr
+	| expression SR_SYM expression									# shiftRightExpr
+	| expression comparison_op expression							# CompExpr
+	| expression equality_op expression								# EqualityExpr
+	| expression BAND_SYM expression								# BandExpr
 	| expression (BXOR_SYM) expression								# BxorExpr
 	| expression (BOR_SYM) expression								# BorExpr
 	| expression (LAND) expression									# LandExpr
 	| expression (LOR) expression									# LorExpr
-	| RP expression LP												# ParenthesisExpr
-	| Literal														# LiteralExpr
-	| ID															# IDExpr;
+	| RP expression LP												# parenthesisExpr
+	| Literal														# literalExpr
+	| ID															# variableExpr;
 
-argumentList: (expression (FASLA expression)*)?;
 
+comparison_op: (GTE_SYM | LTE_SYM | GT_SYM | LT_SYM);
+unaryBL_op : (LOGICAL_NOT | BNOT_SYM);
+equality_op : (EQUAL_SYM | NOTEQ_SYM);
 statement:
-	assignmentStat		        # assignment_Stat
-	| returnStat			    # return_Stat
-	| resultStat			    # result_Stat
-	| ifStat				    # if_Stat
-	| whileStat			        # while_Stat
-	| varDecl			        # var_Decl
-	| expression FASLA_MANQUOTA	# expression_Stat;
+	assignmentStat # assignment_Stat       
+	| returnStat # return_Stat	    
+	| resultStat # result_Stat		    
+	| ifStat	# if_Stat	    
+	| whileStat	# while_Stat       
+	| varDecl	# var_Decl       
+	| expressionStat #expression_Stat
+	| operationStat #operation_Stat;
+
+statementList : statement*;
+
+expressionStat: expression FASLA_MANQUOTA;
+
+operationStat: ID RP argumentList LP FASLA_MANQUOTA;
 
 assignmentStat: ID ASSIGN_SYM expression FASLA_MANQUOTA;
 
-ifStat: IF_KEYWORD RP expression LP RCB statement* LCB;
+ifStat: IF_KEYWORD RP expression LP RCB statementList LCB;
 
 whileStat:
-	WHILE_KEYWORD RP expression LP RCB statement* LCB;
+	WHILE_KEYWORD RP expression LP RCB statementList LCB;
 
 returnStat: RET_KEYWORD FASLA_MANQUOTA;
 
 resultStat: RES_KEYWORD expression FASLA_MANQUOTA;
 
 varDecl:
-	dataType ID (ASSIGN_SYM expression)? FASLA_MANQUOTA;
+	dataType ID inititalization? FASLA_MANQUOTA;
 
 Literal:
-	ARABIC_INT_LITERAL
-	| ENGLISH_INT_LITERAL;
+	ARABIC_INT_LITERAL;
+	// | ENGLISH_INT_LITERAL;
 
 LP: '(';
 RP: ')';
@@ -83,7 +100,7 @@ VALUE_INSIDE_OPERATOR: '*:';
 SIZE_OF: 'حجم:';
 
 // punctuation symbols.
-DOT: '.';
+// DOT: '.';
 FASLA: '،';
 FASLA_MANQUOTA: '؛';
 // ARROW: '->';
@@ -159,7 +176,7 @@ ULONG_DATA_TYPE: 'طبيعي_٨';
 WHITE_SPACE: [\u0020\u0009\u000A\u000B\u000C\u000D] -> skip;
 
 ARABIC_INT_LITERAL: [٠-٩]+;
-ENGLISH_INT_LITERAL: [0-9]+;
+// ENGLISH_INT_LITERAL: [0-9]+;
 
 // Identifier regular expression.
 ID: [a-zA-Zء-ي] [a-zA-Zء-ي0-9٠-٩_]*;

@@ -4,7 +4,8 @@ using System.Text;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Parser;
-using static Parser.AraCParser;
+using static Parser.aracParser;
+using AntlrExamples.Misc;
 
 using System.Collections.Generic;
 
@@ -20,16 +21,17 @@ namespace AntlrExamples
             string input = File.ReadAllText(path);
 
             ICharStream charStream = CharStreams.fromString(input);
-            ITokenSource tokenSource = new AraCLexer(charStream);
+            ITokenSource tokenSource = new aracLexer(charStream);
             ITokenStream tokenStream = new CommonTokenStream(tokenSource);
-            AraCParser araCParser = new AraCParser(tokenStream);
-            
-            var item = araCParser.program();
-            var dotgraph = DotGraphGenerator.getGarph(item);
+            aracParser araCParser = new aracParser(tokenStream);
 
-            String graph = "digraph graph_name { " + dotgraph + "}";
+            var program = araCParser.program();
+            var ast_root = ASTGenerator.GenerateAST(program);
+            // Console.WriteLine(ast_root.GetType().Name);
+            String graph = ASTDotGraphGenerator.getGarph(ast_root);
             Console.WriteLine(graph);
+             
         }
-       
+
     }
 }
