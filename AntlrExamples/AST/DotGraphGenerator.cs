@@ -1,16 +1,7 @@
-using System;
-using System.IO;
+using System.Text;
 using System.Collections.Generic;
 
-using Parser;
-using Antlr4.Runtime;
-using Antlr4.Runtime.Tree;
-
-using System.Text;
-
-namespace AntlrExamples.Misc
-{
-
+namespace AntlrExamples.AST {
     // public class DotGraphGenerator {
     //     public static Dictionary<string, int> ids = new Dictionary<string, int>(){
     //         {"ProgramContext", 0},

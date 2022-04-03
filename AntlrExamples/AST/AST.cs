@@ -1,9 +1,7 @@
 using System;
-using System.Text;
 using System.Collections.Generic;
-
-namespace AntlrExamples.Misc
-{
+namespace AntlrExamples.AST {
+    
     public enum ComparisonOperator
     {
         GREATER_THAN,

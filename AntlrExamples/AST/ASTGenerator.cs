@@ -4,7 +4,8 @@ using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using Parser;
 using static Parser.aracParser;
-namespace AntlrExamples.Misc
+
+namespace AntlrExamples.AST
 {
     public class ASTGenerator {
         public static Node GenerateAST(IParseTree root) {
