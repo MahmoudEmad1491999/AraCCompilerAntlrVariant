@@ -1,4 +1,4 @@
-namespace AntlrExamples.Misc {
+namespace AntlrExamples.Environment {
     public class SymbolTableEntry {
         public string literal;
         public SymbolType symboltype;

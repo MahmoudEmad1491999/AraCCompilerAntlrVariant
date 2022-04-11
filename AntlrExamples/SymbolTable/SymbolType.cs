@@ -1,4 +1,4 @@
-namespace AntlrExamples.Misc {
+namespace AntlrExamples.Environment {
     public enum SymbolType{
         VARIABLE,
         FUNCTION,
