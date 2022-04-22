@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace Parser {
+namespace AntlrExamples.Parser {
 using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using IToken = Antlr4.Runtime.IToken;
@@ -389,4 +389,4 @@ public interface IaracVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitDataType([NotNull] aracParser.DataTypeContext context);
 }
-} // namespace Parser
+} // namespace AntlrExamples.Parser

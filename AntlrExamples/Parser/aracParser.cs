@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace Parser {
+namespace AntlrExamples.Parser {
 using System;
 using System.IO;
 using System.Text;
@@ -2737,4 +2737,4 @@ public partial class aracParser : Parser {
 
 
 }
-} // namespace Parser
+} // namespace AntlrExamples.Parser

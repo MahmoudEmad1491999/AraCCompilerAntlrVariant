@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
-using Parser;
-using static Parser.aracParser;
+using AntlrExamples.Parser;
+using static AntlrExamples.Parser.aracParser;
 
 namespace AntlrExamples.AST
 {

@@ -9,6 +9,10 @@ namespace AntlrExamples.Environment
             this.sym_type = sym_type;
             this.sym_id = sym_id;
         }
+        public override string ToString()
+        {
+            return "نوع المعرف: " + sym_type + "المعرف: " + sym_id;
+        }
     }
 
     public class GVarSymTabEntry : SymTabEntry

@@ -642,6 +642,32 @@ namespace AntlrExamples.AST
             return "NegatedExpression";
         }
     }
+    public class BNegatedExpression : Node
+    {
+        public Node expr;
+        public BNegatedExpression(Node expr)
+        {
+            this.expr = expr;
+            this.child_count = 1;
+        }
+
+        public override Node GetChild(int index)
+        {
+            if (index < child_count)
+            {
+                return expr;
+            }
+            else
+            {
+                throw new Exception("Index out of bounds!");
+            }
+        }
+
+        public override string GetValue()
+        {
+            return "NegatedExpression";
+        }
+    }
     public class IntLiteralExpr : Literal
     {
         public IntLiteralExpr(string literal) : base(literal)

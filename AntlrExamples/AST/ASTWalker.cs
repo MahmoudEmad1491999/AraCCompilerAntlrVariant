@@ -15,7 +15,7 @@ namespace AntlrExamples.AST
             if (head is Program)
             {
                 Program root_program = (Program)head;
-                sym_table = new FileSymTab(entries, parent, sub_tables);
+                sym_table = new ProgramSymTab(entries, parent, sub_tables);
 
                 foreach (var declaration in root_program.declarations)
                 {

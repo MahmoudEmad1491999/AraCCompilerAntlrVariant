@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-
+using System.IO;
 namespace AntlrExamples.Environment
 {
     public abstract class SymTab
@@ -13,10 +13,12 @@ namespace AntlrExamples.Environment
 
         public SymTab(List<SymTabEntry> entries, SymTabType sym_tab_type, SymTab parent, List<SymTab> sub_tables)
         {
-            this.entries = entries;
             this.sym_tab_type = sym_tab_type;
             this.parent = parent;
             this.sub_tables = sub_tables;
+            this.entries = entries;
+            
+            if(parent != null)entries.AddRange(parent.entries);
         }
         public void addEntry(SymTabEntry entry)
         {
@@ -25,13 +27,15 @@ namespace AntlrExamples.Environment
                 for (int index = 0; index < entries.Count; index++)
                 {
                     if (entries[index].sym_id == entry.sym_id)
-                    {
-                        throw new Exception("The Identifier: " + entry.sym_id + " is used as " + entries[index]);
+                    {                        
+                        Console.Error.WriteLine("عفواً المعرف مستخدم من قبل في : " + entries[index]);
+                        throw new Exception();
                     }
                 }
                 entries.Add(entry)  ;
             }
         }
+        
         public void addSubTable(SymTab symTab)
         {
             if (symTab != null)
@@ -40,9 +44,9 @@ namespace AntlrExamples.Environment
             }
         }
     }
-    public class FileSymTab : SymTab
+    public class ProgramSymTab : SymTab
     {
-        public FileSymTab(List<SymTabEntry> entries, SymTab parent, List<SymTab> sub_tables) : base(entries, SymTabType.FILE, parent, sub_tables)
+        public ProgramSymTab(List<SymTabEntry> entries, SymTab parent, List<SymTab> sub_tables) : base(entries, SymTabType.FILE, parent, sub_tables)
         {
         }
     }

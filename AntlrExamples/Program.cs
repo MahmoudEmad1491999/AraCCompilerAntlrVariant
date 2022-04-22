@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using Antlr4.Runtime;
 using AntlrExamples.AST;
-using Parser;
+using AntlrExamples.Parser;
 using AntlrExamples.Environment;
 
 using System.Collections.Generic;
@@ -25,12 +25,19 @@ namespace AntlrExamples
             aracParser araCParser = new aracParser(tokenStream);
 
             var program = araCParser.program();
-            var ast_root = ASTGenerator.GenerateAST(program);
-
-            SymTab sym_tab = ASTWalker.construct_table(ast_root, null);
             
 
-            print_table(sym_tab);
+            SymbolTableGenerator symbolTableGenerator = new SymbolTableGenerator();
+            var table = symbolTableGenerator.GenerateSymTab(program, null);
+
+            // var ast_root = ASTGenerator.GenerateAST(program);
+
+            // SymTab sym_tab = ASTWalker.construct_table(ast_root, null);
+            
+
+            print_table(table);
+            
+
             // Console.WriteLine(ast_root.GetType().Name);
             
             // String graph = ASTDotGraphGenerator.getGarph(ast_root);
