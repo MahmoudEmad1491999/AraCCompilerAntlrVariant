@@ -68,7 +68,7 @@ namespace AntlrExamples.AST
                 string datatype = parameterContext.dataType().GetText();
                 string parameter_name = parameterContext.ID().GetText();
 
-                return new Parameter(new Identifier(datatype), new Identifier(parameter_name));
+                return new Parameter( new Identifier(parameter_name),new Identifier(datatype));
 
             }
             else if(root is aracParser.ParamListContext){

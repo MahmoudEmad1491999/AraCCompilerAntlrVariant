@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
-namespace AntlrExamples.AST {
-    
+namespace AntlrExamples.AST
+{
+
     public enum ComparisonOperator
     {
         GREATER_THAN,
@@ -28,10 +29,10 @@ namespace AntlrExamples.AST {
     }
     public class Identifier : Node
     {
-        public string id;
-        public Identifier(string id)
+        public string value;
+        public Identifier(string value)
         {
-            this.id = id;
+            this.value = value;
             this.child_count = 0;
         }
         public override Node GetChild(int index)
@@ -40,7 +41,7 @@ namespace AntlrExamples.AST {
         }
         public override string GetValue()
         {
-            return this.id;
+            return this.value;
         }
     }
     public class Program : Node
@@ -795,15 +796,15 @@ namespace AntlrExamples.AST {
 
     public class Parameter : Node
     {
-        public Node parameter_datatype;
         public Node parameter_name;
+        public Node parameter_datatype;
         public List<Node> children;
         public Parameter(Node parameter_name, Node parameter_datatype)
         {
-            this.parameter_datatype = parameter_datatype;
             this.parameter_name = parameter_name;
+            this.parameter_datatype = parameter_datatype;
             children = new List<Node>(){
-                parameter_datatype, parameter_name
+                parameter_name,parameter_datatype
             };
             this.child_count = 2;
 
@@ -1191,9 +1192,10 @@ namespace AntlrExamples.AST {
             return "Array subscription expression";
         }
     }
-    
-    
-    public class AddressExpression : Node {
+
+
+    public class AddressExpression : Node
+    {
         public Node operand;
         public AddressExpression(Node operand)
         {
@@ -1203,9 +1205,12 @@ namespace AntlrExamples.AST {
 
         public override Node GetChild(int index)
         {
-            if(index < child_count){
+            if (index < child_count)
+            {
                 return this.operand;
-            }else {
+            }
+            else
+            {
                 throw new Exception("index out of range");
             }
         }
@@ -1215,18 +1220,23 @@ namespace AntlrExamples.AST {
             return "AddressExpression";
         }
     }
-    public class IndirectionExpression : Node {
+    public class IndirectionExpression : Node
+    {
         public Node operand;
-        public IndirectionExpression(Node operand){
+        public IndirectionExpression(Node operand)
+        {
             this.operand = operand;
             this.child_count = 1;
         }
 
         public override Node GetChild(int index)
         {
-            if(index < child_count){
+            if (index < child_count)
+            {
                 return this.operand;
-            }else {
+            }
+            else
+            {
                 throw new Exception("Index out of range");
             }
         }
@@ -1236,18 +1246,23 @@ namespace AntlrExamples.AST {
             return "IndirectionExpression";
         }
     }
-    public class SizeExpression: Node {
+    public class SizeExpression : Node
+    {
         public Node expression;
-        public SizeExpression(Node expression){
+        public SizeExpression(Node expression)
+        {
             this.expression = expression;
             this.child_count = 1;
         }
 
         public override Node GetChild(int index)
         {
-            if(index < child_count){
+            if (index < child_count)
+            {
                 return expression;
-            }else {
+            }
+            else
+            {
                 throw new Exception("Index out of range");
             }
         }
@@ -1257,7 +1272,8 @@ namespace AntlrExamples.AST {
             return "Size Expression";
         }
     }
-    public class ShiftLeftExpression: Node {
+    public class ShiftLeftExpression : Node
+    {
         public Node first_operand;
         public Node second_operand;
         public List<Node> children;
@@ -1274,10 +1290,12 @@ namespace AntlrExamples.AST {
 
         public override Node GetChild(int index)
         {
-            if(index < child_count)
+            if (index < child_count)
             {
                 return children[index];
-            }else {
+            }
+            else
+            {
                 throw new Exception("Index out of range");
             }
         }
@@ -1287,7 +1305,8 @@ namespace AntlrExamples.AST {
             return "Shift Left Expression";
         }
     }
-    public class ShiftRightExpression: Node {
+    public class ShiftRightExpression : Node
+    {
         public Node first_operand;
         public Node second_operand;
         public List<Node> children;
@@ -1304,10 +1323,12 @@ namespace AntlrExamples.AST {
 
         public override Node GetChild(int index)
         {
-            if(index < child_count)
+            if (index < child_count)
             {
                 return children[index];
-            }else {
+            }
+            else
+            {
                 throw new Exception("Index out of range");
             }
         }
