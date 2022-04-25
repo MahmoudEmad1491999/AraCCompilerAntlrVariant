@@ -7,7 +7,7 @@ program: (
 	)+;
 
 globalVarDecl:
-	dataType ID inititalization? FASLA_MANQUOTA;
+	dataType ID inititalization FASLA_MANQUOTA;
 
 inititalization: (ASSIGN_SYM expression);
 
@@ -24,35 +24,46 @@ argument: expression;
 argumentList: (argument (FASLA argument)*)?;
 
 expression:
-	ID RP argumentList LP											# funCallExpr
-	| expression RSB expression LSB									# ArrSubScripExpr
-	| PLUS  expression												# negationExpr
-	|  unaryBL_op expression										# UnaryBLExpr
-	| RP dataType LP expression										# CastingExpr
-	| ADDRESS_OF_OPERATOR expression								# AddressExpr
-	| VALUE_INSIDE_OPERATOR expression								# IndirectionExpr
-	| SIZE_OF expression											# SizeExpr
-	| expression DIVIDE expression									# divideExpr
-	| expression MULTIPLY expression								# multiplyExpr
-	| expression MINUS expression									# subtractionExpr
-	| expression PLUS expression									# addExpr
-	| expression SL_SYM expression									# shiftLeftExpr
-	| expression SR_SYM expression									# shiftRightExpr
-	| expression comparison_op expression							# CompExpr
-	| expression equality_op expression								# EqualityExpr
-	| expression BAND_SYM expression								# BandExpr
-	| expression (BXOR_SYM) expression								# BxorExpr
-	| expression (BOR_SYM) expression								# BorExpr
-	| expression (LAND) expression									# LandExpr
-	| expression (LOR) expression									# LorExpr
-	| RP expression LP												# parenthesisExpr
-	| Literal														# literalExpr
-	| ID															# variableExpr;
+	ID RP argumentList LP											# fun_call_expr
+	// | expression RSB expression LSB									# arr_subscrip_expr
+	| MINUS expression												# minus_expr
+	| LNOT expression												# lnot_expr
+	// | RP dataType LP expression										# casting_expr
+	// | ADDRESS_OF_OPERATOR expression								# address_expr
+	// | VALUE_INSIDE_OPERATOR expression								# indirection_expr
+	// | SIZE_OF expression											# size_expr
+	| expression DIVIDE expression									# divide_expr
+	| expression MULTIPLY expression								# multiply_expr
+	| expression MINUS expression									# subtraction_expr
+	| expression PLUS expression									# add_expr
+	// | expression SL_SYM expression									# shift_left_expr
+	// | expression SR_SYM expression									# shift_right_expr
+	| expression comparison_op expression							# comparison_expr
+	| expression equality_op expression								# equality_expr
+	// | expression BAND_SYM expression								# band_expr
+	// | expression (BXOR_SYM) expression								# bxor_expr
+	// | expression (BOR_SYM) expression								# bor_expr
+	| expression (LAND) expression									# land_expr
+	| expression (LOR) expression									# lor_expr
+	| RP expression LP												# parenthesis_expr
+	| int_literal													# int_literal_expr
+	| ID															# variable_expr;
 
+int_literal: (
+	'٠' |
+	'١' |
+	'٢' |
+	'٣' |
+	'٤' |
+	'٥' |
+	'٦' |
+	'٧' |
+	'٨' |
+	'٩' )+ COLON PLUS? ('١' | '٢' | '٤' | '٨');
 
 comparison_op: (GTE_SYM | LTE_SYM | GT_SYM | LT_SYM);
-unaryBL_op : (LOGICAL_NOT | BNOT_SYM);
 equality_op : (EQUAL_SYM | NOTEQ_SYM);
+
 statement:
 	assignmentStat # assignment_Stat       
 	| returnStat # return_Stat	    
@@ -60,12 +71,12 @@ statement:
 	| ifStat	# if_Stat	    
 	| whileStat	# while_Stat       
 	| varDecl	# var_Decl       
-	| expressionStat #expression_Stat
+	// | expressionStat #expression_Stat
 	| operationStat #operation_Stat;
 
 statementList : statement*;
 
-expressionStat: expression FASLA_MANQUOTA;
+// expressionStat: expression FASLA_MANQUOTA;
 
 operationStat: ID RP argumentList LP FASLA_MANQUOTA;
 
@@ -81,10 +92,8 @@ returnStat: RET_KEYWORD FASLA_MANQUOTA;
 resultStat: RES_KEYWORD expression FASLA_MANQUOTA;
 
 varDecl:
-	dataType ID inititalization? FASLA_MANQUOTA;
+	dataType ID inititalization FASLA_MANQUOTA;
 
-Literal:
-	ARABIC_INT_LITERAL;
 	// | ENGLISH_INT_LITERAL;
 
 LP: '(';
@@ -117,7 +126,7 @@ MODULUS: '%';
 // logical operations
 LAND: '&&';
 LOR: '||';
-LOGICAL_NOT: '!';
+LNOT: '!';
 
 // Bitwise symbols.
 SL_SYM: '<<';
@@ -152,8 +161,8 @@ WHILE_KEYWORD: 'طالما';
 BREAK_KEYWORD: 'قطع';
 CONTINUE_KEYWORRD: 'تخظى' | 'تخطي';
 
-INT_DATA_TYPE: 'صحيح';
-UINT_DATA_TYPE: 'طبيعي';
+INT_DATA_TYPE: 'صحيح_٤';
+UINT_DATA_TYPE: 'طبيعي_٤';
 
 BYTE_DATA_TYPE: 'صحيح_١';
 UBYTE_DATA_TYPE: 'طبيعي_١';
@@ -175,7 +184,15 @@ ULONG_DATA_TYPE: 'طبيعي_٨';
 
 WHITE_SPACE: [\u0020\u0009\u000A\u000B\u000C\u000D] -> skip;
 
-ARABIC_INT_LITERAL: [٠-٩]+;
+// arabicInt: IntLit arabicIntSize;
+// arabicIntSize: COLON PLUS? NUMBER_OF_BYTES;
+// NUMBER_OF_BYTES: (ONE | TWO | FOUR | EIGHT);
+// IntLit: '٠' .. '٩';
+// ONE: '١';
+// TWO: '٢';
+// FOUR: '٤';
+// EIGHT: '٨';
+
 // ENGLISH_INT_LITERAL: [0-9]+;
 
 // Identifier regular expression.

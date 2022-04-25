@@ -11,7 +11,7 @@ namespace AntlrExamples.Environment
         }
         public override string ToString()
         {
-            return "نوع المعرف: " + sym_type + "المعرف: " + sym_id;
+            return "نوع المعرف: " + sym_type + "\tالمعرف: " + sym_id;
         }
     }
 
@@ -24,7 +24,10 @@ namespace AntlrExamples.Environment
     }
     public class FuncSymTabEntry : SymTabEntry
     {
-        public FuncSymTabEntry(string sym_id, string return_type) : base(SymType.FUNCTION, sym_id) { }
+        public string return_type;
+        public FuncSymTabEntry(string sym_id, string return_type) : base(SymType.FUNCTION, sym_id) { 
+            this.return_type = return_type;
+        }
     }
     public class OperSymTabEntry : SymTabEntry
     {

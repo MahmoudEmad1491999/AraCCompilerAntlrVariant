@@ -1,12 +1,9 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using Antlr4.Runtime;
-using AntlrExamples.AST;
+
 using AntlrExamples.Parser;
 using AntlrExamples.Environment;
-
-using System.Collections.Generic;
 
 [assembly: CLSCompliant(false)]
 
@@ -25,19 +22,14 @@ namespace AntlrExamples
             aracParser araCParser = new aracParser(tokenStream);
 
             var program = araCParser.program();
-            
 
-            SymbolTableGenerator symbolTableGenerator = new SymbolTableGenerator();
-            var table = symbolTableGenerator.GenerateSymTab(program, null);
-
+            SymTab symbol_table = ParseTreeWalker.GenerateTable(program, null);
+            SymTab.print_symbol_table(symbol_table);
             // var ast_root = ASTGenerator.GenerateAST(program);
 
             // SymTab sym_tab = ASTWalker.construct_table(ast_root, null);
             
-
-            print_table(table);
             
-
             // Console.WriteLine(ast_root.GetType().Name);
             
             // String graph = ASTDotGraphGenerator.getGarph(ast_root);
@@ -48,16 +40,7 @@ namespace AntlrExamples
             // Console.WriteLine(graph);
              
         }
-        public static void print_table(SymTab table) {
-            foreach(var entry in table.entries)
-            {
-                Console.WriteLine("SymbolTable: " + table.GetType() + ", Symbol Identifier: " + entry.sym_id + ", Symbol Type: " + entry.sym_type);
-            }
-            foreach(var sub_table in table.sub_tables)
-            {
-                print_table(sub_table);
-            }
-        }
+        
 
     }
 }

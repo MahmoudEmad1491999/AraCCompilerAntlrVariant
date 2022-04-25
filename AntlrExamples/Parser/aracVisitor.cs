@@ -87,185 +87,115 @@ public interface IaracVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitArgumentList([NotNull] aracParser.ArgumentListContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>divideExpr</c>
+	/// Visit a parse tree produced by the <c>lor_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitDivideExpr([NotNull] aracParser.DivideExprContext context);
+	Result VisitLor_expr([NotNull] aracParser.Lor_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>AddressExpr</c>
+	/// Visit a parse tree produced by the <c>add_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitAddressExpr([NotNull] aracParser.AddressExprContext context);
+	Result VisitAdd_expr([NotNull] aracParser.Add_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>negationExpr</c>
+	/// Visit a parse tree produced by the <c>land_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitNegationExpr([NotNull] aracParser.NegationExprContext context);
+	Result VisitLand_expr([NotNull] aracParser.Land_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>shiftLeftExpr</c>
+	/// Visit a parse tree produced by the <c>comparison_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitShiftLeftExpr([NotNull] aracParser.ShiftLeftExprContext context);
+	Result VisitComparison_expr([NotNull] aracParser.Comparison_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>BxorExpr</c>
+	/// Visit a parse tree produced by the <c>multiply_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitBxorExpr([NotNull] aracParser.BxorExprContext context);
+	Result VisitMultiply_expr([NotNull] aracParser.Multiply_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>CompExpr</c>
+	/// Visit a parse tree produced by the <c>variable_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitCompExpr([NotNull] aracParser.CompExprContext context);
+	Result VisitVariable_expr([NotNull] aracParser.Variable_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>multiplyExpr</c>
+	/// Visit a parse tree produced by the <c>parenthesis_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitMultiplyExpr([NotNull] aracParser.MultiplyExprContext context);
+	Result VisitParenthesis_expr([NotNull] aracParser.Parenthesis_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>shiftRightExpr</c>
+	/// Visit a parse tree produced by the <c>int_literal_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitShiftRightExpr([NotNull] aracParser.ShiftRightExprContext context);
+	Result VisitInt_literal_expr([NotNull] aracParser.Int_literal_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>BandExpr</c>
+	/// Visit a parse tree produced by the <c>subtraction_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitBandExpr([NotNull] aracParser.BandExprContext context);
+	Result VisitSubtraction_expr([NotNull] aracParser.Subtraction_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>LandExpr</c>
+	/// Visit a parse tree produced by the <c>divide_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitLandExpr([NotNull] aracParser.LandExprContext context);
+	Result VisitDivide_expr([NotNull] aracParser.Divide_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>IndirectionExpr</c>
+	/// Visit a parse tree produced by the <c>fun_call_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitIndirectionExpr([NotNull] aracParser.IndirectionExprContext context);
+	Result VisitFun_call_expr([NotNull] aracParser.Fun_call_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>subtractionExpr</c>
+	/// Visit a parse tree produced by the <c>minus_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitSubtractionExpr([NotNull] aracParser.SubtractionExprContext context);
+	Result VisitMinus_expr([NotNull] aracParser.Minus_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>ArrSubScripExpr</c>
+	/// Visit a parse tree produced by the <c>lnot_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitArrSubScripExpr([NotNull] aracParser.ArrSubScripExprContext context);
+	Result VisitLnot_expr([NotNull] aracParser.Lnot_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>LorExpr</c>
+	/// Visit a parse tree produced by the <c>equality_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitLorExpr([NotNull] aracParser.LorExprContext context);
+	Result VisitEquality_expr([NotNull] aracParser.Equality_exprContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>variableExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
+	/// Visit a parse tree produced by <see cref="aracParser.int_literal"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	Result VisitVariableExpr([NotNull] aracParser.VariableExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>funCallExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitFunCallExpr([NotNull] aracParser.FunCallExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>EqualityExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitEqualityExpr([NotNull] aracParser.EqualityExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>addExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitAddExpr([NotNull] aracParser.AddExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>BorExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitBorExpr([NotNull] aracParser.BorExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>literalExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitLiteralExpr([NotNull] aracParser.LiteralExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>SizeExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitSizeExpr([NotNull] aracParser.SizeExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>UnaryBLExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitUnaryBLExpr([NotNull] aracParser.UnaryBLExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>CastingExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitCastingExpr([NotNull] aracParser.CastingExprContext context);
-	/// <summary>
-	/// Visit a parse tree produced by the <c>parenthesisExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitParenthesisExpr([NotNull] aracParser.ParenthesisExprContext context);
+	Result VisitInt_literal([NotNull] aracParser.Int_literalContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="aracParser.comparison_op"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitComparison_op([NotNull] aracParser.Comparison_opContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="aracParser.unaryBL_op"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitUnaryBL_op([NotNull] aracParser.UnaryBL_opContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="aracParser.equality_op"/>.
 	/// </summary>
@@ -315,13 +245,6 @@ public interface IaracVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitVar_Decl([NotNull] aracParser.Var_DeclContext context);
 	/// <summary>
-	/// Visit a parse tree produced by the <c>expression_Stat</c>
-	/// labeled alternative in <see cref="aracParser.statement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitExpression_Stat([NotNull] aracParser.Expression_StatContext context);
-	/// <summary>
 	/// Visit a parse tree produced by the <c>operation_Stat</c>
 	/// labeled alternative in <see cref="aracParser.statement"/>.
 	/// </summary>
@@ -334,12 +257,6 @@ public interface IaracVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitStatementList([NotNull] aracParser.StatementListContext context);
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="aracParser.expressionStat"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitExpressionStat([NotNull] aracParser.ExpressionStatContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="aracParser.operationStat"/>.
 	/// </summary>

@@ -122,293 +122,183 @@ public interface IaracListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitArgumentList([NotNull] aracParser.ArgumentListContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>divideExpr</c>
+	/// Enter a parse tree produced by the <c>lor_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterDivideExpr([NotNull] aracParser.DivideExprContext context);
+	void EnterLor_expr([NotNull] aracParser.Lor_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>divideExpr</c>
+	/// Exit a parse tree produced by the <c>lor_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitDivideExpr([NotNull] aracParser.DivideExprContext context);
+	void ExitLor_expr([NotNull] aracParser.Lor_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>AddressExpr</c>
+	/// Enter a parse tree produced by the <c>add_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterAddressExpr([NotNull] aracParser.AddressExprContext context);
+	void EnterAdd_expr([NotNull] aracParser.Add_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>AddressExpr</c>
+	/// Exit a parse tree produced by the <c>add_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitAddressExpr([NotNull] aracParser.AddressExprContext context);
+	void ExitAdd_expr([NotNull] aracParser.Add_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>negationExpr</c>
+	/// Enter a parse tree produced by the <c>land_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterNegationExpr([NotNull] aracParser.NegationExprContext context);
+	void EnterLand_expr([NotNull] aracParser.Land_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>negationExpr</c>
+	/// Exit a parse tree produced by the <c>land_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitNegationExpr([NotNull] aracParser.NegationExprContext context);
+	void ExitLand_expr([NotNull] aracParser.Land_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>shiftLeftExpr</c>
+	/// Enter a parse tree produced by the <c>comparison_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterShiftLeftExpr([NotNull] aracParser.ShiftLeftExprContext context);
+	void EnterComparison_expr([NotNull] aracParser.Comparison_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>shiftLeftExpr</c>
+	/// Exit a parse tree produced by the <c>comparison_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitShiftLeftExpr([NotNull] aracParser.ShiftLeftExprContext context);
+	void ExitComparison_expr([NotNull] aracParser.Comparison_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>BxorExpr</c>
+	/// Enter a parse tree produced by the <c>multiply_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterBxorExpr([NotNull] aracParser.BxorExprContext context);
+	void EnterMultiply_expr([NotNull] aracParser.Multiply_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>BxorExpr</c>
+	/// Exit a parse tree produced by the <c>multiply_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitBxorExpr([NotNull] aracParser.BxorExprContext context);
+	void ExitMultiply_expr([NotNull] aracParser.Multiply_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>CompExpr</c>
+	/// Enter a parse tree produced by the <c>variable_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterCompExpr([NotNull] aracParser.CompExprContext context);
+	void EnterVariable_expr([NotNull] aracParser.Variable_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>CompExpr</c>
+	/// Exit a parse tree produced by the <c>variable_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitCompExpr([NotNull] aracParser.CompExprContext context);
+	void ExitVariable_expr([NotNull] aracParser.Variable_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>multiplyExpr</c>
+	/// Enter a parse tree produced by the <c>parenthesis_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterMultiplyExpr([NotNull] aracParser.MultiplyExprContext context);
+	void EnterParenthesis_expr([NotNull] aracParser.Parenthesis_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>multiplyExpr</c>
+	/// Exit a parse tree produced by the <c>parenthesis_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitMultiplyExpr([NotNull] aracParser.MultiplyExprContext context);
+	void ExitParenthesis_expr([NotNull] aracParser.Parenthesis_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>shiftRightExpr</c>
+	/// Enter a parse tree produced by the <c>int_literal_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterShiftRightExpr([NotNull] aracParser.ShiftRightExprContext context);
+	void EnterInt_literal_expr([NotNull] aracParser.Int_literal_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>shiftRightExpr</c>
+	/// Exit a parse tree produced by the <c>int_literal_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitShiftRightExpr([NotNull] aracParser.ShiftRightExprContext context);
+	void ExitInt_literal_expr([NotNull] aracParser.Int_literal_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>BandExpr</c>
+	/// Enter a parse tree produced by the <c>subtraction_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterBandExpr([NotNull] aracParser.BandExprContext context);
+	void EnterSubtraction_expr([NotNull] aracParser.Subtraction_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>BandExpr</c>
+	/// Exit a parse tree produced by the <c>subtraction_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitBandExpr([NotNull] aracParser.BandExprContext context);
+	void ExitSubtraction_expr([NotNull] aracParser.Subtraction_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>LandExpr</c>
+	/// Enter a parse tree produced by the <c>divide_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterLandExpr([NotNull] aracParser.LandExprContext context);
+	void EnterDivide_expr([NotNull] aracParser.Divide_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>LandExpr</c>
+	/// Exit a parse tree produced by the <c>divide_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitLandExpr([NotNull] aracParser.LandExprContext context);
+	void ExitDivide_expr([NotNull] aracParser.Divide_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>IndirectionExpr</c>
+	/// Enter a parse tree produced by the <c>fun_call_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterIndirectionExpr([NotNull] aracParser.IndirectionExprContext context);
+	void EnterFun_call_expr([NotNull] aracParser.Fun_call_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>IndirectionExpr</c>
+	/// Exit a parse tree produced by the <c>fun_call_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitIndirectionExpr([NotNull] aracParser.IndirectionExprContext context);
+	void ExitFun_call_expr([NotNull] aracParser.Fun_call_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>subtractionExpr</c>
+	/// Enter a parse tree produced by the <c>minus_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterSubtractionExpr([NotNull] aracParser.SubtractionExprContext context);
+	void EnterMinus_expr([NotNull] aracParser.Minus_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>subtractionExpr</c>
+	/// Exit a parse tree produced by the <c>minus_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitSubtractionExpr([NotNull] aracParser.SubtractionExprContext context);
+	void ExitMinus_expr([NotNull] aracParser.Minus_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>ArrSubScripExpr</c>
+	/// Enter a parse tree produced by the <c>lnot_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterArrSubScripExpr([NotNull] aracParser.ArrSubScripExprContext context);
+	void EnterLnot_expr([NotNull] aracParser.Lnot_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>ArrSubScripExpr</c>
+	/// Exit a parse tree produced by the <c>lnot_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitArrSubScripExpr([NotNull] aracParser.ArrSubScripExprContext context);
+	void ExitLnot_expr([NotNull] aracParser.Lnot_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>LorExpr</c>
+	/// Enter a parse tree produced by the <c>equality_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterLorExpr([NotNull] aracParser.LorExprContext context);
+	void EnterEquality_expr([NotNull] aracParser.Equality_exprContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>LorExpr</c>
+	/// Exit a parse tree produced by the <c>equality_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitLorExpr([NotNull] aracParser.LorExprContext context);
+	void ExitEquality_expr([NotNull] aracParser.Equality_exprContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>variableExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
+	/// Enter a parse tree produced by <see cref="aracParser.int_literal"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void EnterVariableExpr([NotNull] aracParser.VariableExprContext context);
+	void EnterInt_literal([NotNull] aracParser.Int_literalContext context);
 	/// <summary>
-	/// Exit a parse tree produced by the <c>variableExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
+	/// Exit a parse tree produced by <see cref="aracParser.int_literal"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
-	void ExitVariableExpr([NotNull] aracParser.VariableExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>funCallExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterFunCallExpr([NotNull] aracParser.FunCallExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>funCallExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitFunCallExpr([NotNull] aracParser.FunCallExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>EqualityExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterEqualityExpr([NotNull] aracParser.EqualityExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>EqualityExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitEqualityExpr([NotNull] aracParser.EqualityExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>addExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterAddExpr([NotNull] aracParser.AddExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>addExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitAddExpr([NotNull] aracParser.AddExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>BorExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterBorExpr([NotNull] aracParser.BorExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>BorExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitBorExpr([NotNull] aracParser.BorExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>literalExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterLiteralExpr([NotNull] aracParser.LiteralExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>literalExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitLiteralExpr([NotNull] aracParser.LiteralExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>SizeExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterSizeExpr([NotNull] aracParser.SizeExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>SizeExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitSizeExpr([NotNull] aracParser.SizeExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>UnaryBLExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterUnaryBLExpr([NotNull] aracParser.UnaryBLExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>UnaryBLExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitUnaryBLExpr([NotNull] aracParser.UnaryBLExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>CastingExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterCastingExpr([NotNull] aracParser.CastingExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>CastingExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitCastingExpr([NotNull] aracParser.CastingExprContext context);
-	/// <summary>
-	/// Enter a parse tree produced by the <c>parenthesisExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterParenthesisExpr([NotNull] aracParser.ParenthesisExprContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>parenthesisExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitParenthesisExpr([NotNull] aracParser.ParenthesisExprContext context);
+	void ExitInt_literal([NotNull] aracParser.Int_literalContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="aracParser.comparison_op"/>.
 	/// </summary>
@@ -419,16 +309,6 @@ public interface IaracListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitComparison_op([NotNull] aracParser.Comparison_opContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="aracParser.unaryBL_op"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterUnaryBL_op([NotNull] aracParser.UnaryBL_opContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="aracParser.unaryBL_op"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitUnaryBL_op([NotNull] aracParser.UnaryBL_opContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="aracParser.equality_op"/>.
 	/// </summary>
@@ -512,18 +392,6 @@ public interface IaracListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitVar_Decl([NotNull] aracParser.Var_DeclContext context);
 	/// <summary>
-	/// Enter a parse tree produced by the <c>expression_Stat</c>
-	/// labeled alternative in <see cref="aracParser.statement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterExpression_Stat([NotNull] aracParser.Expression_StatContext context);
-	/// <summary>
-	/// Exit a parse tree produced by the <c>expression_Stat</c>
-	/// labeled alternative in <see cref="aracParser.statement"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitExpression_Stat([NotNull] aracParser.Expression_StatContext context);
-	/// <summary>
 	/// Enter a parse tree produced by the <c>operation_Stat</c>
 	/// labeled alternative in <see cref="aracParser.statement"/>.
 	/// </summary>
@@ -545,16 +413,6 @@ public interface IaracListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitStatementList([NotNull] aracParser.StatementListContext context);
-	/// <summary>
-	/// Enter a parse tree produced by <see cref="aracParser.expressionStat"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void EnterExpressionStat([NotNull] aracParser.ExpressionStatContext context);
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="aracParser.expressionStat"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	void ExitExpressionStat([NotNull] aracParser.ExpressionStatContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="aracParser.operationStat"/>.
 	/// </summary>

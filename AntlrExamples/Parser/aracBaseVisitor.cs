@@ -125,7 +125,7 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// <return>The visitor result.</return>
 	public virtual Result VisitArgumentList([NotNull] aracParser.ArgumentListContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>divideExpr</c>
+	/// Visit a parse tree produced by the <c>lor_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -134,9 +134,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDivideExpr([NotNull] aracParser.DivideExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitLor_expr([NotNull] aracParser.Lor_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>AddressExpr</c>
+	/// Visit a parse tree produced by the <c>add_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -145,9 +145,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAddressExpr([NotNull] aracParser.AddressExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitAdd_expr([NotNull] aracParser.Add_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>negationExpr</c>
+	/// Visit a parse tree produced by the <c>land_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -156,9 +156,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitNegationExpr([NotNull] aracParser.NegationExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitLand_expr([NotNull] aracParser.Land_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>shiftLeftExpr</c>
+	/// Visit a parse tree produced by the <c>comparison_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -167,9 +167,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitShiftLeftExpr([NotNull] aracParser.ShiftLeftExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitComparison_expr([NotNull] aracParser.Comparison_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>BxorExpr</c>
+	/// Visit a parse tree produced by the <c>multiply_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -178,9 +178,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBxorExpr([NotNull] aracParser.BxorExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitMultiply_expr([NotNull] aracParser.Multiply_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>CompExpr</c>
+	/// Visit a parse tree produced by the <c>variable_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -189,9 +189,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCompExpr([NotNull] aracParser.CompExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitVariable_expr([NotNull] aracParser.Variable_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>multiplyExpr</c>
+	/// Visit a parse tree produced by the <c>parenthesis_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -200,9 +200,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitMultiplyExpr([NotNull] aracParser.MultiplyExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitParenthesis_expr([NotNull] aracParser.Parenthesis_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>shiftRightExpr</c>
+	/// Visit a parse tree produced by the <c>int_literal_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -211,9 +211,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitShiftRightExpr([NotNull] aracParser.ShiftRightExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitInt_literal_expr([NotNull] aracParser.Int_literal_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>BandExpr</c>
+	/// Visit a parse tree produced by the <c>subtraction_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -222,9 +222,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBandExpr([NotNull] aracParser.BandExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitSubtraction_expr([NotNull] aracParser.Subtraction_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>LandExpr</c>
+	/// Visit a parse tree produced by the <c>divide_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -233,9 +233,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLandExpr([NotNull] aracParser.LandExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitDivide_expr([NotNull] aracParser.Divide_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>IndirectionExpr</c>
+	/// Visit a parse tree produced by the <c>fun_call_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -244,9 +244,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndirectionExpr([NotNull] aracParser.IndirectionExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitFun_call_expr([NotNull] aracParser.Fun_call_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>subtractionExpr</c>
+	/// Visit a parse tree produced by the <c>minus_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -255,9 +255,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSubtractionExpr([NotNull] aracParser.SubtractionExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitMinus_expr([NotNull] aracParser.Minus_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>ArrSubScripExpr</c>
+	/// Visit a parse tree produced by the <c>lnot_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -266,9 +266,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitArrSubScripExpr([NotNull] aracParser.ArrSubScripExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitLnot_expr([NotNull] aracParser.Lnot_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>LorExpr</c>
+	/// Visit a parse tree produced by the <c>equality_expr</c>
 	/// labeled alternative in <see cref="aracParser.expression"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
@@ -277,10 +277,9 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLorExpr([NotNull] aracParser.LorExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitEquality_expr([NotNull] aracParser.Equality_exprContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>variableExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
+	/// Visit a parse tree produced by <see cref="aracParser.int_literal"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -288,106 +287,7 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitVariableExpr([NotNull] aracParser.VariableExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>funCallExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitFunCallExpr([NotNull] aracParser.FunCallExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>EqualityExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitEqualityExpr([NotNull] aracParser.EqualityExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>addExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitAddExpr([NotNull] aracParser.AddExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>BorExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitBorExpr([NotNull] aracParser.BorExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>literalExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitLiteralExpr([NotNull] aracParser.LiteralExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>SizeExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitSizeExpr([NotNull] aracParser.SizeExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>UnaryBLExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitUnaryBLExpr([NotNull] aracParser.UnaryBLExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>CastingExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitCastingExpr([NotNull] aracParser.CastingExprContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by the <c>parenthesisExpr</c>
-	/// labeled alternative in <see cref="aracParser.expression"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitParenthesisExpr([NotNull] aracParser.ParenthesisExprContext context) { return VisitChildren(context); }
+	public virtual Result VisitInt_literal([NotNull] aracParser.Int_literalContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="aracParser.comparison_op"/>.
 	/// <para>
@@ -398,16 +298,6 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	public virtual Result VisitComparison_op([NotNull] aracParser.Comparison_opContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="aracParser.unaryBL_op"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitUnaryBL_op([NotNull] aracParser.UnaryBL_opContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="aracParser.equality_op"/>.
 	/// <para>
@@ -485,17 +375,6 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// <return>The visitor result.</return>
 	public virtual Result VisitVar_Decl([NotNull] aracParser.Var_DeclContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by the <c>expression_Stat</c>
-	/// labeled alternative in <see cref="aracParser.statement"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitExpression_Stat([NotNull] aracParser.Expression_StatContext context) { return VisitChildren(context); }
-	/// <summary>
 	/// Visit a parse tree produced by the <c>operation_Stat</c>
 	/// labeled alternative in <see cref="aracParser.statement"/>.
 	/// <para>
@@ -516,16 +395,6 @@ public partial class aracBaseVisitor<Result> : AbstractParseTreeVisitor<Result>,
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	public virtual Result VisitStatementList([NotNull] aracParser.StatementListContext context) { return VisitChildren(context); }
-	/// <summary>
-	/// Visit a parse tree produced by <see cref="aracParser.expressionStat"/>.
-	/// <para>
-	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
-	/// on <paramref name="context"/>.
-	/// </para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	public virtual Result VisitExpressionStat([NotNull] aracParser.ExpressionStatContext context) { return VisitChildren(context); }
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="aracParser.operationStat"/>.
 	/// <para>
